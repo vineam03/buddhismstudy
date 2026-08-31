@@ -4,6 +4,15 @@ A personal study website that grows as I learn more about Buddhism.
 
 **Current sections**
 
+- **Guided Study** ([study.html](study.html)) — the whole site as a nine-unit
+  course in logical sequence, with checkbox progress tracking (localStorage).
+- **Modern Life** ([themes.html](themes.html)) — the canon aimed at career,
+  love, money, conflict, loss, identity, and universal truths.
+- **Journey to the West** ([journey.html](journey.html)) — the Xiyouji allegory
+  read pilgrim-by-pilgrim and episode-by-episode against the site's principles.
+- **Export PDF** ([everything.html](everything.html)) — compiles every section
+  into one printable document (browser print → Save as PDF); every page also
+  prints cleanly on its own via the shared `@media print` stylesheet.
 - **The Curriculum** ([curriculum.html](curriculum.html)) — a four-stage study
   path (the universal predicament → psychological mechanics → the systematic
   path → relational living) with canonical anchors and lost-in-translation notes.

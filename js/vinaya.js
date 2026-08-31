@@ -107,6 +107,9 @@
     query = searchBox.value.trim().toLowerCase();
     render();
   });
+  window.addEventListener("beforeprint", function () {
+    document.querySelectorAll("details").forEach(function (d) { d.open = true; });
+  });
 
   buildFilters();
   render();

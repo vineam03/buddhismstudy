@@ -369,6 +369,67 @@ footer.site-footer {
   padding: 1.5rem;
 }
 
+/* ---------- guided study ---------- */
+.unit {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--orange-deep);
+  border-radius: 10px;
+  padding: 1.2rem 1.4rem;
+  margin: 1.2rem 0;
+}
+.unit h3 { color: var(--gold); font-size: 1.2rem; margin-bottom: .2rem; }
+.unit .unit-why { color: var(--orange); font-style: italic; margin-bottom: .7rem; font-size: .95rem; }
+.unit h4 { color: var(--gold-soft); font-size: .8rem; text-transform: uppercase; letter-spacing: .1em; margin: .9rem 0 .3rem; }
+.unit ul.readings { list-style: none; margin: 0 0 .5rem 0; }
+.unit ul.readings li { margin-bottom: .3rem; display: flex; align-items: baseline; gap: .55rem; }
+.unit input[type="checkbox"] { accent-color: var(--orange); width: 1rem; height: 1rem; flex: 0 0 auto; transform: translateY(2px); }
+.unit p { color: var(--text-dim); font-size: .95rem; margin-bottom: .4rem; }
+
+.progress-wrap {
+  position: sticky; top: 0; z-index: 10;
+  background: var(--bg);
+  padding: .8rem 0 .6rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1rem;
+}
+.progress-bar { height: 10px; background: var(--bg-soft); border: 1px solid var(--border); border-radius: 999px; overflow: hidden; }
+.progress-fill { height: 100%; width: 0; background: linear-gradient(90deg, var(--dark-yellow), var(--orange)); transition: width .3s; }
+.progress-label { color: var(--text-dim); font-size: .85rem; margin-top: .35rem; }
+
+/* ---------- print / PDF export ---------- */
+.print-btn {
+  display: inline-block;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: .55rem 1.4rem;
+  background: linear-gradient(135deg, var(--gold-soft), var(--orange));
+  color: #1a1208;
+  font-weight: bold;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.print-btn:hover { filter: brightness(1.1); }
+
+@media print {
+  :root, :root * {
+    --bg: #fff; --bg-soft: #fff; --card: #fff; --card-hover: #fff;
+    --border: #bbb; --gold: #7a5a00; --gold-soft: #7a5a00; --dark-yellow: #7a5a00;
+    --orange: #a04a00; --orange-deep: #a04a00;
+    --text: #111; --text-dim: #333; --text-faint: #555;
+  }
+  body { background: #fff; }
+  nav.site-nav, .controls, .print-btn, .no-print, .progress-wrap { display: none !important; }
+  header.site-header { background: none; padding: 1rem 0; }
+  .site-header h1 { background: none; -webkit-background-clip: initial; -webkit-text-fill-color: initial; color: #7a5a00; }
+  a { color: #333; }
+  details.rule, .canon-book, .stage, .tnote, .note-box, .topic-card, .unit { break-inside: avoid; }
+  .cat-section h2, .basket-head { break-after: avoid; }
+  .stage-badge { background: #eee !important; color: #111; border: 1px solid #999; }
+  .rule-num { background: #ddd !important; color: #111; }
+}
+
 @media (max-width: 600px) {
   .site-header h1 { font-size: 1.7rem; }
   details.rule summary { flex-wrap: wrap; }

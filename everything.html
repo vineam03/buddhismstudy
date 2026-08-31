@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Export as PDF — Buddhism Study</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <span class="wheel">☸</span>
+  <h1>Buddhism Study — The Complete Book</h1>
+  <p class="subtitle">The whole site compiled as one document, ready to save as PDF</p>
+  <nav class="site-nav">
+    <a href="index.html">Home</a>
+    <a href="curriculum.html">Curriculum</a>
+    <a href="study.html">Guided Study</a>
+    <a href="canon.html">The Canon</a>
+    <a href="suttas.html">Sutta Library</a>
+    <a href="vinaya.html">Vinaya</a>
+    <a href="themes.html">Modern Life</a>
+    <a href="journey.html">Journey West</a>
+    <a href="everything.html" class="active">Export PDF</a>
+  </nav>
+</header>
+
+<main>
+  <div class="note-box no-print">
+    <strong>How to export:</strong> wait for the sections below to finish assembling (a few
+    seconds), then press the button — your browser's print dialog opens; choose
+    <strong>“Save as PDF”</strong> as the destination. Every sutta card and Vinaya rule is
+    expanded automatically, and the page switches to a clean light print layout.
+    <br><br>
+    <button class="print-btn" onclick="window.print()">⤓ Save the whole site as PDF</button>
+    <span class="dim" id="build-status" style="margin-left:1rem;">assembling…</span>
+  </div>
+
+  <div id="book-root"></div>
+</main>
+
+<footer class="site-footer">
+  Buddhism Study · compiled from the live site · summaries are personal study notes — full
+  translations at suttacentral.net
+</footer>
+
+<script src="js/data/parajika.js"></script>
+<script src="js/data/sanghadisesa.js"></script>
+<script src="js/data/aniyata.js"></script>
+<script src="js/data/nissaggiya.js"></script>
+<script src="js/data/pacittiya1.js"></script>
+<script src="js/data/pacittiya2.js"></script>
+<script src="js/data/pacittiya3.js"></script>
+<script src="js/data/patidesaniya.js"></script>
+<script src="js/data/suttas-dn.js"></script>
+<script src="js/data/suttas-mn1.js"></script>
+<script src="js/data/suttas-mn2.js"></script>
+<script src="js/data/suttas-sn.js"></script>
+<script src="js/data/suttas-an.js"></script>
+<script src="js/data/suttas-kn.js"></script>
+<script src="js/data/suttas-history.js"></script>
+<script src="js/data/sekhiya.js"></script>
+<script src="js/data/adhikarana.js"></script>
+<script src="js/export.js"></script>
+
+</body>
+</html>

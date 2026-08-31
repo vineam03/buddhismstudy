@@ -63,6 +63,7 @@
   }
 
   function card(s) {
+    var hist = (window.SUTTA_HISTORY || {})[s.id];
     var open = query ? " open" : "";
     return '<details class="rule" id="' + esc(s.id) + '"' + open + ">" +
       '<summary><span class="rule-num">' + esc(s.ref) + "</span>" +
@@ -72,6 +73,7 @@
       '<div class="rule-body">' +
       badges(s) +
       "<h4>The gist</h4><p>" + esc(s.gist) + "</p>" +
+      (hist ? '<h4>Historical context</h4><p class="dim">' + esc(hist) + "</p>" : "") +
       "<h4>On truth &amp; human nature</h4><p>" + esc(s.truth) + "</p>" +
       "<h4>In daily life</h4><p>" + esc(s.life) + "</p>" +
       (s.sc ? '<a class="sclink" href="https://suttacentral.net/' + esc(s.sc) +
@@ -109,6 +111,9 @@
     render();
   });
   window.addEventListener("hashchange", openFromHash);
+  window.addEventListener("beforeprint", function () {
+    document.querySelectorAll("details").forEach(function (d) { d.open = true; });
+  });
 
   buildFilters();
   render();
