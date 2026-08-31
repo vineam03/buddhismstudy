@@ -253,6 +253,114 @@ details.rule[open] .rule-num { background: var(--gold); }
   margin-bottom: 1.6rem;
 }
 
+/* ---------- curriculum & canon pages ---------- */
+.stage {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem 1.6rem;
+  margin: 2rem 0;
+}
+
+.stage-head { display: flex; align-items: center; gap: .9rem; margin-bottom: .3rem; }
+
+.stage-n {
+  flex: 0 0 auto;
+  width: 2.4rem; height: 2.4rem;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: bold; font-size: 1.2rem;
+  color: #1a1208;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--orange) 100%);
+  border-radius: 50%;
+}
+
+.stage h2 { color: var(--gold); font-size: 1.5rem; }
+.stage .stage-tag { color: var(--orange); font-style: italic; margin-bottom: 1rem; }
+
+.stage h3, .canon-book h3.inner {
+  color: var(--orange);
+  font-size: 1.05rem;
+  margin: 1.3rem 0 .35rem;
+}
+
+.stage p, .canon-book p { color: var(--text); margin-bottom: .6rem; }
+.stage ul, .canon-book ul { margin: .3rem 0 .8rem 1.3rem; color: var(--text); }
+.stage li, .canon-book li { margin-bottom: .35rem; }
+.dim { color: var(--text-dim); }
+
+/* lost-in-translation callout */
+.tnote {
+  background: #201505;
+  border: 1px solid var(--dark-yellow);
+  border-left: 5px solid var(--orange);
+  border-radius: 8px;
+  padding: .8rem 1rem;
+  margin: .9rem 0;
+  font-size: .93rem;
+  color: var(--text-dim);
+}
+.tnote .tnote-label {
+  display: block;
+  font-size: .72rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: .3rem;
+  font-weight: bold;
+}
+.tnote strong { color: var(--gold-soft); }
+
+/* canon page */
+.basket-head {
+  color: var(--gold);
+  font-size: 1.7rem;
+  margin: 2.8rem 0 .2rem;
+  border-bottom: 2px solid var(--dark-yellow);
+  padding-bottom: .35rem;
+}
+.basket-lede { color: var(--text-dim); font-style: italic; margin-bottom: 1.2rem; }
+
+.canon-book {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--dark-yellow);
+  border-radius: 10px;
+  padding: 1.2rem 1.4rem;
+  margin: 1.1rem 0;
+}
+.canon-book > h3 {
+  color: var(--gold);
+  font-size: 1.2rem;
+}
+.canon-book .pali-sub { color: var(--orange); font-style: italic; font-size: .95rem; margin-bottom: .7rem; }
+
+.stage-badges { margin: .6rem 0 .2rem; }
+.stage-badge {
+  display: inline-block;
+  font-size: .72rem;
+  font-weight: bold;
+  letter-spacing: .05em;
+  padding: .12rem .55rem;
+  border-radius: 999px;
+  margin-right: .35rem;
+  color: #1a1208;
+  background: var(--gold-soft);
+}
+.stage-badge.s2 { background: var(--orange); }
+.stage-badge.s3 { background: var(--dark-yellow); }
+.stage-badge.s4 { background: var(--orange-deep); }
+
+.toc {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.3rem;
+  margin-bottom: 1.5rem;
+  font-size: .95rem;
+}
+.toc strong { color: var(--gold-soft); }
+.toc a { margin-right: .9rem; white-space: nowrap; }
+
 footer.site-footer {
   border-top: 1px solid var(--border);
   color: var(--text-faint);
