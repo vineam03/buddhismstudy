@@ -4,6 +4,16 @@ A personal study website that grows as I learn more about Buddhism.
 
 **Current sections**
 
+- **The Curriculum** ([curriculum.html](curriculum.html)) — a four-stage study
+  path (the universal predicament → psychological mechanics → the systematic
+  path → relational living) with canonical anchors and lost-in-translation notes.
+- **The Canon** ([canon.html](canon.html)) — every division of the Tipiṭaka in
+  contemporary English, tagged to the curriculum stages.
+- **The Sutta Library** ([suttas.html](suttas.html)) — study notes for 67 key
+  texts: the gist, what each teaches about truth and human nature, and daily-life
+  application. Data in `js/data/suttas-*.js`, rendered by `js/suttas.js`;
+  supports search, collection filters, and `#id` deep links (e.g.
+  `suttas.html#sn36.6`).
 - **The Pātimokkha** ([vinaya.html](vinaya.html)) — all 227 rules of the bhikkhu
   Pātimokkha from the Vinaya Piṭaka, organized by category (Pārājika,
   Saṅghādisesa, Aniyata, Nissaggiya Pācittiya, Pācittiya, Pāṭidesanīya,

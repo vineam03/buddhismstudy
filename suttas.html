@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sutta Library — Buddhism Study</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <span class="wheel">☸</span>
+  <h1>The Sutta Library</h1>
+  <p class="subtitle">Study notes on the key texts — the gist, what they teach about truth and human nature, and how to use them</p>
+  <nav class="site-nav">
+    <a href="index.html">Home</a>
+    <a href="curriculum.html">Curriculum</a>
+    <a href="canon.html">The Canon</a>
+    <a href="suttas.html" class="active">Sutta Library</a>
+    <a href="vinaya.html">Vinaya · 227 Rules</a>
+  </nav>
+</header>
+
+<main>
+  <div class="note-box">
+    Condensed study guides — the "spark notes" — for the texts this site's
+    <a href="curriculum.html">curriculum</a> and <a href="canon.html">canon guide</a> lean on.
+    Each card gives <strong>the gist</strong> (what happens and what's said),
+    <strong>on truth &amp; human nature</strong> (the claim the text makes), and
+    <strong>in daily life</strong> (how to actually use it). These are summaries in my own
+    words, not translations; each card keeps one small link to the full text for checking.
+    Click a card to expand it. Links from other pages land on the right card automatically.
+  </div>
+
+  <div class="controls">
+    <input id="search" type="search" placeholder="Search the library… (e.g. anger, money, grief, breath)">
+    <div class="cat-filters" id="cat-filters"></div>
+    <div class="result-count" id="result-count"></div>
+  </div>
+
+  <div id="suttas-root"></div>
+</main>
+
+<footer class="site-footer">
+  Summaries are personal study notes in contemporary English · Full translations at
+  <a href="https://suttacentral.net">SuttaCentral</a>
+</footer>
+
+<script src="js/data/suttas-dn.js"></script>
+<script src="js/data/suttas-mn1.js"></script>
+<script src="js/data/suttas-mn2.js"></script>
+<script src="js/data/suttas-sn.js"></script>
+<script src="js/data/suttas-an.js"></script>
+<script src="js/data/suttas-kn.js"></script>
+<script src="js/suttas.js"></script>
+
+</body>
+</html>
