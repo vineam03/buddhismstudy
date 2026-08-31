@@ -1,0 +1,267 @@
+/* Buddhism Study — gold / dark yellow / orange theme */
+
+:root {
+  --bg: #1a1208;
+  --bg-soft: #241a0d;
+  --card: #2b2012;
+  --card-hover: #342714;
+  --border: #4a3617;
+  --gold: #ffd700;
+  --gold-soft: #e6b422;
+  --dark-yellow: #b8860b;
+  --orange: #ff8c00;
+  --orange-deep: #e67e22;
+  --text: #f3e5c0;
+  --text-dim: #c9b183;
+  --text-faint: #96803f;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.65;
+  min-height: 100vh;
+}
+
+a { color: var(--gold-soft); text-decoration: none; }
+a:hover { color: var(--gold); }
+
+/* ---------- header ---------- */
+header.site-header {
+  background: linear-gradient(180deg, #2e2109 0%, var(--bg) 100%);
+  border-bottom: 2px solid var(--dark-yellow);
+  padding: 2.5rem 1.5rem 2rem;
+  text-align: center;
+}
+
+.site-header .wheel {
+  font-size: 2.6rem;
+  color: var(--orange);
+  display: block;
+  margin-bottom: .5rem;
+}
+
+.site-header h1 {
+  font-size: 2.4rem;
+  letter-spacing: .04em;
+  background: linear-gradient(90deg, var(--gold) 0%, var(--orange) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--gold);
+}
+
+.site-header .subtitle {
+  color: var(--text-dim);
+  font-style: italic;
+  margin-top: .4rem;
+}
+
+nav.site-nav {
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+nav.site-nav a {
+  padding: .35rem 1rem;
+  border: 1px solid var(--dark-yellow);
+  border-radius: 999px;
+  color: var(--gold-soft);
+  font-size: .95rem;
+  transition: background .15s, color .15s;
+}
+
+nav.site-nav a:hover, nav.site-nav a.active {
+  background: var(--dark-yellow);
+  color: #1a1208;
+}
+
+main { max-width: 960px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+
+/* ---------- home topic grid ---------- */
+.intro { color: var(--text-dim); margin-bottom: 2rem; text-align: center; }
+
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 1.1rem;
+}
+
+.topic-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--orange-deep);
+  border-radius: 10px;
+  padding: 1.3rem 1.3rem 1.1rem;
+  display: block;
+  transition: transform .15s, background .15s, border-color .15s;
+}
+
+a.topic-card:hover {
+  background: var(--card-hover);
+  transform: translateY(-3px);
+  border-left-color: var(--gold);
+}
+
+.topic-card h2 { color: var(--gold); font-size: 1.25rem; margin-bottom: .35rem; }
+.topic-card .pali { color: var(--orange); font-style: italic; font-size: .95rem; }
+.topic-card p { color: var(--text-dim); font-size: .95rem; margin-top: .5rem; }
+
+.topic-card.placeholder {
+  opacity: .55;
+  border-left-color: var(--text-faint);
+}
+.topic-card.placeholder .badge-soon {
+  display: inline-block;
+  font-size: .72rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--orange);
+  border: 1px solid var(--orange-deep);
+  border-radius: 4px;
+  padding: .05rem .45rem;
+  margin-top: .6rem;
+}
+
+/* ---------- vinaya page ---------- */
+.page-title { color: var(--gold); font-size: 1.9rem; margin-bottom: .3rem; }
+.page-lede { color: var(--text-dim); margin-bottom: 1.6rem; }
+
+.controls {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bg);
+  padding: .9rem 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1.4rem;
+}
+
+#search {
+  width: 100%;
+  padding: .65rem .9rem;
+  font-size: 1rem;
+  font-family: inherit;
+  background: var(--bg-soft);
+  color: var(--text);
+  border: 1px solid var(--dark-yellow);
+  border-radius: 8px;
+  outline: none;
+}
+#search:focus { border-color: var(--gold); box-shadow: 0 0 0 2px rgba(255, 215, 0, .15); }
+#search::placeholder { color: var(--text-faint); }
+
+.cat-filters { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .7rem; }
+
+.cat-filters button {
+  font-family: inherit;
+  font-size: .82rem;
+  padding: .3rem .75rem;
+  background: transparent;
+  color: var(--text-dim);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all .15s;
+}
+.cat-filters button:hover { border-color: var(--gold-soft); color: var(--gold-soft); }
+.cat-filters button.on {
+  background: var(--orange-deep);
+  border-color: var(--orange-deep);
+  color: #1a1208;
+  font-weight: bold;
+}
+
+.result-count { color: var(--text-faint); font-size: .85rem; margin-top: .5rem; }
+
+/* category section headers */
+.cat-section h2 {
+  color: var(--orange);
+  font-size: 1.45rem;
+  margin: 2.2rem 0 .2rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: .3rem;
+}
+.cat-section .cat-meta { color: var(--text-dim); font-size: .95rem; margin-bottom: 1rem; }
+.cat-section .cat-meta strong { color: var(--gold-soft); }
+
+/* rule cards */
+details.rule {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: .55rem;
+  overflow: hidden;
+}
+
+details.rule[open] { border-color: var(--dark-yellow); }
+
+details.rule summary {
+  cursor: pointer;
+  list-style: none;
+  padding: .75rem 1rem;
+  display: flex;
+  align-items: baseline;
+  gap: .7rem;
+}
+details.rule summary::-webkit-details-marker { display: none; }
+details.rule summary:hover { background: var(--card-hover); }
+
+.rule-num {
+  flex: 0 0 auto;
+  font-size: .78rem;
+  font-weight: bold;
+  color: #1a1208;
+  background: var(--dark-yellow);
+  border-radius: 5px;
+  padding: .1rem .5rem;
+  letter-spacing: .03em;
+}
+details.rule[open] .rule-num { background: var(--gold); }
+
+.rule-title { color: var(--text); font-weight: bold; }
+.rule-title .pali { color: var(--orange); font-weight: normal; font-style: italic; font-size: .92em; }
+
+.rule-body { padding: 0 1.1rem 1rem; border-top: 1px solid var(--border); }
+.rule-body h4 {
+  color: var(--gold-soft);
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  margin: .9rem 0 .25rem;
+}
+.rule-body p { color: var(--text); font-size: .97rem; }
+.rule-body .origin p { color: var(--text-dim); }
+.rule-body .sclink { font-size: .82rem; margin-top: .8rem; display: inline-block; }
+
+.note-box {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--orange);
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  color: var(--text-dim);
+  font-size: .93rem;
+  margin-bottom: 1.6rem;
+}
+
+footer.site-footer {
+  border-top: 1px solid var(--border);
+  color: var(--text-faint);
+  text-align: center;
+  font-size: .85rem;
+  padding: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .site-header h1 { font-size: 1.7rem; }
+  details.rule summary { flex-wrap: wrap; }
+}
