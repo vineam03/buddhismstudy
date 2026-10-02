@@ -1,0 +1,1356 @@
+{
+  "rationale": "One spine: the doctor's four questions (what hurts, why, can it stop, what is the treatment). World 0 gives all four short answers at once, then the worlds take them in turn: W1, W2, W3, W4 to W6. They are named 'Four Noble Truths' only in the capstone. Eight worlds, 46 lessons, 20 taught words. The learner-facing track is called the Trail, so 'path' always means the Buddha's training; the learner sees 'points', never XP. This revision answers the critics: the waking-up is told; karma now comes before 'a fire can go out'; giving has its own lesson; hard lessons can be set aside without blocking anything; library links get plain labels and a 'harder reading' note. Mechanics are exact and honest: every lesson pays the same 30 points to everyone, rank blurbs claim only an amount of study, skill claims sit on world badges, every world brings one rank, the run display stops at seven, and points stop at the last rank, which says 'Enough'. The game cannot train the craving it teaches about: rewards are fixed, announced, paid once, never escalate, and end. Lesson w2-l2 uses the learner's own points as its example; w7-l4 leaves them on the bank.",
+  "worlds": [
+    {
+      "id": "w0",
+      "order": 0,
+      "title": "Start Here",
+      "tagline": "Who the Buddha was, what this is, and how it works.",
+      "stage": 0,
+      "goal": "The learner can say who the Buddha was, what the middle way is, how to test advice, the four doctor's questions that map every world ahead, and how the step-by-step Trail works.",
+      "emblemIdea": "An open gateway (two upright posts and a curved top beam) with three round stepping stones leading through it toward a half-circle rising sun.",
+      "bossTitle": "The Starting Gate Check",
+      "lessons": [
+        {
+          "id": "w0-l1",
+          "title": "A Man Who Went Looking",
+          "objective": "After this lesson the learner can say who the Buddha was: a human being in ancient India who went looking for an end to human hurt, found one, and taught it.",
+          "hook": "An old story. About 2,500 years ago in India, a young man had a comfortable home, parents who loved him and a young son. Then he saw it clearly: everyone grows old, gets sick and dies. His parents wept, but he left home to look for an answer. Years later he found one, and he spent the rest of his long life teaching it. The next lesson tells how.",
+          "keyTerm": "Buddha (say: BOOD-dah) = 'the one who woke up': a human teacher who saw clearly how hurt begins and how it ends. It is a title, not the name of a god.",
+          "sources": [
+            "mn26"
+          ],
+          "practice": "Take three slow breaths. Then finish this sentence in your head: 'One thing about life I would like to understand is...' Any answer is fine.",
+          "icon": "seated-figure"
+        },
+        {
+          "id": "w0-l2",
+          "title": "Not Too Soft, Not Too Hard",
+          "objective": "After this lesson the learner can explain the middle way: spoiling yourself does not work, and punishing yourself does not work either.",
+          "hook": "An old story. The young man from the last lesson tried comfort first. It did not answer his question. Then he starved himself for six years until his ribs showed. That did not work either. So he ate a meal and got his strength back. He sat down, steadied his mind, and saw clearly how hurt begins and how it ends. People called that waking up, and called him the Buddha. Then he walked to find five old friends and gave his first talk.",
+          "keyTerm": "middle way = the balanced way: not too soft on yourself, not too hard",
+          "sources": [
+            "mn36",
+            "mn26",
+            "sn56.11"
+          ],
+          "practice": "Pick one thing: sleep, food, phone or work. Ask: am I too soft on myself here, too hard, or about right? Only notice. No fixing today.",
+          "icon": "balance-scale"
+        },
+        {
+          "id": "w0-l3",
+          "title": "Try It and See",
+          "objective": "After this lesson the learner can use the Buddha's two-part test for any advice: when people live by it, does it lead to harm or to good, and what do wise, kind people say about it?",
+          "hook": "An old story. The people of one town were confused. Every visiting teacher said, 'I am right and the others are wrong.' They asked the Buddha who to believe. He said: do not believe a thing only because it is old, or written down, or because a teacher said it. Look at what it does when people live by it, and ask people you trust who are wise. If it leads to harm, drop it. If it leads to good, keep it.",
+          "keyTerm": "",
+          "sources": [
+            "an3.65"
+          ],
+          "practice": "Think of one piece of advice you once followed. Did it lead to good or to harm? Who that you trust would agree? That is the same two-part test to use on everything here, this website included.",
+          "icon": "magnifier"
+        },
+        {
+          "id": "w0-l4",
+          "title": "The Doctor's Four Questions",
+          "objective": "After this lesson the learner can list the four questions a good doctor asks (what hurts, why, can it stop, what is the treatment) and knows they are the map of this whole Trail, with good news at question three.",
+          "hook": "Our example. Your knee hurts, so you see a doctor. A good doctor asks four things. What hurts? Why? Can it get better? What is the treatment? The Buddha's first talk used the same four steps for the hurt in a human life. Here is the short version of his answers: something hurts, there is a cause, yes it can stop, and there is a training. The worlds ahead show you each one.",
+          "keyTerm": "",
+          "sources": [
+            "sn56.11",
+            "mn63"
+          ],
+          "practice": "Think of one small ache you have today, like a sore back or a small worry. Ask the four questions about it: What hurts? Why? Can it get better? What would help?",
+          "icon": "medicine-bag"
+        },
+        {
+          "id": "w0-l5",
+          "title": "One Step at a Time",
+          "objective": "After this lesson the learner can explain how the Trail works: small steps in a set order, each one resting on the one before, with nothing to lose for a missed answer.",
+          "hook": "An old story. An accountant asked the Buddha, 'My job is learned step by step. Is your training like that?' 'Yes,' he said. One skill, and the next only when the first is steady. 'I only point the way. The walking is yours.' This Trail works the same way.",
+          "keyTerm": "sutta (say: SOOT-tah) = one of the old talks, by the Buddha or his first students. Each lesson's story comes from one. Most of the 67 cards in this site's library are suttas.",
+          "sources": [
+            "mn107"
+          ],
+          "practice": "Look at the map. Find the next stepping stone, only the next one. Say: 'One small step is enough for today.' That is how this works.",
+          "icon": "stepping-stones"
+        }
+      ]
+    },
+    {
+      "id": "w1",
+      "order": 1,
+      "title": "What Hurts?",
+      "tagline": "The first question. Look honestly, without gloom. Good news comes at question three.",
+      "stage": 1,
+      "goal": "The learner can name the not-quite-right side of their own day, tell pain apart from the hurt added on top, and face change, loss, and ups and downs as things that visit everyone.",
+      "emblemIdea": "A small cloud with three slanting rain lines above a flat horizon, and one thin gold sunbeam breaking through on one side.",
+      "bossTitle": "The Weather Check",
+      "lessons": [
+        {
+          "id": "w1-l1",
+          "title": "Not Quite Right",
+          "objective": "After this lesson the learner can spot the 'not-quite-right' side of everyday life, from big pain down to small restlessness, and knows this is not the same as saying life is all misery.",
+          "hook": "Our examples. A toothache. A long queue when you are in a hurry. A quiet Sunday evening when nothing is wrong, yet you feel restless. Big or small, something is not quite right. The Buddha's first talk named this as the first thing to understand. He did not say life is all misery. Other talks of his list kinds of happiness that are good to have.",
+          "keyTerm": "dukkha (say: DOOK-kah) = the 'not-quite-right' side of life, from big pain down to small restlessness. It does not mean 'life is misery'.",
+          "sources": [
+            "sn56.11",
+            "mn141",
+            "an4.62"
+          ],
+          "practice": "Look back over the last hour. Find one small 'not-quite-right' moment: a queue, a sore neck, a wish to be somewhere else. Name it quietly: 'There it is.' Then find one thing that was fine.",
+          "icon": "wobbly-table"
+        },
+        {
+          "id": "w1-l2",
+          "title": "Two Arrows",
+          "objective": "After this lesson the learner can tell the first arrow (pain that happens) from the second arrow (the extra hurt we add ourselves).",
+          "hook": "Our example. You stub your toe. Ouch. That is arrow one. Then you think, 'I'm so clumsy. My whole day is ruined.' That is arrow two, and you shot it yourself. The Buddha said everyone is hit by the first arrow, trained or not. The second arrow is the one we can learn to put down.",
+          "keyTerm": "",
+          "sources": [
+            "sn36.6"
+          ],
+          "practice": "Remember one small annoying thing from today. Finish two sentences: 'The first arrow was...' and 'The second arrow I added was...' No blame. You are only spotting it.",
+          "icon": "two-arrows"
+        },
+        {
+          "id": "w1-l3",
+          "title": "Everything Changes",
+          "objective": "After this lesson the learner can explain that everything we experience keeps changing, and that expecting it to hold still is what adds hurt.",
+          "hook": "Our example. Look at a photo of yourself from ten years ago. The hair, the clothes, the phone, the people next to you: almost all of it has changed. An old story: even the Buddha, at eighty, called his own body 'an old cart held together with straps'.",
+          "keyTerm": "impermanence (say: im-PUR-muh-nuns) = the library's word for 'everything changes'",
+          "sources": [
+            "dn16"
+          ],
+          "practice": "Listen for one sound nearby and follow it until it ends. Then notice one breath begin and end. Two things came and went. That is change, seen live.",
+          "icon": "falling-leaf"
+        },
+        {
+          "id": "w1-l4",
+          "title": "Five Honest Facts",
+          "objective": "After this lesson the learner can explain why calmly looking at five plain facts (aging, sickness, death, parting, and today's choices being theirs) makes them less of a shock and makes today matter more.",
+          "hook": "Our example. A weather forecast does not make it rain. It helps you pack an umbrella. The Buddha gave five plain facts to remember each morning, so that none of them arrives as an ambush. The fifth one is the hopeful one.",
+          "keyTerm": "",
+          "sources": [
+            "an5.57"
+          ],
+          "practice": "Read these slowly, once: 'I will get older. I will get sick sometimes. I will die one day. I will be parted from things I love. What I choose to do today stays mine.' Take one breath. Then choose one small kind thing to do today. (More on the fifth fact in World 3.)",
+          "icon": "sunrise"
+        },
+        {
+          "id": "w1-l5",
+          "title": "The Mustard Seed",
+          "objective": "After this lesson the learner can explain that loss visits every home, and that knowing this can turn 'why me?' into 'so this is what everyone carries'.",
+          "hook": "An old story. A young mother, Kisa Gotami, lost her baby son. Wild with grief, she begged the Buddha for medicine. He said gently, 'Bring me a mustard seed from a house where no one has died.' She knocked on every door. Every house had mustard seed. But in every house, someone had died. She saw that she was not alone.",
+          "keyTerm": "",
+          "sources": [
+            "thig10.1",
+            "mn87",
+            "sn15.3"
+          ],
+          "practice": "Think of one person you know who has also lost someone. Silently wish them well: 'You too. May you be at ease.' Notice that you are not carrying this alone.",
+          "icon": "open-door"
+        },
+        {
+          "id": "w1-l6",
+          "title": "Ups and Downs Are Weather",
+          "objective": "After this lesson the learner can explain that ups and downs blow on everyone like weather and are not a verdict on them.",
+          "hook": "Our example. On Monday the boss praises you. On Thursday the same boss blames you. You are the same person on both days. Only the wind changed. The Buddha spoke of winds like these, in pairs: gain and loss, praise and blame. They blow on everyone, kings included. He told his students not to be puffed up by praise or flattened by blame.",
+          "keyTerm": "",
+          "sources": [
+            "an8.6",
+            "dn1"
+          ],
+          "practice": "Which wind blew on you today: a win, a loss, some praise, some blame? Name it: 'This is a wind. It will turn.'",
+          "icon": "wind"
+        }
+      ]
+    },
+    {
+      "id": "w2",
+      "order": 2,
+      "title": "Why Does It Hurt?",
+      "tagline": "The second question. See how the mind builds its own trouble, and where it can stop building.",
+      "stage": 2,
+      "goal": "The learner can name the 'gotta have it' pull as the cause, explain why getting does not end wanting, notice the instant tag, find the gap where a domino can be lifted out, and name the three fires.",
+      "emblemIdea": "Five upright dominoes in a row, the third one lifted slightly out of line with a small gold dot in the gap it leaves.",
+      "bossTitle": "The Domino Check",
+      "lessons": [
+        {
+          "id": "w2-l1",
+          "title": "The Gotta-Have-It Pull",
+          "objective": "After this lesson the learner can name craving (the 'I must have it' or 'I must get rid of it' pull) as what shoots the second arrow.",
+          "hook": "Remember the two arrows. Our example: you stub your toe, and the second arrow is the thought, 'This must not be happening!' That 'must' is the pull. Here it is again, smaller. Your phone buzzes while a friend is talking, and you itch to check it. The Buddha's first talk named this pull as the cause of the added hurt. The old word for it means 'thirst'.",
+          "keyTerm": "craving = the 'gotta have it' or 'get it away from me' pull. The old word for it means 'thirst'. Wanting to learn or to be kind is not craving.",
+          "sources": [
+            "sn56.11",
+            "mn141",
+            "sn36.6"
+          ],
+          "practice": "Catch one pull right now: to check your phone, to snack, to skip ahead. Do not obey it and do not fight it. Count ten breaths and watch what the pull does.",
+          "icon": "water-drop"
+        },
+        {
+          "id": "w2-l2",
+          "title": "The Moving Finish Line",
+          "objective": "After this lesson the learner can explain why getting what we crave does not end craving: the mind gets used to it and asks for more.",
+          "hook": "Our example. 'Once I get the raise, I'll be happy.' You get it. It feels great for a month. Then it is only your pay, and the finish line has moved. An old story: a monk (someone who leaves home to train full time) named Talaputa caught his own mind doing this. 'For years you begged me for this life,' he told it. 'Now I have it, and you want to go back.'",
+          "keyTerm": "",
+          "sources": [
+            "thag19.1",
+            "mn26"
+          ],
+          "practice": "Remember something you badly wanted a year ago and now have. How much joy does it give today, out of ten? Then notice the little 'yay' when this lesson gives you points, and watch it fade. (With Quiet Mode on: notice the little 'yay' of ticking this lesson off.)",
+          "icon": "moving-flag"
+        },
+        {
+          "id": "w2-l3",
+          "title": "Nice, Nasty or Neutral",
+          "objective": "After this lesson the learner can notice that every experience arrives with an instant tag (nice, nasty or neutral) before any wanting starts.",
+          "hook": "Our example. Your phone buzzes. Before you even read the message, something in you goes 'ooh' or 'ugh' or 'meh'. That instant tag comes first, every time, before any wanting starts. The Buddha's training asks you to catch it as it happens.",
+          "keyTerm": "feeling-tone = the instant 'nice', 'nasty' or 'neutral' tag on every experience. It is not an emotion like sad or angry, and it is not the same thing as dukkha.",
+          "sources": [
+            "dn22",
+            "mn10"
+          ],
+          "practice": "For thirty seconds, tag whatever you notice (a sound, an itch, a thought) as 'nice', 'nasty' or 'neutral'. Only tag. Nothing else.",
+          "icon": "three-marks"
+        },
+        {
+          "id": "w2-l4",
+          "title": "Five Dominoes",
+          "objective": "After this lesson the learner can follow the five dominoes (something happens, a tag appears, the pull starts, we hold on, it hurts) and point to the gap after the tag, where one domino can be lifted out.",
+          "hook": "Our example, as five dominoes. One: an email arrives. Two: your stomach drops. Nasty. Three: 'I must hit back right now.' Four: you hold on: 'I am right.' Five: by dinner there is a fight. An old teaching by a nun (a woman who leaves home to train full time) named Dhammadinna says each tag has its own lean: nice leans in, nasty pushes away, neutral drifts off. You cannot stop the email or the tag. But after the tag, before the 'I must', there is a small gap. There you can lift one domino out.",
+          "keyTerm": "",
+          "sources": [
+            "sn12.2",
+            "dn15",
+            "mn44"
+          ],
+          "practice": "Remember one small annoying moment from today. Answer two things only. What was the tag: nice, nasty or neutral? What did the pull say? ('I must...') The gap between those two is where a domino can come out.",
+          "icon": "dominoes"
+        },
+        {
+          "id": "w2-l5",
+          "title": "The Story Machine",
+          "objective": "After this lesson the learner can catch the mind turning one small event into a big story, and come back to what actually happened.",
+          "hook": "Our example. You text a friend. Three hours, no reply. In three minutes your mind writes a whole movie: 'She's angry. I said something wrong. Nobody really likes me.' All you actually have is: no reply yet. An old story: the Buddha once told a man named Bahiya, 'In the seen, only the seen. In the heard, only the heard.'",
+          "keyTerm": "",
+          "sources": [
+            "mn18",
+            "ud1.10"
+          ],
+          "practice": "Pick one small worry. Split it in two: 'what actually happened' (one short sentence) and 'the story I added'. Notice which part is heavier.",
+          "icon": "spiral"
+        },
+        {
+          "id": "w2-l6",
+          "title": "Three Fires",
+          "objective": "After this lesson the learner can name the three fires that keep the hurt going (wanting, pushing away and fog) and spot which one is burning in a tense moment.",
+          "hook": "An old story. The Buddha once spoke to a thousand people who worshipped fire. He used their own picture. 'Everything is burning,' he said. Burning with what? Three fires. Remember the pull: it has two directions. Toward is the wanting fire. Away is the pushing-away fire, from mild annoyance up to hate. The third fire is the fog that hides both.",
+          "keyTerm": "three fires = wanting, pushing away (from annoyance up to hate) and fog (not seeing clearly). The library calls them greed, hatred and delusion.",
+          "sources": [
+            "sn35.28",
+            "mn9"
+          ],
+          "practice": "Think of the last time you were a little upset. Which fire was it: wanting, pushing away, or fog? Name it: 'Pushing away is burning.' That is all.",
+          "icon": "three-flames"
+        }
+      ]
+    },
+    {
+      "id": "w3",
+      "order": 3,
+      "title": "Can It Stop?",
+      "tagline": "The third question. Loosen the grip on 'me' and 'mine', and the fire has less to burn.",
+      "stage": 2,
+      "goal": "The learner can treat moods and labels as passing things, explain not-self without thinking 'I don't exist', own what they do on purpose, and say that the added hurt can end when the three fires are not fed.",
+      "emblemIdea": "A campfire of three crossed logs with no flame, one curl of smoke rising from it, and a small cool crescent moon above.",
+      "bossTitle": "The Light-Grip Check",
+      "lessons": [
+        {
+          "id": "w3-l1",
+          "title": "The Monkey Mind",
+          "objective": "After this lesson the learner can describe how the mind jumps from thing to thing all day, so a mood is a passing visitor and not the final truth.",
+          "hook": "Our example. At 11 at night everything is ruined. At 8 in the morning, after sleep and breakfast, it is fine. Same life, different mind. The Buddha said the mind is like a monkey swinging through the forest: it grabs one branch, lets go, grabs the next.",
+          "keyTerm": "",
+          "sources": [
+            "sn12.61"
+          ],
+          "practice": "Put a time on your mood right now: 'This is the 3 o'clock mind.' Then remember a different mood you had earlier today. Same you, different branch.",
+          "icon": "monkey"
+        },
+        {
+          "id": "w3-l2",
+          "title": "Who's the Boss?",
+          "objective": "After this lesson the learner can use the 'boss test': body, moods and thoughts do not follow orders, so they are things to look after, not a fixed 'me' to defend.",
+          "hook": "Our example. Tell your hair to stop going gray. Tell your worry to switch off. Tell yourself at 2 a.m., 'Sleep now!' None of them obey. An old story: in his second talk the Buddha put the same test to his first five students. He did not say 'you don't exist'. He said: stop gripping what was never under your command.",
+          "keyTerm": "not-self = 'this is not me, not mine to command'. A way to hold things loosely. It does not mean 'you don't exist'.",
+          "sources": [
+            "sn22.59"
+          ],
+          "practice": "Try new words for a feeling. Instead of 'I am worried', say 'Worry is here'. Try it now with whatever you feel: '___ is here.' Notice the small space that opens. If this feels strange, stop and feel your feet on the floor.",
+          "icon": "tilted-crown"
+        },
+        {
+          "id": "w3-l3",
+          "title": "The Chariot",
+          "objective": "After this lesson the learner can explain that 'me' is a handy name for many changing parts working together, the way 'chariot' is a name for wheels, axle and seat.",
+          "hook": "An old story, from a later book. A king asked a monk, 'Who are you?' The monk asked back, 'You came by chariot. Is the wheel the chariot? The axle? The seat?' 'No,' said the king. 'Chariot is the name for the parts working together.' 'So it is with me,' said the monk. The good news: parts can be repaired.",
+          "keyTerm": "",
+          "sources": [
+            "milinda"
+          ],
+          "practice": "Name five 'parts' of you today: a body feeling, a mood, a memory, a plan, a role such as helper, worker or friend. Notice that each one can change. You are not stuck.",
+          "icon": "chariot"
+        },
+        {
+          "id": "w3-l4",
+          "title": "Bigger Than Your Labels",
+          "objective": "After this lesson the learner can see that labels such as 'not the type', 'too old' or 'only a...' are name-tags, not the truth about what they can do.",
+          "hook": "An old story. A nun named Soma sat down to train her mind. A mocking voice told her a woman could never train her mind that far. She answered: 'What does that label matter, when the mind is steady and sees clearly?' The voice had nothing left to say.",
+          "keyTerm": "",
+          "sources": [
+            "sn5.2"
+          ],
+          "practice": "Think of one label you carry: 'bad at reading', 'shy', 'too old'. Say: 'That is a name-tag. It is not all of me.' Notice how that feels.",
+          "icon": "name-tag"
+        },
+        {
+          "id": "w3-l5",
+          "title": "Actions Are Seeds",
+          "objective": "After this lesson the learner can explain that what we do on purpose shapes who we become, the way seeds grow into plants. It is not fate and not a punishment handed out.",
+          "hook": "Our example. Plant chilies, get chilies. Plant mangoes, get mangoes. You cannot order a mood to leave. But what you do on purpose is yours. The Buddha said: 'Beings are the owners of their actions.' Each angry act makes anger easier next time. Each kind act makes kindness easier. The old texts say these results can ripen over many lifetimes. You can leave that question open. The part you can see for yourself today is how habits grow.",
+          "keyTerm": "karma (say: KAR-mah, also spelled kamma) = something you do on purpose, and what grows from it. It is not fate.",
+          "sources": [
+            "mn135",
+            "an5.57",
+            "dhp"
+          ],
+          "practice": "Name one thing you did on purpose today. Ask: if I planted this seed every day for a year, what would grow?",
+          "icon": "seed"
+        },
+        {
+          "id": "w3-l6",
+          "title": "A Fire Can Go Out",
+          "objective": "After this lesson the learner can answer the third question: the added hurt has a fuel, so when the three fires are no longer fed they cool and can end.",
+          "hook": "Remember the three fires: wanting, pushing away and fog. Our example: a campfire with no new wood does not need to be fought. It burns down and the air turns cool. In the fire talk, the Buddha said a person who sees the burning clearly grows cool toward it and becomes free. Arrow one still lands, even for the Buddha. What can end is the burning added on top. This is not a heaven somewhere else, and it is not becoming nothing.",
+          "keyTerm": "nirvana (say: nir-VAH-nah, also spelled nibbana) = the cool peace when wanting, pushing away and fog stop burning. The old word means 'going out', like a flame.",
+          "sources": [
+            "sn35.28",
+            "sn56.11",
+            "sn22.59"
+          ],
+          "practice": "Remember one craving you did not feed, and it passed: a snack, a purchase, an angry reply you never sent. How did the next few seconds feel? That was a small taste of a fire going out.",
+          "icon": "smoke-wisp"
+        }
+      ]
+    },
+    {
+      "id": "w4",
+      "order": 4,
+      "title": "Living Well",
+      "tagline": "The fourth question: what is the treatment? Part 1: how you act, give, speak and earn.",
+      "stage": 3,
+      "goal": "The learner can describe the three-part training and use five everyday tools from its first part: giving, five promises, the mirror check, four gates for words, and honest work.",
+      "emblemIdea": "An eight-spoked wheel resting on a flat ground line, with a short straight track behind it showing it rolls true.",
+      "bossTitle": "The Good Ground Check",
+      "lessons": [
+        {
+          "id": "w4-l1",
+          "title": "The Training Plan",
+          "objective": "After this lesson the learner can say that the treatment is a training in three parts: live kindly, steady the mind, see clearly.",
+          "hook": "Our example. Knowing why your knee hurts does not mend it. You need a plan. An old teaching: the nun Dhammadinna sorted the Buddha's training into three jobs. Live kindly. Steady the mind. See clearly. You have already started the third job: Worlds 1 to 3 were practice in seeing clearly. This world is the first job, and the next world is the second.",
+          "keyTerm": "Eightfold Path = the library's name for this training plan. It counts the three jobs as eight steps. You do not need the eight yet.",
+          "sources": [
+            "mn44",
+            "mn141"
+          ],
+          "practice": "Which of the three is strongest for you right now: living kindly, a steady mind, or seeing clearly? Which is wobbliest? Only notice. You will train all three.",
+          "icon": "dharma-wheel"
+        },
+        {
+          "id": "w4-l2",
+          "title": "The Open Hand",
+          "objective": "After this lesson the learner can explain that giving, even something small, loosens the 'gotta have it' pull, and can choose one small thing to give today.",
+          "hook": "Our example. Make a tight fist and hold it. It is tiring, and a closed fist cannot receive anything either. Now open the hand. The 'gotta have it' pull is the fist. Giving is the hand opening. An old poem counts giving among life's great blessings. And when some of his students were quarrelling, the Buddha told them to share what they had and not hoard it.",
+          "keyTerm": "",
+          "sources": [
+            "khp5",
+            "mn48",
+            "an8.54"
+          ],
+          "practice": "Choose one small thing to give today: a few minutes of full attention, a kind message, a seat, a snack. It does not need to cost money. Notice how it feels as the hand opens.",
+          "icon": "open-hand"
+        },
+        {
+          "id": "w4-l3",
+          "title": "Five Promises",
+          "objective": "After this lesson the learner can name the five training promises (not to kill, steal, cheat in love, lie, or cloud the mind with drink or drugs) and knows they are promises to practice, not commandments.",
+          "hook": "Our example. A guardrail on a mountain road is not a punishment. It is what lets you drive relaxed. People who follow the Buddha while living at home have long taken five promises like that. An old talk says the happiness of having nothing to hide is worth far more than the happiness of owning things.",
+          "keyTerm": "",
+          "sources": [
+            "mn9",
+            "khp5",
+            "an4.62"
+          ],
+          "practice": "Pick the one promise that would be most doable for you to keep all day today. Say: 'Only for today, I will train in this one.' If you slip, begin again.",
+          "icon": "shield"
+        },
+        {
+          "id": "w4-l4",
+          "title": "The Mirror Check",
+          "objective": "After this lesson the learner can check any action at three moments (before, during and after) by asking 'Does this harm me or anyone else?'",
+          "hook": "An old story. The Buddha had a son, Rahula. Years later the boy came to train with him. When Rahula was seven, his father asked, 'What is a mirror for?' 'For looking, sir.' 'In the same way, look at what you do: before you do it, while you do it, and after.' And if you find you did harm: say so, learn, and do better.",
+          "keyTerm": "",
+          "sources": [
+            "mn61"
+          ],
+          "practice": "Think of the next thing you will do after this lesson. Hold up the mirror for one breath: 'Will this harm me? Anyone else?' One look, then go.",
+          "icon": "mirror"
+        },
+        {
+          "id": "w4-l5",
+          "title": "Four Gates for Words",
+          "objective": "After this lesson the learner can check their words at four gates before speaking: Is it true? Is it helpful? Is it said with care? Is this the right time?",
+          "hook": "An old story. A prince tried to trap the Buddha: 'Would you ever say something people do not want to hear?' The Buddha was holding the prince's baby. 'If this child put a stick in its mouth, would you pull it out, even if it hurt?' 'Yes.' 'So I say hard things too, but only when they are true, helpful, and the time is right.' Another short talk adds a fourth test: say it gently.",
+          "keyTerm": "",
+          "sources": [
+            "mn58",
+            "an5.198"
+          ],
+          "practice": "Think of a message you need to send today. Take it through the four gates: True? Helpful? Said with care? Right time? If one gate is shut, change the words or wait. A hard thing can pass all four gates.",
+          "icon": "speech-bubble"
+        },
+        {
+          "id": "w4-l6",
+          "title": "Honest Work",
+          "objective": "After this lesson the learner can ask one question of how they earn and spend: does this harm anyone?",
+          "hook": "An old story. A family man said to the Buddha, 'We are ordinary people. We live at home and handle money. Is there a teaching for us?' There was. One part of it: earn your living in a way that harms no one. The Buddha named a few trades to stay out of, such as selling weapons or poison.",
+          "keyTerm": "",
+          "sources": [
+            "an8.54",
+            "an5.177",
+            "an4.62"
+          ],
+          "practice": "Name one thing about how you earn, spend or help out that harms no one. That is honest ground. If you have no paid work right now, pick something you do for others.",
+          "icon": "hammer"
+        }
+      ]
+    },
+    {
+      "id": "w5",
+      "order": 5,
+      "title": "The Steady Mind",
+      "tagline": "The treatment, part 2. Train your attention gently, like tuning a string.",
+      "stage": 3,
+      "goal": "The learner can run a short daily mind-training: balanced effort, feeding helpful thoughts, swapping unhelpful ones, remembering to notice, resting attention on the breath, and naming what gets in the way.",
+      "emblemIdea": "A lute (round body, long straight neck) with three parallel strings; the middle string drawn as a gentle wave to show it sounding.",
+      "bossTitle": "The Tuning Check",
+      "lessons": [
+        {
+          "id": "w5-l1",
+          "title": "Not Too Tight, Not Too Loose",
+          "objective": "After this lesson the learner can find the right amount of effort, like a string tuned neither too tight nor too loose.",
+          "hook": "An old story. A monk named Sona used to play the lute (an old stringed instrument, like a guitar). He trained so hard, pacing up and down for hours, that his feet bled, and he wanted to quit. The Buddha asked, 'When your strings were too tight, did they play well? Too loose?' 'No.' 'Then tune your effort the same way.' This is the middle way (not too soft, not too hard) again, used every day.",
+          "keyTerm": "",
+          "sources": [
+            "an6.55"
+          ],
+          "practice": "Check your effort on this Trail right now. Too tight (rushing, tense)? Too loose (drifting)? Adjust one notch. If you are tired, stopping here for today is the right tuning.",
+          "icon": "lute"
+        },
+        {
+          "id": "w5-l2",
+          "title": "What You Feed Grows",
+          "objective": "After this lesson the learner can explain that whatever the mind thinks about often becomes its habit, and can sort a thought as 'helps' or 'harms'.",
+          "hook": "Our example. Two plants sit on a windowsill. You water one every day and forget the other. In a month you know which one is bigger. An old story: before he woke up, the Buddha noticed his thoughts worked this way. Whatever he thought about often grew stronger. So he sorted his thoughts into two piles: thoughts that harm and thoughts that help. Remember the boss test: you cannot order a thought to leave. But you can choose which one to water.",
+          "keyTerm": "",
+          "sources": [
+            "mn19"
+          ],
+          "practice": "Catch the next three thoughts that come. Put each in a pile: 'helps' or 'harms'. No need to change them. Sorting is the exercise.",
+          "icon": "seed"
+        },
+        {
+          "id": "w5-l3",
+          "title": "Swap the Thought",
+          "objective": "After this lesson the learner can swap a sticky unhelpful thought for a helpful one, instead of wrestling with it.",
+          "hook": "An old story. A carpenter has a rough peg stuck in a hole. He does not pull at it with his fingers. He takes a finer peg and taps it in, and the old one pops out. The Buddha said: do the same with a thought that will not leave. You are not ordering it out. You are giving the mind something better to hold.",
+          "keyTerm": "",
+          "sources": [
+            "mn20"
+          ],
+          "practice": "Pick one nagging thought. Choose its opposite: for a grumble, one thing you are thankful for; for a worry, one thing that is fine right now. Hold the new thought for three breaths.",
+          "icon": "peg"
+        },
+        {
+          "id": "w5-l4",
+          "title": "Remember to Notice",
+          "objective": "After this lesson the learner can explain mindfulness as remembering to notice what is happening right now: in the body, in the quick tag, and in the mood.",
+          "hook": "Our example. You ride home and cannot remember the last ten minutes. You eat a whole sandwich and never taste it. The body was there. The noticing was not. The Buddha's training brings it back with one move: remember to notice.",
+          "keyTerm": "mindfulness = remembering to notice what is happening right now",
+          "sources": [
+            "mn10",
+            "dn22",
+            "mn131"
+          ],
+          "practice": "Do a three-point check-in, ten seconds each. Body: what is one thing you feel? Tag (the quick nice, nasty or neutral): which is it? Mood: what is the weather in your mind?",
+          "icon": "bell"
+        },
+        {
+          "id": "w5-l5",
+          "title": "One Breath at a Time",
+          "objective": "After this lesson the learner can do one minute of breath practice: knowing 'breathing in' and 'breathing out', and gently coming back when the mind wanders.",
+          "hook": "Our example. A puppy on a leash runs off every few seconds. You do not shout at it. You gently bring it back, again and again. Training attention on the breath works like that. The Buddha's own instructions start very plainly: breathing in, know you are breathing in.",
+          "keyTerm": "meditation = exercise for your attention, done on purpose, a little at a time",
+          "sources": [
+            "mn118"
+          ],
+          "practice": "Sit comfortably. For ten breaths, quietly note 'in' and 'out'. When you drift (you will), say 'back' and carry on. Drifting is not failing. If watching the breath feels bad, feel your feet on the floor instead. Both count the same.",
+          "icon": "breath-wave"
+        },
+        {
+          "id": "w5-l6",
+          "title": "Five Things That Get in the Way",
+          "objective": "After this lesson the learner can treat the five things that get in the way of a steady mind (wanting, annoyance, sleepiness, fidgeting, doubt) as normal visitors: name the one that is here and carry on.",
+          "hook": "Our example. You sit down for ten breaths. Within a minute you want a snack. Or a noise annoys you. Or you feel sleepy, or fidgety, or you think, 'Is this even working?' Nothing has gone wrong. The Buddha's training expects these five and asks you to know them well. Like the winds in World 1, they blow through everyone. Name the one that is here, and carry on.",
+          "keyTerm": "",
+          "sources": [
+            "dn22",
+            "mn10",
+            "mn107"
+          ],
+          "practice": "Take five breaths. When something gets in the way, name it: wanting, annoyed, sleepy, fidgety or doubting. Say 'a visitor', and go back to the breath or to your feet on the floor.",
+          "icon": "wind"
+        }
+      ]
+    },
+    {
+      "id": "w6",
+      "order": 6,
+      "title": "The Open Heart",
+      "tagline": "The treatment, part 3. Turn the training outward: kindness, care, gladness, steadiness.",
+      "stage": 4,
+      "goal": "The learner can meet other people, including difficult ones, with goodwill, care that does not drown, gladness at their wins, a steady heart, and a way to put a grudge down.",
+      "emblemIdea": "A heart outline with four short rays pointing up, down, left and right, like a compass.",
+      "bossTitle": "The Big-Heart Check",
+      "lessons": [
+        {
+          "id": "w6-l1",
+          "title": "Everyone Holds Themselves Dear",
+          "objective": "After this lesson the learner can explain the root of kindness: everyone cares about their own life as much as I care about mine, so I should not harm them.",
+          "hook": "An old story. A king asked his queen, hoping for a romantic answer, 'Is there anyone you love more than yourself?' Queen Mallika said honestly, 'No. And you?' He had to admit: no. The Buddha said everyone feels this way, so anyone who loves themselves should harm no one.",
+          "keyTerm": "",
+          "sources": [
+            "sn3.8"
+          ],
+          "practice": "Look at the next person you see, or picture one. Say quietly: 'You want to be happy, the same as me. You do not want to hurt, the same as me.'",
+          "icon": "heart"
+        },
+        {
+          "id": "w6-l2",
+          "title": "Wishing Well",
+          "objective": "After this lesson the learner can practice goodwill (wishing someone well on purpose) as a skill you train, not a mood you wait for.",
+          "hook": "Our example. You do not have to like a bus driver to wish him a safe shift. Goodwill is that plain wish: 'May you be well.' The Buddha's best-known poem says to guard this wish the way a mother guards her only child.",
+          "keyTerm": "goodwill (old word: metta, say: MET-tah) = wishing someone well, the way a friend would, with nothing wanted back",
+          "sources": [
+            "snp1.8",
+            "an11.15",
+            "iti27"
+          ],
+          "practice": "Say slowly, three times: 'May I be well. May you be well. May everyone be well.' Picture yourself, then someone you like, then everyone on your street.",
+          "icon": "heart-rays"
+        },
+        {
+          "id": "w6-l3",
+          "title": "Caring Without Drowning",
+          "objective": "After this lesson the learner can care about someone's pain while keeping their own balance, because looking after yourself is part of looking after others.",
+          "hook": "Our example. You sit with a sick friend and wish the pain would ease. That wish is compassion. An old story shows how to keep it up. Two acrobats balance on a bamboo pole. 'You watch me and I'll watch you,' says the teacher. 'No,' says the apprentice. 'You watch your balance and I'll watch mine. That is how we both stay safe.' The Buddha said the apprentice was right.",
+          "keyTerm": "compassion = the wish to ease someone's pain, without drowning in it yourself",
+          "sources": [
+            "sn47.19",
+            "sn46.54"
+          ],
+          "practice": "Think of someone who is struggling. Wish them: 'May your pain ease.' Then check your own balance: one slow breath, feet on the floor.",
+          "icon": "two-friends"
+        },
+        {
+          "id": "w6-l4",
+          "title": "Glad for Them",
+          "objective": "After this lesson the learner can turn envy around by being glad on purpose when someone else does well.",
+          "hook": "Our example. Your friend gets good news: a new job, a new home, a trip. You say 'Congratulations!' and feel a small sting inside. Everyone gets that sting. An old story: the Buddha taught his own teenage son a training for it. Be glad for them, on purpose, until it becomes real.",
+          "keyTerm": "",
+          "sources": [
+            "mn62",
+            "sn46.54"
+          ],
+          "practice": "Think of someone who had good news lately. Say in your mind: 'Good for you. May your good fortune last.' Notice whether the sting softens even a little.",
+          "icon": "heart-rays"
+        },
+        {
+          "id": "w6-l5",
+          "title": "A Steady Heart",
+          "objective": "After this lesson the learner can explain a steady heart: staying steady while still caring, because each person owns their own actions. It is not coldness.",
+          "hook": "An old story. People drop flowers on the earth, and they drop trash on it too. The earth does not cheer at one or sulk at the other. It stays the earth. The Buddha told his son: train your mind to be like that. The earth holds everything and controls nothing. In the same way you can care about someone and still see that their choices are theirs. Steady does not mean cold.",
+          "keyTerm": "steady heart (the library calls it 'equanimity') = a calm, balanced heart that still cares",
+          "sources": [
+            "mn62",
+            "an5.161",
+            "an5.57"
+          ],
+          "practice": "Think of someone you worry about. Say: 'I care about you. I will help where I can. Your choices are yours.' Feel your weight on the chair, like the earth.",
+          "icon": "mountain"
+        },
+        {
+          "id": "w6-l6",
+          "title": "Anger Burns the Holder",
+          "objective": "After this lesson the learner can explain how anger does an enemy's work for them by hurting the one who holds it.",
+          "hook": "An old teaching. Think what an enemy would wish on you: that you sleep badly, look ugly, lose friends and make bad choices. The Buddha pointed out that anger does all of this to you for free. Your enemy does not have to lift a finger. Anger is the pushing-away fire, and you are the one standing in it.",
+          "keyTerm": "",
+          "sources": [
+            "an7.64",
+            "an5.161",
+            "mn21"
+          ],
+          "practice": "Pick one small grudge. Five ways out appear as five numbered buttons, each named after a lesson you have done: 1 wish them well, 2 feel for their troubles, 3 stay steady, 4 give it no more attention, 5 remember their actions are theirs to carry. Tap the one you can honestly do today.",
+          "icon": "three-flames"
+        }
+      ]
+    },
+    {
+      "id": "w7",
+      "order": 7,
+      "title": "Carrying It Home",
+      "tagline": "Put it all together, hold it lightly, and keep walking.",
+      "stage": 0,
+      "goal": "The learner can explain the whole teaching in their own words using the four questions, choose good company, recover from a slip without shame, hold the teaching and this game lightly, and carry on into the library.",
+      "emblemIdea": "A raft of four horizontal logs on two wavy water lines, with a small oil lamp (a shallow bowl with a teardrop flame) standing on it.",
+      "bossTitle": "The Homecoming Check",
+      "lessons": [
+        {
+          "id": "w7-l1",
+          "title": "Four Questions, Four Answers",
+          "objective": "After this lesson the learner can answer the doctor's four questions in their own words: what hurts, why, can it stop, and what is the treatment.",
+          "hook": "Remember the doctor from World 0? Four questions: What hurts? Why? Can it stop? What is the treatment? You have now walked through all four answers. Together, these four answers have a famous name. Time to say them in your own words.",
+          "keyTerm": "Four Noble Truths = the Buddha's four answers: the hurt, its cause, its end, and the path of training",
+          "sources": [
+            "sn56.11",
+            "mn141"
+          ],
+          "practice": "Finish four sentences, out loud or in your head. Each one has a tap-to-see hint. 'What hurts is... It hurts because... The added hurt can stop when... The training is...' Any honest answer counts.",
+          "icon": "medicine-bag"
+        },
+        {
+          "id": "w7-l2",
+          "title": "Good Friends",
+          "objective": "After this lesson the learner can explain why the people (and the feeds) we spend time with shape the whole path, and can name one person who brings out their best.",
+          "hook": "An old story. The Buddha's helper Ananda said one day, 'Good friends are half of this path!' 'Not half, Ananda,' the Buddha replied. 'Good friends are the whole of it.' We become like the people we spend our hours with. Our example: today that includes the voices on our phones.",
+          "keyTerm": "Sangha (say: SUNG-gah) = the Buddha's community: first the monks and nuns who train full time, and more loosely everyone who walks this path together",
+          "sources": [
+            "sn45.2",
+            "dn31",
+            "khp5"
+          ],
+          "practice": "Name one person who makes you kinder or calmer when you are with them. Plan one small contact with them this week. A message is enough.",
+          "icon": "two-friends"
+        },
+        {
+          "id": "w7-l3",
+          "title": "When You Slip",
+          "objective": "After this lesson the learner can respond to a mistake or an off day the way the teaching says: own it, begin again, and grow a bigger life around it, without beating themselves up.",
+          "hook": "An old picture. Drop a lump of salt into a cup of water and you cannot drink it. Drop the same lump into a great river and you cannot taste it. The Buddha said a mistake is like the salt. You cannot un-drop it. But every kind, honest act makes you more river and less cup.",
+          "keyTerm": "",
+          "sources": [
+            "an3.99",
+            "mn61"
+          ],
+          "practice": "Bring to mind one small thing you regret. Say: 'That happened. I own it.' Then name one good thing you will do today to add water to the river.",
+          "icon": "river"
+        },
+        {
+          "id": "w7-l4",
+          "title": "The Raft",
+          "objective": "After this lesson the learner can explain that teachings, and the points in this game, are tools for getting across, not trophies to show off or fight over.",
+          "hook": "An old story. A man builds a raft and crosses a wide, dangerous river. On the far bank he thinks, 'This raft was so useful! I will carry it on my head forever.' The Buddha asked: is that sensible? He said his own teaching is like that raft. The points were a raft for this Trail. Leave them on the bank. The teaching is a raft too. You are still on the river, so keep using it, but do not show it off or fight with it.",
+          "keyTerm": "",
+          "sources": [
+            "mn22",
+            "ud6.4",
+            "snp4"
+          ],
+          "practice": "Look at your points and badges. Say: 'These were my raft for the Trail.' (With Quiet Mode on: think of the steps you have ticked off.) Then name one thing from the Trail you will keep using: two arrows? four gates? ten breaths? That is the cargo.",
+          "icon": "raft"
+        },
+        {
+          "id": "w7-l5",
+          "title": "Keep Going, With Care",
+          "objective": "After this lesson the learner can name their own next step: one practice to keep and one place in the library to explore.",
+          "hook": "An old story. At eighty, close to death, the Buddha was asked who would lead his students. He named no one. He said the teaching itself would be their teacher. His last words were plain: all things change, so keep going, with care. You now know all three supports: the teacher (the Buddha), the teaching, and the community (the Sangha).",
+          "keyTerm": "Dhamma (say: DUM-mah, also spelled Dharma) = the Buddha's teaching; the way things really work",
+          "sources": [
+            "dn16",
+            "mn63",
+            "dhp"
+          ],
+          "practice": "Choose two things: one practice from this Trail to keep, and one part of the library to visit next. Say them, out loud or in your head: 'Next, I will...' You are steering now.",
+          "icon": "lamp"
+        }
+      ]
+    }
+  ],
+  "ranks": [
+    {
+      "index": 0,
+      "id": "curious-visitor",
+      "name": "Curious Visitor",
+      "minXp": 0,
+      "blurb": "You showed up and you are curious. That is how every trail starts. There is nothing you need to know yet.",
+      "emblemIdea": "An open gateway: two posts and a curved top beam, empty in the middle, with one small dot at the doorstep."
+    },
+    {
+      "index": 1,
+      "id": "trail-finder",
+      "name": "Trail Finder",
+      "minXp": 200,
+      "blurb": "About one world's worth of study on this site. Titles count steps taken here, nothing more.",
+      "emblemIdea": "Three stepping stones rising in a diagonal, the last one with a tiny flag."
+    },
+    {
+      "index": 2,
+      "id": "good-noticer",
+      "name": "Good Noticer",
+      "minXp": 370,
+      "blurb": "About two worlds' worth of study on this site.",
+      "emblemIdea": "A magnifier (circle with a short diagonal handle) held over a single leaf."
+    },
+    {
+      "index": 3,
+      "id": "hill-climber",
+      "name": "Hill Climber",
+      "minXp": 600,
+      "blurb": "About three worlds' worth of study on this site.",
+      "emblemIdea": "A rounded hill with a dotted path running halfway up and a small flag where the path stops."
+    },
+    {
+      "index": 4,
+      "id": "knot-untangler",
+      "name": "Knot Untangler",
+      "minXp": 830,
+      "blurb": "About four worlds' worth of study on this site. You are near the halfway mark of the Trail.",
+      "emblemIdea": "A looped knot (pretzel-like line) with one end pulled straight and free."
+    },
+    {
+      "index": 5,
+      "id": "steady-hand",
+      "name": "Steady Hand",
+      "minXp": 1060,
+      "blurb": "About five worlds' worth of study on this site.",
+      "emblemIdea": "An open, level palm (rounded square with five short finger bars) holding a small seed with two leaves."
+    },
+    {
+      "index": 6,
+      "id": "mind-gardener",
+      "name": "Mind Gardener",
+      "minXp": 1290,
+      "blurb": "About six worlds' worth of study on this site.",
+      "emblemIdea": "A seedling with two leaves growing from a half-circle mound, with one gentle wave line above."
+    },
+    {
+      "index": 7,
+      "id": "warm-heart",
+      "name": "Warm Heart",
+      "minXp": 1520,
+      "blurb": "About seven worlds' worth of study on this site.",
+      "emblemIdea": "A heart with eight short rays around it, like a small sun."
+    },
+    {
+      "index": 8,
+      "id": "far-walker",
+      "name": "Far Walker",
+      "minXp": 1670,
+      "blurb": "About a whole Trail's worth of study. The title counts study done on this site, not wisdom or goodness.",
+      "emblemIdea": "A long dotted road winding across three low hills toward a half-circle sun on the horizon."
+    },
+    {
+      "index": 9,
+      "id": "lamp-keeper",
+      "name": "Lamp Keeper",
+      "minXp": 2200,
+      "blurb": "A whole Trail's worth of study and a good stretch of the library as well. This is the last title. There is no higher one, and the points stop counting here. Keep reading for its own sake.",
+      "emblemIdea": "An oil lamp (shallow bowl with a teardrop flame) inside a ring, with eight short light rays around it."
+    }
+  ],
+  "xpRules": [
+    {
+      "activity": "lesson",
+      "xp": 30,
+      "note": "The learner always sees the word 'points'; XP is only the internal name. Paid once, the first time the learner reaches a lesson's reward card (activity id lesson:<lessonId>). Every learner gets the same 30 whatever they picked in the quick check, because after a 'Not quite' the idea is shown again and they pick again. Replays are free, unlimited and pay 0. A heads-up lesson that is set aside logs skip:<lessonId> for 0 points and still pays its 30 whenever it is done later. 46 lessons = 1380."
+    },
+    {
+      "activity": "quiz-perfect",
+      "xp": 0,
+      "note": "No points. quiz:<lessonId> is only a quiet marker, logged the first time all 3 quick-check questions are answered right on the first pick in one run (a play-again counts). It feeds the Ten Clean Checks badge and nothing else, so the reward card shows the same number for every learner and never shows a bonus that was not earned."
+    },
+    {
+      "activity": "boss",
+      "xp": 50,
+      "note": "Paid once per world for finishing the end-of-world check (activity id boss:<worldId>). The check appears when every lesson in the world is done or set aside. The data holds exactly 5 questions, each tagged with the lesson it reviews; a question on a set-aside lesson is left out when the check is played. In six-lesson worlds one lesson has no check question (w1-l5, w2-l5, w3-l4, w4-l6, w5-l3, w6-l4); it has already been reviewed by the 'look back' question of the next lesson. The check cannot be failed: a missed question shows a one-line reminder with a link to its lesson and comes round again. No score or grade is shown, only 'Check complete'. 8 worlds = 400. The whole Trail is exactly 1780 points for anyone who does every lesson."
+    },
+    {
+      "activity": "sutta-read",
+      "xp": 10,
+      "note": "Paid once per library card when the learner taps 'I have read this' at the bottom of the open card (activity id sutta:<cardId>). Honest self-report: no dwell-time or scroll tracking. Ticking the matching Guided Study box records the same fact, so one reading is counted once whichever page it is marked on. 67 cards = 670."
+    },
+    {
+      "activity": "sutta-check",
+      "xp": 5,
+      "note": "Paid once per card for answering its single check question, with unlimited retries (activity id suttaq:<cardId>). Offered only after the card is marked read. 67 cards = 335."
+    },
+    {
+      "activity": "rule-read",
+      "xp": 2,
+      "note": "Paid only when the learner taps 'I have read this story' inside an open rule (activity id rule:<cat>-<n>). It is never paid by opening a rule, by search results that open rules in bulk, by printing or by the PDF export. Only the first 50 rule stories pay points (100 at most); later ones are logged with 0 points so the count badges still work. The page says so plainly: '2 points each for your first 50 stories'."
+    },
+    {
+      "activity": "study-check",
+      "xp": 0,
+      "note": "No separate points. Each of the 67 Guided Study boxes links to one library card, so ticking a box logs study:<data-r value> for the Study Buddy badge and also marks that card as read (sutta:<cardId>, 10 points, once). Marking the card read on the library page ticks the box. Un-ticking only clears the visual tick; nothing is removed and re-ticking pays nothing. Old ticks from before the game are migrated the same way, silently, with one line on My Journey: 'We counted the readings you had already ticked.'"
+    },
+    {
+      "activity": "journey-read",
+      "xp": 10,
+      "note": "Paid once per numbered Journey to the West episode when the learner taps 'I have read this' (activity id jw:<episode number>, 1 to 14, taken from the heading number and not from the position on the page). The five character cards above the episodes have no button and pay nothing. 14 episodes = 140."
+    },
+    {
+      "activity": "theme-read",
+      "xp": 10,
+      "note": "Paid once per Modern Life topic when the learner taps 'I have read this' at the end of the topic (activity id theme:<sectionId>, for example theme:career, theme:money, theme:loss). The learner sees the word 'topic', not 'lens'. 14 topics = 140."
+    },
+    {
+      "activity": "glossary-card",
+      "xp": 2,
+      "note": "Paid once per glossary word the first time its flashcard is flipped to show the plain meaning (activity id gloss:<termId>). There is no 'I know this' self-grade. Flipping again is free practice for 0 points. The glossary holds the 20 Trail words plus library words such as clinging, precept, monk, nun and equanimity: at least 40 words, about 50, so about 100 points."
+    },
+    {
+      "activity": "daily-practice",
+      "xp": 5,
+      "note": "Paid at most once per local calendar day for finishing the optional One Quiet Minute (activity id daily:<YYYY-MM-DD>), and only for the first 30 practice days ever (150 at most). After that the same card and the same 'Done for today' line appear, with 0 points. Flat, never multiplied, and there is nothing to make up or buy back. Arithmetic for the top title: beyond the Trail there are about 1635 points (cards 670, card checks 335, rules 100, Journey 140, topics 140, glossary about 100, daily 150). Lamp Keeper needs 420 of them. Rules, glossary and daily practice together give 350 at most, so some library cards, topics or Journey episodes are always needed. Points stop being added at 2200."
+    }
+  ],
+  "badges": [
+    {
+      "id": "first-step",
+      "name": "First Step",
+      "how": "Finish your very first lesson, 'A Man Who Went Looking'.",
+      "ruleType": "has",
+      "rulePrefix": "lesson:w0-l1",
+      "ruleN": 0,
+      "iconIdea": "One footprint (oval sole with five small toe dots) on a round stepping stone."
+    },
+    {
+      "id": "starting-gate",
+      "name": "Starting Gate",
+      "how": "Finish every lesson in World 0: Start Here. You can now say who the Buddha was and name the four questions.",
+      "ruleType": "world",
+      "rulePrefix": "w0",
+      "ruleN": 0,
+      "iconIdea": "A gateway with a row of dots running through it."
+    },
+    {
+      "id": "clear-eyes",
+      "name": "Clear Eyes",
+      "how": "Finish every lesson in World 1: What Hurts? You can now tell pain from the hurt added on top.",
+      "ruleType": "world",
+      "rulePrefix": "w1",
+      "ruleN": 0,
+      "iconIdea": "A plain almond-shaped eye with a round pupil, and one small falling leaf beside it."
+    },
+    {
+      "id": "domino-spotter",
+      "name": "Domino Spotter",
+      "how": "Finish every lesson in World 2: Why Does It Hurt? You can now find the gap where a domino can be lifted out.",
+      "ruleType": "world",
+      "rulePrefix": "w2",
+      "ruleN": 0,
+      "iconIdea": "Three upright dominoes with the middle one lifted out and a small dot in the gap."
+    },
+    {
+      "id": "light-grip",
+      "name": "Light Grip",
+      "how": "Finish every lesson in World 3: Can It Stop? You can now explain how a fire with no fuel goes out.",
+      "ruleType": "world",
+      "rulePrefix": "w3",
+      "ruleN": 0,
+      "iconIdea": "An open palm with a small circle floating just above it."
+    },
+    {
+      "id": "good-ground",
+      "name": "Good Ground",
+      "how": "Finish every lesson in World 4: Living Well. You now have five everyday tools for acting, giving, speaking and earning without harm.",
+      "ruleType": "world",
+      "rulePrefix": "w4",
+      "ruleN": 0,
+      "iconIdea": "An eight-spoked wheel sitting on a thick flat line."
+    },
+    {
+      "id": "tuned-string",
+      "name": "Tuned String",
+      "how": "Finish every lesson in World 5: The Steady Mind. You can now do one minute of breath practice and name what gets in the way.",
+      "ruleType": "world",
+      "rulePrefix": "w5",
+      "ruleN": 0,
+      "iconIdea": "Three vertical strings, the middle one drawn as a gentle wave."
+    },
+    {
+      "id": "wide-heart",
+      "name": "Wide Heart",
+      "how": "Finish every lesson in World 6: The Open Heart. You now have four ways to meet other people and one way to put a grudge down.",
+      "ruleType": "world",
+      "rulePrefix": "w6",
+      "ruleN": 0,
+      "iconIdea": "A heart with four rays, one in each direction."
+    },
+    {
+      "id": "homecoming",
+      "name": "Homecoming",
+      "how": "Finish every lesson in World 7: Carrying It Home. You can now give the four answers in your own words.",
+      "ruleType": "world",
+      "rulePrefix": "w7",
+      "ruleN": 0,
+      "iconIdea": "A lamp on a small hill with a raft on the water below."
+    },
+    {
+      "id": "ten-clean-checks",
+      "name": "Ten Clean Checks",
+      "how": "Get all 3 quick-check answers right first time in 10 different lessons. Play-agains count. This gives no points.",
+      "ruleType": "count",
+      "rulePrefix": "quiz:",
+      "ruleN": 10,
+      "iconIdea": "Three check marks in a row inside a rounded box."
+    },
+    {
+      "id": "zero-to-hero",
+      "name": "Zero to Hero",
+      "how": "Finish the friendly check at the end of all 8 worlds.",
+      "ruleType": "count",
+      "rulePrefix": "boss:",
+      "ruleN": 8,
+      "iconIdea": "Eight small stepping stones in an arc ending at a lamp."
+    },
+    {
+      "id": "travel-light",
+      "name": "Travel Light",
+      "how": "Finish The Raft lesson and learn why the points stay on the bank.",
+      "ruleType": "has",
+      "rulePrefix": "lesson:w7-l4",
+      "ruleN": 0,
+      "iconIdea": "A raft resting on a shore line with a row of footprints walking on from it."
+    },
+    {
+      "id": "library-card",
+      "name": "Library Card",
+      "how": "Read your first card in the Sutta Library and tap 'I have read this'.",
+      "ruleType": "count",
+      "rulePrefix": "sutta:",
+      "ruleN": 1,
+      "iconIdea": "A small card with a lotus stamp in one corner."
+    },
+    {
+      "id": "ten-talks",
+      "name": "Ten Talks",
+      "how": "Read 10 cards in the Sutta Library.",
+      "ruleType": "count",
+      "rulePrefix": "sutta:",
+      "ruleN": 10,
+      "iconIdea": "A stack of three books with a leaf bookmark."
+    },
+    {
+      "id": "whole-shelf",
+      "name": "The Whole Shelf",
+      "how": "Read all 67 cards in the Sutta Library.",
+      "ruleType": "count",
+      "rulePrefix": "sutta:",
+      "ruleN": 67,
+      "iconIdea": "A shelf line full of book spines with a small lamp on top."
+    },
+    {
+      "id": "good-questions",
+      "name": "Good Questions",
+      "how": "Answer the check question on 10 library cards.",
+      "ruleType": "count",
+      "rulePrefix": "suttaq:",
+      "ruleN": 10,
+      "iconIdea": "A speech bubble holding a question-mark curve and a small check mark, both drawn as lines."
+    },
+    {
+      "id": "lute-player",
+      "name": "Lute Player",
+      "how": "Read the library card about the lute strings: not too tight, not too loose.",
+      "ruleType": "has",
+      "rulePrefix": "sutta:an6.55",
+      "ruleN": 0,
+      "iconIdea": "A lute with three strings and a single round note dot beside it."
+    },
+    {
+      "id": "why-that-rule",
+      "name": "Why That Rule?",
+      "how": "Read the story behind 10 of the monks' rules and tap 'I have read this story' on each.",
+      "ruleType": "count",
+      "rulePrefix": "rule:",
+      "ruleN": 10,
+      "iconIdea": "A scroll with a small question-mark curve above it."
+    },
+    {
+      "id": "story-collector",
+      "name": "Story Collector",
+      "how": "Read the stories behind 50 of the monks' rules. Every rule began with a real mistake.",
+      "ruleType": "count",
+      "rulePrefix": "rule:",
+      "ruleN": 50,
+      "iconIdea": "Three overlapping scrolls."
+    },
+    {
+      "id": "study-buddy",
+      "name": "Study Buddy",
+      "how": "Tick 10 readings in Guided Study.",
+      "ruleType": "count",
+      "rulePrefix": "study:",
+      "ruleN": 10,
+      "iconIdea": "A checklist: three rows, each with a ticked box and a short line."
+    },
+    {
+      "id": "all-the-way-west",
+      "name": "All the Way West",
+      "how": "Read all 14 numbered episodes of Journey to the West.",
+      "ruleType": "count",
+      "rulePrefix": "jw:",
+      "ruleN": 14,
+      "iconIdea": "A plain round monkey-head outline with two round ears and a thin gold band, above a winding road that reaches a mountain. No eyes or mouth."
+    },
+    {
+      "id": "everyday-life",
+      "name": "Everyday Life",
+      "how": "Read 3 Modern Life topics, such as work, money or family.",
+      "ruleType": "count",
+      "rulePrefix": "theme:",
+      "ruleN": 3,
+      "iconIdea": "A magnifier over a small house shape."
+    },
+    {
+      "id": "word-collector",
+      "name": "Word Collector",
+      "how": "Flip 10 glossary flashcards.",
+      "ruleType": "count",
+      "rulePrefix": "gloss:",
+      "ruleN": 10,
+      "iconIdea": "Two overlapping cards, the front one marked with a small lotus."
+    },
+    {
+      "id": "one-quiet-minute",
+      "name": "One Quiet Minute",
+      "how": "Do the one-minute practice once.",
+      "ruleType": "count",
+      "rulePrefix": "daily:",
+      "ruleN": 1,
+      "iconIdea": "A circle one quarter filled in gold, like a soft timer, with a wave line inside."
+    },
+    {
+      "id": "seven-quiet-minutes",
+      "name": "Seven Quiet Minutes",
+      "how": "Do the one-minute practice on 7 different days. They do not need to be in a row.",
+      "ruleType": "count",
+      "rulePrefix": "daily:",
+      "ruleN": 7,
+      "iconIdea": "Seven small filled circles in an arc."
+    },
+    {
+      "id": "three-good-days",
+      "name": "Three Good Days",
+      "how": "Show up on 3 days in one run. Any activity counts, and rest days in between are fine.",
+      "ruleType": "streak",
+      "rulePrefix": "",
+      "ruleN": 3,
+      "iconIdea": "Three lute strings with one small dot on each."
+    },
+    {
+      "id": "seven-good-days",
+      "name": "Seven Good Days",
+      "how": "Show up on 7 days in one run. Any activity counts, and rest days in between are fine. This is the biggest run badge there is, on purpose.",
+      "ruleType": "streak",
+      "rulePrefix": "",
+      "ruleN": 7,
+      "iconIdea": "A lute outline with seven small dots along its neck."
+    },
+    {
+      "id": "thousand-steps",
+      "name": "A Thousand Steps",
+      "how": "Collect 1,000 points in total, from anywhere on the site.",
+      "ruleType": "xp",
+      "rulePrefix": "",
+      "ruleN": 1000,
+      "iconIdea": "A winding dotted path climbing a low hill to a small lotus."
+    }
+  ],
+  "icons": [
+    {
+      "name": "seated-figure",
+      "idea": "A circle head above a wide rounded triangle body: a person sitting cross-legged. No face."
+    },
+    {
+      "name": "balance-scale",
+      "idea": "A vertical post with a level bar on top and a shallow bowl hanging from each end, perfectly balanced. Used only for the middle way."
+    },
+    {
+      "name": "magnifier",
+      "idea": "A circle with a short thick diagonal handle."
+    },
+    {
+      "name": "medicine-bag",
+      "idea": "A rounded rectangle bag with an arch handle and a plus sign on the front. Stands for the four questions (w0-l4 and w7-l1)."
+    },
+    {
+      "name": "stepping-stones",
+      "idea": "Four flat ovals rising left to right, each slightly larger than the last."
+    },
+    {
+      "name": "wobbly-table",
+      "idea": "A table top tilted slightly, with one leg shorter than the other, and two small wobble arcs beside the short leg."
+    },
+    {
+      "name": "two-arrows",
+      "idea": "Two parallel diagonal arrows pointing at one small circle: the first solid, the second with a dashed shaft."
+    },
+    {
+      "name": "falling-leaf",
+      "idea": "One pointed leaf tilted at an angle on a curved dotted fall line."
+    },
+    {
+      "name": "sunrise",
+      "idea": "A half circle on a horizon line with five short rays above it, one ray for each honest fact."
+    },
+    {
+      "name": "open-door",
+      "idea": "A door frame with the door standing ajar and a small round bowl on the doorstep."
+    },
+    {
+      "name": "wind",
+      "idea": "Three horizontal lines of different lengths, each ending in a small curl. Stands for passing weather (w1-l6 and w5-l6)."
+    },
+    {
+      "name": "water-drop",
+      "idea": "A single teardrop shape with a small highlight curve inside: thirst."
+    },
+    {
+      "name": "moving-flag",
+      "idea": "A small flag on a pole with a dashed outline of the same flag a little further to the right."
+    },
+    {
+      "name": "three-marks",
+      "idea": "Three plain circles in a row holding a plus, a short dash and a minus, drawn as strokes. No faces."
+    },
+    {
+      "name": "dominoes",
+      "idea": "Five upright rounded bars in a row with a clear gap after the second one."
+    },
+    {
+      "name": "spiral",
+      "idea": "A single line winding outward from a center dot in three turns."
+    },
+    {
+      "name": "three-flames",
+      "idea": "Three teardrop flames side by side, the middle one tallest. Stands for the three fires (w2-l6 and w6-l6)."
+    },
+    {
+      "name": "monkey",
+      "idea": "A plain monkey outline with no face: round head, two round ears, and a curled tail hanging from a branch line."
+    },
+    {
+      "name": "tilted-crown",
+      "idea": "A three-point crown sitting crooked, with one small slip arc beside it."
+    },
+    {
+      "name": "chariot",
+      "idea": "A box cart on one large spoked wheel with a single pole sticking out in front."
+    },
+    {
+      "name": "name-tag",
+      "idea": "A rounded rectangle tag with a hole and a loop of string, and two blank lines on it."
+    },
+    {
+      "name": "seed",
+      "idea": "A small round seed with a short stem and two leaves sprouting from it. Stands for actions and habits growing (w3-l5 and w5-l2)."
+    },
+    {
+      "name": "smoke-wisp",
+      "idea": "A short candle stub with one curling line of smoke where the flame was."
+    },
+    {
+      "name": "dharma-wheel",
+      "idea": "A circle rim with eight evenly spaced spokes and a small centered hub. Used only for the training plan."
+    },
+    {
+      "name": "open-hand",
+      "idea": "An open upturned palm (rounded square with five short finger bars) with one small circle resting on it."
+    },
+    {
+      "name": "shield",
+      "idea": "A shield outline divided into five segments."
+    },
+    {
+      "name": "mirror",
+      "idea": "An oval on a short handle with one diagonal shine line."
+    },
+    {
+      "name": "speech-bubble",
+      "idea": "A rounded speech bubble with a small tail and a check mark inside."
+    },
+    {
+      "name": "hammer",
+      "idea": "A rectangle hammer head on a diagonal handle, resting on a short ground line."
+    },
+    {
+      "name": "lute",
+      "idea": "A round body with a long straight neck and three parallel strings."
+    },
+    {
+      "name": "peg",
+      "idea": "A small wedge being tapped into a block, with a second wedge popping out the other side."
+    },
+    {
+      "name": "bell",
+      "idea": "A bell shape (a dome with a flared rim) with a small clapper dot and two sound arcs."
+    },
+    {
+      "name": "breath-wave",
+      "idea": "One smooth wave line that rises and falls twice, with a small arrowhead at each end."
+    },
+    {
+      "name": "heart",
+      "idea": "A plain symmetrical heart outline."
+    },
+    {
+      "name": "heart-rays",
+      "idea": "A heart with eight short rays spreading out all around it: a wish sent outward (w6-l2 and w6-l4)."
+    },
+    {
+      "name": "two-friends",
+      "idea": "Two figures side by side on one ground line, each a circle head above a half-circle shoulder shape, not quite touching. No faces. Used for people looking after each other (w6-l3 and w7-l2)."
+    },
+    {
+      "name": "mountain",
+      "idea": "A wide triangle on a flat ground line with a small zigzag snowcap at the peak."
+    },
+    {
+      "name": "river",
+      "idea": "Three long wavy horizontal lines with one small square (the lump of salt) dropping toward them."
+    },
+    {
+      "name": "raft",
+      "idea": "Four horizontal logs tied with two cross-bands, floating on one wavy line."
+    },
+    {
+      "name": "lamp",
+      "idea": "A shallow bowl on a short foot with a single teardrop flame and three short rays."
+    }
+  ],
+  "streakRule": "Before lesson w5-l1 is done the display is labeled 'Recent days (rest days are fine)'. After w5-l1 it is called 'In Tune' and links to the lute-strings card (an6.55). It is drawn as lute strings, never a flame (on this site fire stands for wanting, pushing away and fog). It is built to forgive. (1) A 'day you showed up' is any local calendar day with at least one logged activity of any kind. The word 'practice' is kept for One Quiet Minute only. (2) Update rule, run whenever an activity is logged on day D: if there is no earlier day, run = 1. Otherwise gap = D minus the last logged day, in days. Gap 0 or negative (clock change, travel, restored backup): no change. Gap 1, 2 or 3: run goes up by 1, so up to two rest days in a row are bridged and are not counted. Gap 4 or more: run = 1. After every update, best = max(best, run). (3) The two streak badges (3 and 7 days) are checked against max(run, best) on every update, so they arrive while the run is alive. Once earned they are never removed. (4) The display is worked out when the page is drawn, from the days since the last logged day. 0: 'In tune today' (before w5-l1: 'Here today'). 1 to 3: 'Resting. Still in tune.' (before w5-l1: 'Resting. That is fine.'). 4 or more: the run is not shown at all and the line reads 'Welcome back. Your days are all still here. A new run starts whenever you like.' The run is never shown as zero. (5) Counting stops where the badges stop. The run is shown as 1 to 7 lit strings and in words up to '7 days or more'. Best run is shown the same way, capped at '7 or more'. No bigger run number is ever displayed, so there is no record to defend. (6) The only number that grows is 'Days you showed up', a lifetime total that never goes down. It is the headline on My Journey; the run is shown smallest. (7) There are no freezes to earn, buy or hoard. The streak gives no points, no multiplier and unlocks nothing. (8) Never show the words 'lost', 'broken', 'missed' or 'failed', never use red, never show a countdown, never send a reminder. (9) Too tight is also out of tune: after 3 lessons in one day the reward card adds 'That is plenty for one day. Rest helps it sink in. Stop here or carry on, both are fine.' It is a note, never a lock. (10) Quiet Mode hides the whole display. Game.streak() still returns the real counts { current, best, activeToday }; the cap at 7 is applied only in what is shown.",
+  "dailyPractice": "An optional card called 'One Quiet Minute' sits on the home page, the Trail page and My Journey. It is never required and never blocks a lesson. Each day it offers one try-it-now exercise taken only from lessons the learner has already finished, so nothing unfamiliar appears and it doubles as gentle review. Before any lesson is done the default is 'Take three slow breaths and feel your feet on the floor.' The pick is fixed for the day and chosen by date from the finished lessons, least recently practiced first, so there is no randomness to chase. A plain link, 'Pick a different one', opens the list of finished practices to choose from (a list, not a shuffle). Practices that touch death, loss, regret or a grudge (w1-l4, w1-l5, w6-l6, w7-l3) are never picked automatically; they appear only if the learner chooses them. Tapping Start shows the instruction in large type and a soft ring that fills over about sixty seconds, with no numbers and no sound. The ring is only a guide: the learner taps 'I did it' whenever ready, early or late (honest self-report, no checking). That logs daily:YYYY-MM-DD and counts as a day you showed up. It gives 5 points, once per local calendar day, for the first 30 practice days ever; after that the card works exactly the same and gives no points, and the card says so in advance ('5 points a day for your first 30 days'). One optional tap follows: 'How was that? Calmer / About the same / Restless'. Every answer gets the same reply, 'Good noticing', and nothing is stored about it. The card then shows one line linking the practice to its lesson and reads 'Done for today. That is enough.' A second practice the same day is welcome and gives no points. There are no reminders and no 'come back tomorrow' prompt. If a day is skipped, the card shows today's practice and never mentions yesterday. In Quiet Mode the card is unchanged apart from hiding the points line.",
+  "homepageFlow": [
+    "1. First visit (no saved progress and no old Guided Study ticks): above the existing section cards, one welcome panel on the dark warm background. An original CC0 SVG shows a dotted gold trail winding from a gateway, past eight small world emblems, to a lamp on a hill. Headline: 'New to Buddhism? Start at zero.' Sub-line: 'Short stories. One idea at a time. Hard words explained one at a time. Nothing to lose if you miss one.' One large gold button: 'Take the first step (about 3 minutes)'.",
+    "2. Under the button, three small pictures with a few words each: 'Read a short story', 'Try it for one minute', 'Answer three short questions'. Then three plain lines headed 'How this works': 'Each step is one short lesson. You collect points for the steps you finish. Points only count what you have done, and you cannot lose them.' Last line: 'Free. No sign-up. Your progress stays in this browser.'",
+    "3. A small plain link below: 'I already know the basics. Take me to the library.' It jumps to the existing section cards, so experienced readers are never forced through the Trail.",
+    "4. The button opens lesson w0-l1 directly, not the map. A lesson is a stack of cards shown one at a time, with one gold 'Next' button, a 'Back' button and the words 'Card 2 of 8'. Fixed order: story, the one big idea, everyday example, try it now, one new word (only if the lesson has one, with how to say it), three quick questions, what you can do now, go deeper. Each story is labeled 'An old story' or 'Our example'. Any word the Trail has already taught can be tapped to show its plain meaning in place.",
+    "5. Quick check: three questions with three large answer buttons each. Questions 1 and 2 are about this lesson. Question 3 is labeled 'A look back' and names the lesson it comes from, always one of the two lessons before. A right answer shows a check mark, the word 'Right' and one sentence saying why. Any other answer shows 'Not quite. Here is the idea again:' with one kind sentence, then the learner picks again. Nothing is lost.",
+    "6. Reward card: first what the learner can now do ('You can now say who the Buddha was'), then, smaller, a lotus and '+30 points'. The very first reward card adds: 'Points only count the steps you have done. You cannot lose them.' Every learner sees the same number; no bonus line ever appears. Lesson 1 also shows the First Step badge. Two equal buttons: 'Next lesson' and 'That is enough for today'. Neither is styled as the better choice. On a heads-up lesson the reward card shows only the skill line and the points; any badge or title news waits for the next reward card.",
+    "7. Go-deeper card: one to three links, each with a plain label written for the Trail ('The Buddha's own story of leaving home') and, small underneath, the library title and shelf mark. Two fixed lines sit on the card: 'These pages are harder reading. They are for later. You lose nothing by skipping them.' and 'MN 26 is a shelf mark, like a library book number. You never need to remember it.' In Worlds 0 and 1 the links are folded behind an 'Optional, harder reading' toggle. Every one of the 67 library cards now opens with one plain sentence saying what it is about (the 'plain' line in the sutta easy data), so the library has a soft landing.",
+    "8. Only now does the learner see the Trail map: eight worlds as a winding trail of stepping stones from the gateway to the lamp. A four-question legend sits at the top with a 'You are here' mark: World 1 'What hurts?', World 2 'Why?', World 3 'Can it stop?', Worlds 4 to 6 'What is the treatment?' (parts 1, 2 and 3), World 7 'In your own words'. Every stone shows its icon, its lesson number and its plain title, so the whole route can be read in advance. Done stones are gold with a check and the word 'Done'. The next stone glows and says 'You are here'. Later stones are dimmed and say 'Comes after <previous title>'. There are no padlocks, and there is always exactly one highlighted next step. The stone for w3-l6 carries a banner: 'Question 3: Can it stop? Yes.' World 4 shows the training wheel once as a picture, not a list to learn: eight spokes labeled in plain words (seeing clearly, kind aims, kind words, kind actions, honest work, balanced effort, noticing, a steady mind), each lighting up as its lesson is done.",
+    "9. Heads-up lessons (w1-l4, w1-l5, w7-l5) open with one line, for example 'This lesson talks about loss. If today is not the day, set it aside.' The 'Set aside for now' button marks the stone 'Set aside. Here when you want it.' and the Trail carries on: the next lesson, the world check and the next world all open as usual. The lesson keeps its 30 points for whenever it is done. Nothing on the site reminds the learner about it.",
+    "10. When every lesson in a world is done or set aside, its check stone appears (for World 0, 'The Starting Gate Check'): five short questions, no score, ending in 'Check complete'. It opens the next world with a one-line preview that names its question, for example 'World 1: What hurts?' or 'World 5: The treatment, part 2'. The World 1 and World 2 screens add one line: 'Good news ahead: the hurt has a cause, and World 3 asks whether it can stop. Short answer: yes.' The World 0 screen also says: 'There are 10 titles. All ten are listed on My Journey. The last one, Lamp Keeper, is for people who read on in the library.'",
+    "11. On every later visit the welcome panel becomes a 'Continue' panel: the next lesson's title and icon on one gold button ('Next up: Not Quite Right, about 4 minutes'), the title emblem with a slim bar and the words 'points to the next title', 'Days you showed up', the recent-days strings, and the optional One Quiet Minute card. If three lessons are already done today it adds: 'That is plenty for one day. Rest helps it sink in.' Returning visitors who had old Guided Study ticks see this panel too, with lesson 1 as the next step.",
+    "12. Below the panel the existing section cards stay, regrouped under three plain headings: 'Start here' (The Trail, Plain-English Glossary), 'When you are ready' (Sutta Library, Modern Life topics, Journey to the West), 'Deep study' (Curriculum, Guided Study, The Canon: the full bookshelf of old texts, the 227 monks' rules, Export PDF). Each card gets a plain first line, a small tag such as 'Best after World 1', and a lotus with the points it gives ('10 points per card'). The navigation gains three items at the front: The Trail, My Journey, Glossary. Every existing page stays open to everyone at all times. On library pages the top strip shows only the title name and a 'Continue' link, with no bar and no run display.",
+    "13. When the Trail is complete, the Continue panel becomes 'Choose your own next step' with three suggestions (a library card not yet read, Guided Study Unit 1, one Modern Life topic). The progress bar and any 'points to go' line are removed. One plain sentence replaces them: 'There is one more title, Lamp Keeper, for people who read on in the library. No hurry.' A card headed 'What this Trail left out' lists, with library links: rebirth and other worlds, the full life of the monks and nuns, the eight steps by name, and the different schools of Buddhism. When Lamp Keeper is reached the points number is hidden, the bar is replaced by the single word 'Enough.', and My Journey shows counts instead ('41 of 67 cards read').",
+    "14. Footer of the home page and My Journey: 'Your progress is saved only in this browser.' with links for 'Quiet Mode' (hide points, titles, badges and the run display), 'Larger text', 'Open all lessons' (for people who already know the basics), 'Save my progress to a file', 'Load progress from a file', 'Start over' (asks once to confirm), and a credits line: 'All pictures are original SVGs made for this site and released as CC0 (public domain).' The check mark, open book and lotus used on buttons are also original CC0 SVGs, kept in img/brand."
+  ],
+  "writingRules": [
+    "One idea per lesson and one point per card. If a card needs the word 'also', split it or cut it. A second idea goes to 'go deeper'. Where a lesson guards a misreading (for example 'wanting to learn is not craving'), that is one sentence on the big-idea card, never a second objective.",
+    "Order is always concrete to abstract: story, then the idea in one sentence, then an everyday example, then try it, then (only if needed) the new word. Never open with a term.",
+    "Write for a reading age of about 10. Aim for 12 words a sentence, never more than 20. No more than 60 words on a card (the story card may run to 100). No more than 3 sentences on the big-idea card.",
+    "Use everyday words: 'holding on' not 'attachment', 'the not-quite-right side of life' not 'unsatisfactoriness'. If a harder word is needed, give its plain meaning first and the word second.",
+    "The lesson track is always called 'the Trail' in anything the learner reads. The word 'path' is kept for the Buddha's training. The learner always sees 'points', never 'XP', and 'titles' for ranks.",
+    "Talk to the learner as 'you', in active voice and present tense. Say 'the Buddha taught' or 'try this', never 'you must', 'you should' or 'Buddhists believe'.",
+    "Titles, world names, buttons, quiz questions and go-deeper labels are plain English with no Pali or Sanskrit and no names of texts. The library's own title and shelf mark appear only as small print under a go-deeper label.",
+    "At most one new word per lesson, on its own card: word, how to say it in plain letters, plain meaning. Never use a word before the lesson that teaches it. The Trail teaches 20 words; all are in the glossary with the same say-it guide (BOOD-dah, SOOT-tah, DOOK-kah, im-PUR-muh-nuns, KAR-mah, nir-VAH-nah, MET-tah, SUNG-gah, DUM-mah).",
+    "Plain English is the taught word wherever it works (craving, not-self, mindfulness, goodwill, compassion, steady heart, training promise, holding on). An old-language word is taught only when the library cannot be read without it. 'Clinging', 'precept', 'equanimity', 'greed, hatred and delusion' are glossary entries marked 'what the library calls it'.",
+    "'Monk' and 'nun' are explained in brackets in the story text the first time each appears (w2-l2 and w2-l4) and are in the glossary. 'Lute' is explained in brackets in w5-l1. 'Meditate' is not used before w5-l5; earlier stories say 'train the mind'.",
+    "Every taught word can be tapped anywhere on the Trail to show its plain meaning in place. Whenever a lesson leans on a word or picture taught more than two lessons back, the plain meaning is written beside it again (for example 'the three fires: wanting, pushing away and fog').",
+    "Use the same picture for the same idea every time: arrows for pain and added hurt, dominoes for the chain, fires for wanting, pushing away and fog, the wheel for the training plan, the lute for effort, the seed for actions and habits, the raft for tools, wind for passing weather. Fire 2 is always 'pushing away, from annoyance up to hate', including in the anger lesson.",
+    "Say exactly what can stop. Pain, aging and loss are arrow one and still land, even for the Buddha. What can end is the hurt added on top. Use 'the added hurt' in w3-l6 and w7-l1, and never promise an end to physical pain.",
+    "Label what is old and what is ours. Stories from the cards open with 'An old story' or 'The Buddha said'. Modern examples (phones, knees, guardrails, campfires, puppies, plants on a windowsill) open with 'Our example' and are never put in the Buddha's mouth.",
+    "Stay faithful to the source card. Every old story and quote must be findable in a listed library card. Do not add miracles, quotes or details the card does not have. Three places go beyond the cards and say so: the five promises are introduced as 'promises people who follow the Buddha at home have long taken', the five things that get in the way as 'the training expects these five', and the meaning of the word nirvana as a plain fact on the word card, not a quote.",
+    "Guard six common misreadings in the lesson text itself: dukkha is not 'life is misery'; craving is not all wanting; karma is not fate or punishment; not-self is not 'you don't exist'; a steady heart is not coldness; nirvana is not a heaven and not becoming nothing. In the four gates, 'said with care' does not mean 'pleasant to hear': the check includes one question where the right answer is to say a hard, true, helpful thing gently at a good time.",
+    "Do not explain rebirth away and do not demand it. Where a source card speaks of many lifetimes (w3-l5, and the tears card linked from w1-l5), say once: 'The old texts say this runs over many lifetimes. You can leave that question open.' Leave out for now: the twelve links by name, the eight steps by name, lists longer than five, meditation stages, schools of Buddhism and scholarly debates. The Trail-complete screen says plainly what was left out.",
+    "Lists are never longer than five and are never tested as lists. The winds are shown as pairs, two at a time. The five ways out of a grudge are five buttons, not a sentence.",
+    "Examples must work for anyone: do not assume a job, a partner, children, money, a car or good health. Never ask the learner to compare income and spending. Vary the examples. Avoid idioms, sarcasm and culture-specific references a second-language reader may not know.",
+    "Names of people in stories are written without accent marks (Kisa Gotami, Sona, Ananda, Rahula) and are never tested.",
+    "Quick check: exactly 3 questions with 3 options each. Questions 1 and 2 test this lesson's idea in a new everyday situation. Question 3 is labeled 'A look back', names its lesson, and comes only from one of the two lessons before (lessons the learner has actually done; in w0-l1 all three are on the lesson itself).",
+    "No trick questions, no 'all of the above', no 'which is NOT', no questions about dates, names, numbers or spellings. Every option is one short line. The other options are the common misunderstandings, and each gets a kind one-sentence correction.",
+    "Feedback never says 'wrong', 'incorrect' or 'fail'. Use 'Not quite. Here is the idea again:' plus one sentence, then let them pick again. Right answers get one sentence saying why they are right.",
+    "Never use 'simply', 'obviously', 'easy', 'of course' or 'as everyone knows', including on buttons and switches ('three short questions', 'Larger text'). No guilt words ('should have', 'failed', 'lazy').",
+    "Reward cards name the skill first ('You can now tell the first arrow from the second'), then the points, smaller. State facts, not flattery. Never praise intelligence; describe what the learner did. Title blurbs describe only an amount of study and never say 'you can...'; skill sentences belong to lesson reward cards and world badges.",
+    "Never claim or imply spiritual attainment, and never promise results, cures or special states. No medical or mental-health advice. Use 'a small taste of', 'points toward', 'you can now explain'. Do not tell the learner they have crossed the river: they are still on it.",
+    "Hard topics are told plainly and gently, with no graphic detail. Lessons w1-l4, w1-l5 and w7-l5 open with one heads-up line and a 'Set aside for now' button. World 1 does not end on them: its last lesson is about weather that turns.",
+    "Every try-it-now takes 30 to 60 seconds, needs no equipment, can be done sitting anywhere and silently ('out loud or in your head'), ends with noticing rather than fixing, and asks only for 'one small' annoyance, regret or grudge, never a painful memory. Breath practices always offer 'feel your feet instead' as an equal option. A practice that mentions points carries alternate wording for Quiet Mode.",
+    "Go-deeper labels are written for the Trail in plain words ('The Buddha's first talk', 'Why only these four questions? The poisoned arrow story', 'The elephant and the men who each touched one part'). The Path is the front door to the site, not a replacement for it.",
+    "Numbers as digits, lists as numbered steps. Follow the existing site's American spelling and keep its tone: warm, plain, a little playful, never preachy and never cute about pain."
+  ],
+  "accessibilityRules": [
+    "Trail cards use body text of at least 18px, line height 1.6 or more, and lines no longer than about 60 characters. Left-aligned, never justified, no blocks of italics or capitals.",
+    "Text contrast is at least 4.5 to 1 against the dark background. Use the light cream text color for reading; gold and orange are for headings, icons, borders and buttons. Never put gold text on orange or orange on gold, and never use the faint text color for anything that must be read. Icons and focus rings are at least 3 to 1.",
+    "Never rely on color alone. Done, next, later and set aside are shown by icon, word and shape (check and 'Done', glow and 'You are here', dimmed and 'Comes after...', outline and 'Set aside'). Quiz feedback says 'Right' or 'Not quite' in words with an icon.",
+    "Weak readers find their way by picture, so every map stone shows its icon, its lesson number and its title together. An icon is reused only where the idea is the same, and the lesson number always tells two stones apart.",
+    "Every control is a real button or link, at least 48 by 48 pixels, with at least 8 pixels between targets. One primary action per card.",
+    "Everything works by keyboard: Tab reaches every control in reading order, Enter or Space activates it, arrow keys move between quiz options, and a clear 3px orange focus ring is always visible. Moving to the next card moves focus to that card's heading.",
+    "Quick-check answers are real radio inputs or buttons inside a fieldset with the question as its legend, so nothing is chosen by accident and screen readers hear the question.",
+    "Points, new titles and new badges are announced through a polite aria-live region in a plain sentence, for example 'Lesson done. 30 points. New title: Trail Finder.'",
+    "Tapping a taught word opens its plain meaning in place as a small panel that is reachable by keyboard, closes with Escape, and never changes the page.",
+    "Each lesson card offers a 'Read aloud' button that uses the browser's built-in speech (no download, no network). It reads only that card, is off by default, never starts by itself and can be stopped at any time.",
+    "A 'Larger text' switch on the Trail and My Journey raises text size and spacing and uses a clean system sans-serif for card text. The choice is remembered.",
+    "Respect prefers-reduced-motion: no confetti, bouncing, sliding or parallax. Rewards appear as a still picture and a line of text, or one gentle fade. Nothing flashes and no sound plays by default.",
+    "No time limits anywhere. Lessons, quick checks and world checks are untimed. The one-minute practice ring has no numbers, is only a guide, has the text alternative 'about one minute', and can be ignored, shortened or extended.",
+    "Every SVG that carries meaning has role='img' and a short title (for example 'Two arrows'); purely decorative copies are aria-hidden. Icons always sit next to a text label and never replace one on a button. No picture uses a face with features or drawn letters.",
+    "Words from the old language carry lang='pi' so screen readers do not mangle them, and each shows a say-it guide in plain letters.",
+    "The Trail is a single column that works at 320px wide and at 200 percent zoom, with no sideways scrolling and no hover-only information. The map scrolls vertically.",
+    "Show progress in words as well as bars: 'Lesson 3 of 6', 'Card 2 of 8', '120 points to the next title'.",
+    "The learner can always go back one card, leave a lesson, and return to the same card later. Nothing is lost by closing the page.",
+    "If localStorage is blocked or full, lessons still play and a calm notice says progress cannot be saved on this browser. A corrupted save never breaks a page. If JavaScript is off, show a plain message linking to Guided Study and keep every existing page readable. The game layer never hides site content.",
+    "Pages declare their language, use one h1 and headings in order so screen-reader users can jump by heading.",
+    "Print styles hide all game elements so the existing pages and PDF export still print cleanly. Printing or exporting never logs an activity.",
+    "All graphics are original SVG released as CC0, drawn in the site's gold and orange palette, so they stay sharp at any zoom and need no outside network request."
+  ],
+  "humaneRules": [
+    "Nothing is ever taken away. Points, titles, badges and days you showed up never go down, expire or reset unless the learner chooses 'Start over'. Un-ticking a Guided Study box clears only the tick.",
+    "The game does not contradict the teaching that craving resets its own baseline. Rewards are fixed, small and printed on the thing that gives them; every item pays once; nothing escalates; every source of points has a stated cap; points stop being added at the last title (2200) and the number is then hidden. There is no prestige or reset loop, so there is no ever-bigger hit to chase and no finish line that moves.",
+    "The game says what it is. Lesson w2-l1 asks the learner to watch the pull to skip ahead rise and fade. Lesson w2-l2 (The Moving Finish Line) uses the learner's own points as the worked example. Lesson w7-l4 (The Raft) tells them to leave the points on the bank and keep using the skills.",
+    "No late surprises. All ten titles and their point numbers are listed on My Journey from the first visit, and the World 0 check says that the last one needs the library. After the Trail is finished the home page shows no progress bar and no 'points to go'.",
+    "Skill before points: every reward card leads with what the learner can now do, with the number second and smaller. Every learner gets the same points for the same lesson, so the number can never work as a hidden grade.",
+    "Titles and badges are honest about what they measure: study done on this website, never spiritual progress. Title blurbs state only an amount of study. No title or badge uses a real Buddhist attainment name or sacred emblem (no wheel-marked palm, no eye with a wheel), and My Journey says so in plain words.",
+    "No random rewards: no loot boxes, spins, surprise bonuses, mystery prizes, multipliers or double-point days.",
+    "No fake urgency: no countdowns, limited-time events, 'only today' offers or expiring rewards. Daily practice points are capped at 30 days in total, so a skipped day costs nothing.",
+    "No reminders of any kind: no notifications, emails, tab badges or 'come back tomorrow' prompts. The site waits quietly and never mentions a day that was skipped or a lesson that was set aside.",
+    "The run display forgives, following the site's own lute-strings card (an6.55). Two rest days in a row are bridged, counting stops at seven, a longer break is met with 'Welcome back. Your days are all still here', and the words 'lost', 'broken', 'missed' and 'failed' never appear. It earns no points and unlocks nothing.",
+    "Stopping is treated as success. Every reward card offers 'That is enough for today' as an equal button, and after 3 lessons in one day a gentle note suggests stopping. It is an offer, never a block.",
+    "No shame. Answers that miss get 'Not quite' and the idea again, can be retried at once and cost nothing. There are no lives, hearts, energy bars, red marks, grades or fail screens, and a world check cannot be failed. Off days are named as normal inside the lessons (w5-l1, w5-l6, w7-l3).",
+    "Care with hard subjects. The lessons on death and grief carry a soft heads-up and can be set aside. A set-aside lesson blocks nothing: the next lesson, the world check, the next world, the Zero to Hero badge and a new title for every world are all still reached (the title floors of 370 to 1670 are set for a learner who sets aside all three). Only that lesson's own 30 points and its world badge wait, quietly, for whenever the learner wants them. These lessons are never auto-picked as a daily practice, and their reward cards carry no badge or title fanfare.",
+    "No comparison: no leaderboards, no 'top 10%', no 'other learners are ahead', no sharing prompts. The site teaches that comparison feeds envy (w6-l4), so the game does not use it.",
+    "No grinding. Replays and re-reads are free and earn nothing. Points for rules are paid only on a deliberate 'I have read this story' tap and only for the first 50, and one reading is never paid twice across Guided Study and the library, so there is no reason to click without reading.",
+    "Nothing is gated for money, sign-up, sharing or play. The whole existing library stays open to everyone from the first visit. The Trail opens in logical order by default, with no padlocks, and 'Open all lessons' is always available.",
+    "Quiet Mode: one switch hides points, titles, badges and the run display everywhere, leaving only check marks and the next step. Lessons and checks work exactly the same, and lessons that mention points switch to their Quiet Mode wording.",
+    "Honest counting: 'read' means the learner tapped 'I have read this', and practice is self-reported. No time-on-page tracking, no scroll tracking, no analytics. The site says plainly that it trusts the learner.",
+    "Private by design: progress lives only in this browser's localStorage. No accounts and no tracking. The learner can save it to a file, load it back, or erase it with one clearly labeled button and a single confirm step.",
+    "A soft landing in the library. Go-deeper links say in advance that the library is harder reading and loses the learner nothing if skipped, and every library card opens with one plain sentence, so nobody is made to feel stupid by tapping a link.",
+    "No dark exits and no trick wording. Every lesson can be left at any card and resumes there. Choices are labeled in plain, neutral words, and the 'no' option is as easy to find as the 'yes'.",
+    "Reward moments are short and calm: one still image, one line of text. No flames for streaks, no escalating animations, no sounds designed to hook. Title emblems are ten different pictures of equal visual weight; they do not grow richer as the titles go up.",
+    "All graphics are original SVGs made for this site and released as CC0 (public domain), with a credits line saying so. No downloaded assets, fonts or trackers.",
+    "For the builder: changes this design needs in docs/GAME_CONTRACT.md and tools/validate.js. (a) Game.revoke is used only by 'Start over' and import, never when a Guided Study box is un-ticked. (b) rule: is awarded only by the 'I have read this story' button, never by the open state, search or print, and with 0 points once 50 rule: ids are logged. (c) jw: is awarded only on the 14 numbered episodes, by heading number. (d) gloss: is awarded on first flip, with no 'known' self-grade. (e) A skip:<lessonId> marker (0 points) exists; Game.isUnlocked, Game.nextLesson and worldProgress.complete treat done-or-set-aside as passed, while the 'world' badge rule still needs every lesson done. (f) Game.streak follows the streak rule here: best is updated on every logged day and a gap of zero or less changes nothing. (g) Game.award adds no points once the total reaches the top rank's minXp, and daily: pays only while fewer than 30 are logged. (h) The HUD on library pages shows the title name and a Continue link only; toasts say 'points'; the contract line asking for rank emblems that grow richer is dropped. (i) Boss questions carry an optional lesson tag; the count stays exactly 5. (j) check.svg and book.svg join img/brand and its lint list, and the validator asserts that the 'all of' badge counts (67 cards, 14 episodes, 8 checks) match the live data. (k) Ticking a Guided Study box and marking its library card read set each other; old ticks migrate the same way. Notes for the owner: the library has no card for the five promises, none for giving, and the mindfulness cards mention the five things that get in the way without listing them; three short new cards would close those gaps."
+  ]
+}
