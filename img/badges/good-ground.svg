@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img">
+  <title>Good Ground</title>
+  <circle cx="32" cy="32" r="29" fill="#2b2012" stroke="#b8860b" stroke-width="3"/>
+  <path d="M35 29.5L44.5 29.5M34.12 31.62L40.84 38.34M32 32.5L32 42M29.88 31.62L23.16 38.34M29 29.5L19.5 29.5M29.88 27.38L23.16 20.66M32 26.5L32 17M34.12 27.38L40.84 20.66" fill="none" stroke="#ffd700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="32" cy="29.5" r="13" fill="none" stroke="#ffd700" stroke-width="3"/>
+  <circle cx="32" cy="29.5" r="3.2" fill="#ffd700"/>
+  <path d="M17.5 46.5h29" fill="none" stroke="#ff8c00" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

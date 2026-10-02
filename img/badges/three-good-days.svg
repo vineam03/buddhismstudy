@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img">
+  <title>Three Good Days</title>
+  <circle cx="32" cy="32" r="29" fill="#2b2012" stroke="#b8860b" stroke-width="3"/>
+  <path d="M21 14V50M32 14V50M43 14V50" stroke="#ffd700" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="21" cy="40" r="3.1" fill="#ff8c00"/>
+  <circle cx="32" cy="32" r="3.1" fill="#ff8c00"/>
+  <circle cx="43" cy="24" r="3.1" fill="#ff8c00"/>
+</svg>

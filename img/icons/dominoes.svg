@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" fill="none" stroke="#e6b422" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <title>Five dominoes with a gap</title>
+  <rect x="7.5" y="14" width="5" height="36" rx="2.5"/>
+  <rect x="17.5" y="14" width="5" height="36" rx="2.5"/>
+  <rect x="31.5" y="14" width="5" height="36" rx="2.5" stroke="#ff8c00"/>
+  <rect x="41.5" y="14" width="5" height="36" rx="2.5"/>
+  <rect x="51.5" y="14" width="5" height="36" rx="2.5"/>
+</svg>

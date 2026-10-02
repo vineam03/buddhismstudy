@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img">
+  <title>Seven Quiet Minutes</title>
+  <circle cx="32" cy="32" r="29" fill="#2b2012" stroke="#b8860b" stroke-width="3"/>
+  <circle cx="18.58" cy="42.75" r="3.4" fill="#ffd700"/>
+  <circle cx="16.74" cy="32.31" r="3.4" fill="#ffd700"/>
+  <circle cx="22.04" cy="23.13" r="3.4" fill="#ffd700"/>
+  <circle cx="32" cy="19.5" r="3.4" fill="#ffd700"/>
+  <circle cx="41.96" cy="23.13" r="3.4" fill="#ffd700"/>
+  <circle cx="47.26" cy="32.31" r="3.4" fill="#ffd700"/>
+  <circle cx="45.42" cy="42.75" r="3.4" fill="#ff8c00"/>
+  <path d="M24.5 37q1.875-4 3.75 0t3.75 0 3.75 0 3.75 0" stroke="#e6b422" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

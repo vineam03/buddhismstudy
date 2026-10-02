@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" fill="none" stroke="#e6b422" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <title>Open door</title>
+  <path d="M14 50V9h26v41"/>
+  <path d="M40 9l14 5v42l-14-6"/>
+  <path d="M9.5 50H40M49 32v4"/>
+  <path d="M20.5 40.5h13a6.5 6.5 0 0 1-13 0z" stroke="#ff8c00"/>
+</svg>

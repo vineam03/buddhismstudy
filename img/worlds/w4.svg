@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img">
+  <title>Living Well</title>
+  <circle cx="48" cy="48" r="45" fill="#2b2012" stroke="#e6b422" stroke-width="3"/>
+  <path d="M21 70h30" fill="none" stroke="#ffd700" stroke-width="4" stroke-linecap="round"/>
+  <path d="M58 70h18" fill="none" stroke="#b8860b" stroke-width="4" stroke-linecap="round" stroke-dasharray="0 6"/>
+  <path d="M57 45L69 45M55.24 49.24L63.73 57.73M51 51L51 63M46.76 49.24L38.27 57.73M45 45L33 45M46.76 40.76L38.27 32.27M51 39L51 27M55.24 40.76L63.73 32.27" fill="none" stroke="#ffd700" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="51" cy="45" r="20" fill="none" stroke="#ffd700" stroke-width="5"/>
+  <circle cx="51" cy="45" r="5.5" fill="#ff8c00"/>
+</svg>

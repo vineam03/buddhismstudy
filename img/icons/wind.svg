@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" fill="none" stroke="#e6b422" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <title>Wind</title>
+  <path d="M15.5 22h17a5.5 5.5 0 1 0-5.5-5.5"/>
+  <path d="M9.5 32h38a6.5 6.5 0 1 0-6.5-6.5"/>
+  <path d="M19.5 42h20a5.5 5.5 0 1 1-5.5 5.5" stroke="#ff8c00"/>
+</svg>

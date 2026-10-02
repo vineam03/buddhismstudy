@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" fill="none" stroke="#e6b422" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <title>Monkey on a branch</title>
+  <path d="M8 42h48" stroke="#ff8c00"/>
+  <circle cx="30" cy="19" r="9"/>
+  <path d="M22.3 14.3A4 4 0 1 0 21.1 20.6M37.7 14.3A4 4 0 1 1 38.9 20.6"/>
+  <path d="M24.5 26.5c-4.5 3.5-6.5 9-6.5 15.5M35.5 26.5c4.5 3.5 6.5 9 6.5 15.5v8.5a4.5 4.5 0 1 0 4.5-4.5"/>
+</svg>

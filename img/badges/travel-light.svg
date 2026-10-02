@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img">
+  <title>Travel Light</title>
+  <circle cx="32" cy="32" r="29" fill="#2b2012" stroke="#b8860b" stroke-width="3"/>
+  <path d="M18.5 48.5q3.375-3.5 6.75 0t6.75 0 6.75 0 6.75 0" stroke="#e6b422" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="21" y="30" width="23" height="4" rx="2" fill="#ffd700"/>
+  <rect x="19" y="35" width="26" height="4" rx="2" fill="#ffd700"/>
+  <rect x="21" y="40" width="22" height="4" rx="2" fill="#ffd700"/>
+  <path d="M26 30.5v13M38 30.5v13" fill="none" stroke="#2b2012" stroke-width="1.6" stroke-linecap="round"/>
+  <g fill="#ffd700" transform="translate(28.5 22.6) rotate(-14)"><ellipse rx="2.3" ry="2.7"/><circle cy="3.9" r="1.6"/></g>
+  <g fill="#ffd700" transform="translate(35.5 17.3) rotate(14)"><ellipse rx="2.3" ry="2.7"/><circle cy="3.9" r="1.6"/></g>
+  <g fill="#ff8c00" transform="translate(29.5 12) rotate(-14)"><ellipse rx="2.3" ry="2.7"/><circle cy="3.9" r="1.6"/></g>
+</svg>

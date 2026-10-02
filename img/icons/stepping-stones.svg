@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" fill="none" stroke="#e6b422" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <title>Stepping stones</title>
+  <ellipse cx="14" cy="51" rx="6" ry="3.5"/>
+  <ellipse cx="23.5" cy="40" rx="7.5" ry="4"/>
+  <ellipse cx="34" cy="28" rx="9" ry="4.5"/>
+  <ellipse cx="45.5" cy="14" rx="10.5" ry="5" stroke="#ff8c00"/>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img">
+  <title>Story Collector</title>
+  <circle cx="32" cy="32" r="29" fill="#2b2012" stroke="#b8860b" stroke-width="3"/>
+  <g transform="translate(32 22) rotate(-7)">
+    <rect x="-13" y="-3.85" width="26" height="7.7" fill="#e6b422" stroke="#2b2012" stroke-width="1.2"/>
+    <rect x="-16" y="-5.25" width="5.5" height="10.5" rx="2.75" fill="#b8860b" stroke="#2b2012" stroke-width="1.2"/>
+    <rect x="10.5" y="-5.25" width="5.5" height="10.5" rx="2.75" fill="#b8860b" stroke="#2b2012" stroke-width="1.2"/>
+  </g>
+  <g transform="translate(31.5 31.3) rotate(5)">
+    <rect x="-13" y="-3.85" width="26" height="7.7" fill="#e6b422" stroke="#2b2012" stroke-width="1.2"/>
+    <rect x="-16" y="-5.25" width="5.5" height="10.5" rx="2.75" fill="#b8860b" stroke="#2b2012" stroke-width="1.2"/>
+    <rect x="10.5" y="-5.25" width="5.5" height="10.5" rx="2.75" fill="#b8860b" stroke="#2b2012" stroke-width="1.2"/>
+  </g>
+  <g transform="translate(32 41)">
+    <rect x="-13" y="-3.85" width="26" height="7.7" fill="#ffd700" stroke="#2b2012" stroke-width="1.2"/>
+    <rect x="-16" y="-5.25" width="5.5" height="10.5" rx="2.75" fill="#e6b422" stroke="#2b2012" stroke-width="1.2"/>
+    <rect x="10.5" y="-5.25" width="5.5" height="10.5" rx="2.75" fill="#e6b422" stroke="#2b2012" stroke-width="1.2"/>
+    <path d="M-8.5-1.4h9M-8.5 1.8h5.5" fill="none" stroke="#2b2012" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="7" cy="0.2" r="2.2" fill="#ff8c00"/>
+  </g>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" fill="none" stroke="#e6b422" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <title>Two friends side by side</title>
+  <circle cx="19" cy="20.5" r="6.5"/>
+  <circle cx="45" cy="20.5" r="6.5"/>
+  <path d="M9.5 51v-8.5a9.5 9.5 0 0 1 19 0V51M35.5 51v-8.5a9.5 9.5 0 0 1 19 0V51"/>
+  <path d="M8 51h48" stroke="#ff8c00"/>
+</svg>

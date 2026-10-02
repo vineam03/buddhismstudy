@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img">
+  <title>Ten Talks</title>
+  <circle cx="32" cy="32" r="29" fill="#2b2012" stroke="#b8860b" stroke-width="3"/>
+  <rect x="16" y="38.5" width="32" height="7" rx="2" fill="#ffd700"/>
+  <rect x="36" y="40.25" width="12" height="3.5" fill="#f3e5c0"/>
+  <rect x="19" y="30.5" width="30" height="7" rx="2" fill="#e6b422"/>
+  <rect x="37" y="32.25" width="12" height="3.5" fill="#f3e5c0"/>
+  <rect x="17" y="22.5" width="22" height="7" rx="2" fill="#ffd700"/>
+  <rect x="29" y="24.25" width="10" height="3.5" fill="#f3e5c0"/>
+  <path d="M0 0C3-4 8.5-4 12 0C8.5 4 3 4 0 0Z" fill="#ff8c00" transform="translate(37.5 26) rotate(-20)"/>
+</svg>

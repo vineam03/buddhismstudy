@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" fill="none" stroke="#e6b422" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <title>Breath going in and out</title>
+  <path d="M8 32c3 0 5-10 9-10 5 0 5 20 10 20s5-20 10-20 5 20 10 20c4 0 6-10 9-10"/>
+  <path d="M13 27l-5 5 5 5M51 27l5 5-5 5" stroke="#ff8c00"/>
+</svg>

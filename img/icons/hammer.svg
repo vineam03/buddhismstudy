@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" fill="none" stroke="#e6b422" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <title>Hammer</title>
+  <g transform="translate(35.61 33.25) rotate(-40)">
+    <rect x="-14" y="-21" width="28" height="12" rx="3"/>
+    <path d="M-3.5 -9V21a3.5 3.5 0 0 0 7 0V-9"/>
+  </g>
+  <path d="M30.11 55.84h25" stroke="#ff8c00"/>
+</svg>

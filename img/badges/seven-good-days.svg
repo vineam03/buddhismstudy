@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img">
+  <title>Seven Good Days</title>
+  <circle cx="32" cy="32" r="29" fill="#2b2012" stroke="#b8860b" stroke-width="3"/>
+  <g transform="rotate(45 32 32)">
+    <path d="M28.75 14V34.5C28.75 38 24 39.5 24 45.5A8 8 0 0 0 40 45.5C40 39.5 35.25 38 35.25 34.5V14A3.25 3.25 0 0 0 28.75 14ZM24.3 14.5H27.4M36.6 14.5H39.7M29.5 49h5" fill="none" stroke="#ffd700" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="32" cy="14.6" r="1.35" fill="#ff8c00"/>
+    <circle cx="32" cy="17.9" r="1.35" fill="#ff8c00"/>
+    <circle cx="32" cy="21.2" r="1.35" fill="#ff8c00"/>
+    <circle cx="32" cy="24.5" r="1.35" fill="#ff8c00"/>
+    <circle cx="32" cy="27.8" r="1.35" fill="#ff8c00"/>
+    <circle cx="32" cy="31.1" r="1.35" fill="#ff8c00"/>
+    <circle cx="32" cy="34.4" r="1.35" fill="#ff8c00"/>
+  </g>
+</svg>

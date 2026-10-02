@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img">
+  <title>One Quiet Minute</title>
+  <circle cx="32" cy="32" r="29" fill="#2b2012" stroke="#b8860b" stroke-width="3"/>
+  <path d="M32 32V15A17 17 0 0 1 49 32Z" fill="#ffd700"/>
+  <circle cx="32" cy="32" r="17" fill="none" stroke="#ffd700" stroke-width="3"/>
+  <path d="M22.5 40q2.375-4 4.75 0t4.75 0 4.75 0 4.75 0" stroke="#ff8c00" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

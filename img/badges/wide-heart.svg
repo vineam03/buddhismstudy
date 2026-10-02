@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img">
+  <title>Wide Heart</title>
+  <circle cx="32" cy="32" r="29" fill="#2b2012" stroke="#b8860b" stroke-width="3"/>
+  <path d="M32 42C24.3 36.5 21 32.3 21 29A5.5 5.5 0 0 1 32 29A5.5 5.5 0 0 1 43 29C43 32.3 39.7 36.5 32 42z" fill="#ffd700" stroke="#ffd700" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M48 32L51.5 32M32 48L32 51.5M16 32L12.5 32M32 16L32 12.5" fill="none" stroke="#ff8c00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

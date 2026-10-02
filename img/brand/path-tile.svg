@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img">
+  <title>Stepping stone</title>
+  <defs>
+    <radialGradient id="lit" cx="0.36" cy="0.32" r="0.72">
+      <stop offset="0" stop-color="#b8860b" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#b8860b" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="32" cy="32" r="24.5" fill="#2b2012"/>
+  <circle cx="32" cy="32" r="24.5" fill="url(#lit)" stroke="#e6b422" stroke-width="3"/>
+</svg>

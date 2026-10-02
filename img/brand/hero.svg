@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" role="img">
+  <title>A dotted trail from a gateway, past eight markers, to a lamp on a hill</title>
+  <defs>
+    <linearGradient id="hill" gradientUnits="userSpaceOnUse" x1="0" y1="120" x2="0" y2="320">
+      <stop offset="0" stop-color="#b8860b" stop-opacity="0.24"/>
+      <stop offset="0.55" stop-color="#b8860b" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#b8860b" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffd700" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#ffd700" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g fill="url(#hill)">
+    <path d="M110 320C200 250 300 196 400 196C500 196 570 262 650 320z"/>
+    <path d="M390 320C480 300 560 132 690 124C740 121 772 200 796 320z"/>
+    <path d="M4 320C40 272 110 262 200 284C290 304 400 306 480 320z"/>
+  </g>
+  <g fill="#f3e5c0" opacity="0.45">
+    <circle cx="180" cy="60" r="2"/>
+    <circle cx="300" cy="112" r="1.6"/>
+    <circle cx="392" cy="44" r="2"/>
+    <circle cx="470" cy="120" r="1.6"/>
+    <circle cx="556" cy="62" r="1.6"/>
+    <circle cx="250" cy="170" r="1.4"/>
+  </g>
+  <circle cx="690" cy="84" r="72" fill="url(#glow)"/>
+  <path d="M92 282C98 285 110 299 128 302C146 305 176 304 200 300C224 296 250 288 272 278C294 268 307 248 330 238C353 228 384 218 410 216C436 214 462 227 486 226C510 225 538 217 556 208C574 199 581 182 596 172C611 162 628 156 644 148C660 140 682 128 690 124" fill="none" stroke="#ffd700" stroke-width="5" stroke-linecap="round" stroke-dasharray="0 13"/>
+  <path d="M64 286V234a28 28 0 0 1 56 0v52" fill="none" stroke="#ffd700" stroke-width="8" stroke-linecap="round"/>
+  <g fill="#2b2012" stroke="#e6b422" stroke-width="3">
+    <circle cx="152" cy="304" r="12"/>
+    <circle cx="219" cy="296" r="12"/>
+    <circle cx="283" cy="272" r="12"/>
+    <circle cx="340" cy="234" r="12"/>
+    <circle cx="406" cy="216" r="12"/>
+    <circle cx="474" cy="225" r="12"/>
+    <circle cx="541" cy="214" r="12"/>
+    <circle cx="594" cy="173" r="12"/>
+  </g>
+  <g fill="#ffd700">
+    <circle cx="152" cy="304" r="4"/>
+    <circle cx="219" cy="296" r="4"/>
+    <circle cx="283" cy="272" r="4"/>
+    <circle cx="340" cy="234" r="4"/>
+    <circle cx="406" cy="216" r="4"/>
+    <circle cx="474" cy="225" r="4"/>
+    <circle cx="541" cy="214" r="4"/>
+    <circle cx="594" cy="173" r="4"/>
+  </g>
+  <path d="M680 112h20l-4 12h-12z" fill="#e6b422"/>
+  <path d="M668 100h44a22 13 0 0 1 -44 0z" fill="#ffd700"/>
+  <path d="M690 60C697 70 700 76 700 82A10 10 0 0 1 680 82C680 76 683 70 690 60z" fill="#ff8c00"/>
+</svg>

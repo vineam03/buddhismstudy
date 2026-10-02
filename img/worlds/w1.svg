@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img">
+  <title>What Hurts?</title>
+  <circle cx="48" cy="48" r="45" fill="#2b2012" stroke="#e6b422" stroke-width="3"/>
+  <circle cx="62" cy="29" r="9" fill="#ff8c00"/>
+  <path d="M66 49.5h1.8L74 70.5h-3.7z" fill="#ffd700" stroke="#ffd700" stroke-width="1.5" stroke-linejoin="round"/>
+  <g fill="#f3e5c0">
+    <circle cx="35" cy="39" r="9"/>
+    <circle cx="46" cy="33" r="12"/>
+    <circle cx="58" cy="39" r="9"/>
+    <path d="M35 39h23v9H35z"/>
+  </g>
+  <path d="M36 54 32 64M47 54 43 64M58 54 54 64" fill="none" stroke="#f3e5c0" stroke-width="4" stroke-linecap="round"/>
+  <path d="M23 72.5h52" fill="none" stroke="#b8860b" stroke-width="3" stroke-linecap="round"/>
+</svg>

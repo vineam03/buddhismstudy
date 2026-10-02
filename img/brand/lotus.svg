@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img">
+  <title>Lotus</title>
+  <path d="M32 48C41 39.6 41 30.64 32 20C23 30.64 23 39.6 32 48z" transform="rotate(-66 32 48)" fill="#b8860b"/>
+  <path d="M32 48C41 39.6 41 30.64 32 20C23 30.64 23 39.6 32 48z" transform="rotate(66 32 48)" fill="#b8860b"/>
+  <path d="M32 48C42 38.4 42 28.16 32 16C22 28.16 22 38.4 32 48z" transform="rotate(-33 32 48)" fill="#e6b422"/>
+  <path d="M32 48C42 38.4 42 28.16 32 16C22 28.16 22 38.4 32 48z" transform="rotate(33 32 48)" fill="#e6b422"/>
+  <path d="M32 48C42 37.2 42 25.68 32 12C22 25.68 22 37.2 32 48z" fill="#ffd700"/>
+  <path d="M24 48a8 6 0 0 0 16 0z" fill="#ff8c00"/>
+</svg>

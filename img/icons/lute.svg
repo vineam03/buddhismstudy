@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" fill="none" stroke="#e6b422" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <title>Lute with three strings</title>
+  <g transform="rotate(45 32 32)">
+    <circle cx="32" cy="46" r="14"/>
+    <path d="M26.5 49V8M32 49V8M37.5 49V8"/>
+    <path d="M23 8h18"/>
+    <path d="M24 50h16" stroke="#ff8c00"/>
+  </g>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" fill="none" stroke="#e6b422" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <title>Sunrise</title>
+  <path d="M8 45h48"/>
+  <path d="M48 35.8L54.5 32M41.3 29L45 22.5M32 26.5L32 19M22.8 29L19 22.5M16 35.8L9.5 32"/>
+  <path d="M19 45a13 13 0 0 1 26 0" stroke="#ff8c00"/>
+</svg>

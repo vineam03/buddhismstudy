@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" fill="none" stroke="#e6b422" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <title>Magnifying glass</title>
+  <circle cx="25" cy="25" r="14"/>
+  <path d="M17 24a8.5 8.5 0 0 1 7-7"/>
+  <path d="M34.9 34.9L41 41"/>
+  <path d="M43 43l9.5 9.5" stroke="#ff8c00" stroke-width="6"/>
+</svg>

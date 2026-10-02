@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img">
+  <title>Domino Spotter</title>
+  <circle cx="32" cy="32" r="29" fill="#2b2012" stroke="#b8860b" stroke-width="3"/>
+  <g fill="#ffd700"><rect x="17" y="30" width="7.5" height="18" rx="2"/><rect x="39.5" y="30" width="7.5" height="18" rx="2"/><rect x="28.25" y="16" width="7.5" height="18" rx="2"/></g>
+  <path d="M17 39h7.5M39.5 39h7.5M28.25 25h7.5" fill="none" stroke="#2b2012" stroke-width="1.5"/>
+  <circle cx="32" cy="44" r="3" fill="#ff8c00"/>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img">
+  <title>Lute Player</title>
+  <circle cx="32" cy="32" r="29" fill="#2b2012" stroke="#b8860b" stroke-width="3"/>
+  <g transform="rotate(45 32 32)">
+    <path d="M26 14.5H38" fill="none" stroke="#e6b422" stroke-width="2.4" stroke-linecap="round"/>
+    <rect x="28.5" y="11.5" width="7" height="6.5" rx="2" fill="#e6b422"/>
+    <path d="M29.75 16.5h4.5V31C34.25 35 42 36.5 42 44A10 10 0 0 1 22 44C22 36.5 29.75 35 29.75 31Z" fill="#ffd700"/>
+    <path d="M30.9 18.5L29.4 48M32 18.5V48M33.1 18.5L34.6 48" fill="none" stroke="#2b2012" stroke-width="0.9"/>
+    <path d="M27.5 48.5H36.5" fill="none" stroke="#2b2012" stroke-width="1.8" stroke-linecap="round"/>
+  </g>
+  <circle cx="44" cy="43.5" r="3.6" fill="#ff8c00"/>
+</svg>

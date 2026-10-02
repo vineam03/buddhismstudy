@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img">
+  <title>Can It Stop?</title>
+  <circle cx="48" cy="48" r="45" fill="#2b2012" stroke="#e6b422" stroke-width="3"/>
+  <path d="M65.33 20.01A10 10 0 1 1 55.9 34.15A8.5 8.5 0 0 0 65.33 20.01z" fill="#f3e5c0"/>
+  <path d="M44 58C38 54 38 50 44 46C50 42 50 37 44 33C40.500 30 41 25 45.500 24" fill="none" stroke="#f3e5c0" stroke-width="4" stroke-linecap="round"/>
+  <path d="M23 69h42" fill="none" stroke="#b8860b" stroke-width="6" stroke-linecap="round"/>
+  <path d="M27 62 61 76" fill="none" stroke="#e6b422" stroke-width="6" stroke-linecap="round"/>
+  <path d="M61 62 27 76" fill="none" stroke="#ffd700" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="44" cy="69" r="3" fill="#ff8c00"/>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img">
+  <title>Warm Heart</title>
+  <circle cx="48" cy="48" r="45" fill="#2b2012" stroke="#e6b422" stroke-width="3"/>
+  <path d="M48 63C36.1 54.5 31 48.1 31 43A8.5 8.5 0 0 1 48 43A8.5 8.5 0 0 1 65 43C65 48.1 59.9 54.5 48 63z" fill="#ffd700" stroke="#ffd700" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M74 48L79.5 48M66.38 66.38L70.27 70.27M48 74L48 79.5M29.62 66.38L25.73 70.27M22 48L16.5 48M29.62 29.62L25.73 25.73M48 22L48 16.5M66.38 29.62L70.27 25.73" fill="none" stroke="#ff8c00" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

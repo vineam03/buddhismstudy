@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" fill="none" stroke="#e6b422" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <title>Chariot</title>
+  <path d="M9 11v16h32V11"/>
+  <path d="M41 25l13.5-6"/>
+  <circle cx="25" cy="40" r="12.5"/>
+  <path d="M25 27.5v25M12.5 40h25"/>
+  <circle cx="25" cy="40" r="3" fill="#ff8c00" stroke="none"/>
+</svg>

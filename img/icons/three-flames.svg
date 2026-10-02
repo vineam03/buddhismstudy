@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" fill="none" stroke="#e6b422" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <title>Three flames</title>
+  <path d="M16.5 26C12.4 32.8 8.5 41.6 8.5 48.5a5.5 5.5 0 0 0 11 0C19.5 43.3 14.6 38.4 16.5 26z"/>
+  <path d="M35.5 9C29.9 20.3 24.5 37.1 24.5 46.5a7.5 7.5 0 0 0 15 0C39.5 39.4 32.9 29.6 35.5 9z" stroke="#ff8c00"/>
+  <path d="M52.5 26C48.4 32.8 44.5 41.6 44.5 48.5a5.5 5.5 0 0 0 11 0C55.5 43.3 50.6 38.4 52.5 26z"/>
+</svg>

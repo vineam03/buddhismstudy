@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" fill="none" stroke="#e6b422" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <title>Name tag</title>
+  <path d="M25 20h14l9 9v23a4 4 0 0 1-4 4H20a4 4 0 0 1-4-4V29z"/>
+  <circle cx="32" cy="29" r="2.5"/>
+  <path d="M24 41h16M24 48h10"/>
+  <path d="M32 26.5C25.5 19 26.5 9 32 9s6.5 10 0 17.5" stroke="#ff8c00"/>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img">
+  <title>Tuned String</title>
+  <circle cx="32" cy="32" r="29" fill="#2b2012" stroke="#b8860b" stroke-width="3"/>
+  <path d="M21 15V49M43 15V49" fill="none" stroke="#ffd700" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M32 15q7 4.25 0 8.5t0 8.5t0 8.5t0 8.5" fill="none" stroke="#ff8c00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

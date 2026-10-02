@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" fill="none" stroke="#e6b422" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <title>Medicine bag</title>
+  <rect x="10" y="24" width="44" height="30" rx="6"/>
+  <path d="M24 24v-5a8 8 0 0 1 16 0v5"/>
+  <path d="M32 32v14M25 39h14" stroke="#ff8c00"/>
+</svg>

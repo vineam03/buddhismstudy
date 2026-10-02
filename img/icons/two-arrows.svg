@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" fill="none" stroke="#e6b422" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <title>Two arrows</title>
+  <path d="M20.1 10.9L44.2 35M36.4 32.9L44.2 35L42.1 27.3"/>
+  <path d="M35 44.2L10.9 20.1" stroke-dasharray="4 6"/>
+  <path d="M27.3 42.1L35 44.2L32.9 36.4"/>
+  <circle cx="47" cy="47" r="6" stroke="#ff8c00"/>
+</svg>

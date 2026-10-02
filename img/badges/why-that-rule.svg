@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img">
+  <title>Why That Rule?</title>
+  <circle cx="32" cy="32" r="29" fill="#2b2012" stroke="#b8860b" stroke-width="3"/>
+  <path d="M28.5 19.5a3.5 3.5 0 0 1 7 0c0 2.6-3.5 2.6-3.5 5" stroke="#ff8c00" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="32" cy="28.9" r="1.7" fill="#ff8c00"/>
+  <g transform="translate(32 41)">
+    <rect x="-14" y="-5.6" width="28" height="11.2" fill="#ffd700"/>
+    <rect x="-17" y="-7" width="5.5" height="14" rx="2.75" fill="#e6b422"/>
+    <rect x="11.5" y="-7" width="5.5" height="14" rx="2.75" fill="#e6b422"/>
+    <path d="M-8.5-1.7h17M-8.5 2h11" fill="none" stroke="#2b2012" stroke-width="1.6" stroke-linecap="round"/>
+  </g>
+</svg>

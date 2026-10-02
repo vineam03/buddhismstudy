@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" fill="none" stroke="#e6b422" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <title>Speech bubble with a check mark</title>
+  <path d="M17 10h30a8 8 0 0 1 8 8v18a8 8 0 0 1-8 8H30L19 54V44h-2a8 8 0 0 1-8-8V18a8 8 0 0 1 8-8z"/>
+  <path d="M22 27l7 7 13-14" stroke="#ff8c00"/>
+</svg>
