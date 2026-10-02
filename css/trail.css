@@ -1,0 +1,1111 @@
+/* The Trail page: the map, the lesson player and the world checks.
+   Linked after css/styles.css and css/game.css. Colours come only from the variables in
+   css/styles.css. Reading text uses --text. Contract: docs/GAME_CONTRACT.md, section 7. */
+
+/* ---------- page frame ---------- */
+main.trail {
+  max-width: 46rem;
+  padding-top: 1.5rem;
+}
+
+.trail [hidden] { display: none !important; }
+
+/* A heading that only receives focus so that reading starts there shows no ring. */
+.trail [tabindex="-1"]:focus { outline: none; }
+
+main.trail ~ footer.site-footer { color: var(--text-dim); }
+
+.trail noscript .panel a,
+.trail .settings-help a {
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
+/* The link to My Journey sits in a sentence. Its target is 48px tall; the line keeps its height. */
+.trail .settings-help a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  margin: -14px 0;
+}
+
+/* Inside a lesson or a check the page chrome steps back, so the card is the page. */
+body.trail-focus header.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  padding: .45rem 1rem;
+  border-bottom-width: 1px;
+}
+body.trail-focus .site-header .wheel {
+  display: inline;
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+body.trail-focus .site-header h1 { font-size: 1.2rem; }
+body.trail-focus .site-header .subtitle,
+body.trail-focus nav.site-nav,
+body.trail-focus .hud { display: none; }
+body.trail-focus main.trail {
+  max-width: 38rem;
+  padding-top: .4rem;
+}
+
+/* ---------- the map ---------- */
+.map-title {
+  color: var(--gold);
+  font-size: 1.7rem;
+  line-height: 1.25;
+}
+.map-lede {
+  margin: .3rem 0 1.1rem;
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.map-done { margin-bottom: 1.1rem; }
+.map-done-title {
+  color: var(--gold);
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.map-done .btn { margin-top: .7rem; }
+
+/* the four-question legend */
+.legend {
+  padding: 1rem 1.1rem 1.05rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.legend-title {
+  color: var(--gold);
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+.legend-lede { margin: .15rem 0 .7rem; }
+.legend-list {
+  display: grid;
+  gap: .4rem;
+  list-style: none;
+}
+.legend-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .1rem .7rem;
+  padding: .45rem .7rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg-soft);
+}
+.legend-row.is-here {
+  padding: calc(.45rem - 1px) calc(.7rem - 1px);
+  border: 2px solid var(--gold);
+  background: var(--card-hover);
+}
+.legend-q {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+}
+.legend-n {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 1.6em;
+  height: 1.6em;
+  border-radius: 50%;
+  background: var(--dark-yellow);
+  color: #1a1208;
+  font-size: .95em;
+  font-weight: bold;
+}
+.legend-label { color: var(--text); font-weight: bold; }
+.legend-where { color: var(--text-dim); font-size: .95em; }
+.legend-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  margin-left: auto;
+  color: var(--text);
+  font-size: .95em;
+  font-weight: bold;
+}
+.legend-jump {
+  margin-top: .5rem;
+  padding-left: 0;
+  font-size: 1rem;
+}
+
+/* the small marks that go with a state word */
+.stone-state .state-ico { margin-top: .22em; }
+.state-ico {
+  display: inline-block;
+  flex: 0 0 auto;
+  width: .85em;
+  height: .85em;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+.state-done {
+  width: 1em;
+  height: 1em;
+  border-radius: 0;
+  background: url("../img/brand/check.svg") center / contain no-repeat;
+}
+.state-here {
+  background: var(--orange);
+  box-shadow: 0 0 0 3px rgba(255, 140, 0, .3);
+}
+.state-open { border: 2px solid var(--gold-soft); }
+.state-later { border: 2px solid var(--text-faint); }
+.state-aside { border: 2px dotted var(--gold-soft); }
+
+/* the worlds */
+.worlds {
+  display: grid;
+  gap: 1.2rem;
+  margin-top: 1.4rem;
+}
+.world {
+  padding: 1rem 1rem 1.05rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--bg-soft);
+}
+.world.world-here { border-color: var(--dark-yellow); }
+.world-head {
+  display: flex;
+  align-items: flex-start;
+  gap: .9rem;
+}
+summary.world-head {
+  list-style: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+summary.world-head::-webkit-details-marker { display: none; }
+.world-emblem { margin-top: .15rem; }
+.world-text { min-width: 0; }
+.world-kicker {
+  color: var(--orange);
+  font-size: .95rem;
+  font-weight: bold;
+  line-height: 1.3;
+}
+.world-title {
+  color: var(--gold);
+  font-size: 1.4rem;
+  line-height: 1.25;
+}
+.world-tagline {
+  margin-top: .2rem;
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.world-progress {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  margin-top: .3rem;
+  color: var(--text-dim);
+  font-size: .95rem;
+  line-height: 1.4;
+}
+.world-toggle {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+  margin-top: .2rem;
+  color: var(--gold-soft);
+  font-size: .95rem;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+.world-toggle-hide { display: none; }
+details[open] > summary .world-toggle-show { display: none; }
+details[open] > summary .world-toggle-hide { display: inline; }
+.world-unwritten {
+  margin-top: .9rem;
+  color: var(--text);
+  font-size: 1.05rem;
+}
+
+/* the stepping stones */
+.stones {
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.stone-item {
+  position: relative;
+  padding-bottom: .55rem;
+}
+.stone-item:last-child { padding-bottom: 0; }
+/* the trail itself: a dotted line from stone to stone, solid where it has been walked */
+.stone-item::before {
+  content: "";
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  border-left: 3px dotted var(--dark-yellow);
+}
+.stone-item.is-done::before { border-left: 3px solid var(--gold-soft); }
+.stone-item:first-child::before { top: 34px; }
+.stone-item:last-child::before { bottom: auto; height: 34px; }
+.stone-item:only-child::before { display: none; }
+
+.stone {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: .85rem;
+  width: 100%;
+  min-height: 68px;
+  padding: 0 .6rem 0 0;
+  border: 2px solid transparent;
+  border-radius: 14px;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  line-height: 1.35;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+a.stone:hover { color: var(--text); background: var(--card); }
+button.stone:hover { background: var(--card); }
+
+.stone-mark {
+  position: relative;
+  display: flex;
+  flex: 0 0 64px;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+}
+/* the stone's own shape */
+.stone-mark::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  left: 5px;
+  border: 3px solid var(--dark-yellow);
+  border-radius: 50%;
+  background: var(--card);
+}
+.stone-mark img { position: relative; }
+.stone-mark .stone-tick {
+  position: absolute;
+  right: 0;
+  bottom: 2px;
+  box-sizing: content-box;
+  padding: 3px;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  background: var(--bg);
+}
+
+.stone-body {
+  display: flex;
+  flex: 1 1 8rem;
+  flex-direction: column;
+  gap: .15rem;
+  min-width: 0;
+  padding: .3rem 0;
+}
+.stone-line {
+  display: flex;
+  align-items: flex-start;
+  gap: .5rem;
+}
+.stone-num {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.55rem;
+  height: 1.55rem;
+  margin-top: .05rem;
+  padding: 0 .3rem;
+  border-radius: .45rem;
+  background: var(--dark-yellow);
+  color: #1a1208;
+  font-size: .95rem;
+  font-weight: bold;
+  line-height: 1;
+}
+.stone-title {
+  color: var(--text);
+  font-size: 1.125rem;
+  font-weight: bold;
+  line-height: 1.3;
+}
+.stone-state {
+  display: flex;
+  align-items: flex-start;
+  gap: .45rem;
+  color: var(--text);
+  font-size: .95rem;
+}
+
+/* done: a solid gold ring and a check */
+.stone-item.is-done .stone-mark::before {
+  border-color: var(--gold);
+  background: var(--card-hover);
+}
+
+/* you are here: the one highlighted step, bigger and glowing */
+.stone-item.is-here > .stone {
+  margin: .15rem 0;
+  padding: .55rem .7rem .55rem .35rem;
+  border-color: var(--gold);
+  background: var(--card);
+  box-shadow: 0 0 18px rgba(255, 140, 0, .28);
+}
+.stone-item.is-here > a.stone:hover { background: var(--card-hover); }
+.stone-item.is-here .stone-mark::before {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-color: var(--gold);
+  background: var(--card-hover);
+  box-shadow: 0 0 0 4px rgba(255, 215, 0, .2), 0 0 16px rgba(255, 140, 0, .6);
+}
+.stone-item.is-here .stone-title { color: var(--gold); }
+.stone-item.is-here .stone-state { font-weight: bold; }
+.stone-go {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  margin-left: auto;
+  padding: .4rem 1.2rem;
+  border-radius: 10px;
+  background: var(--gold);
+  color: #1a1208;
+  font-size: 1.05rem;
+  font-weight: bold;
+}
+
+/* later: dimmed and dashed, still readable */
+.stone-item.is-later .stone-mark::before {
+  border: 2px dashed var(--text-faint);
+  background: var(--bg-soft);
+}
+.stone-item.is-later .stone-mark img { opacity: .5; }
+.stone-item.is-later .stone-title { color: var(--text-dim); font-weight: normal; }
+.stone-item.is-later .stone-state { color: var(--text-dim); }
+.stone-item.is-later .stone-num {
+  border: 1px solid var(--text-faint);
+  background: transparent;
+  color: var(--text-dim);
+}
+
+/* set aside: an open outline, nothing more */
+.stone-item.is-aside .stone-mark::before {
+  border: 3px dotted var(--gold-soft);
+  background: var(--bg-soft);
+}
+.stone-item.is-aside .stone-mark img { opacity: .8; }
+
+/* the check at the end of a world: a squarer stone */
+.stone-check .stone-mark::before { border-radius: 16px; }
+
+.stone-banner {
+  display: inline-block;
+  position: relative;
+  margin: .5rem 0 .35rem 4.6rem;
+  padding: .25rem .8rem;
+  border: 1px solid var(--gold);
+  border-left: 5px solid var(--gold);
+  border-radius: 6px;
+  background: var(--card);
+  color: var(--text);
+  font-size: .95rem;
+  font-weight: bold;
+  line-height: 1.4;
+}
+.stone-note {
+  position: relative;
+  margin: .1rem 0 .3rem 4.6rem;
+  padding: .45rem .8rem;
+  border-left: 4px solid var(--gold-soft);
+  border-radius: 6px;
+  background: var(--card);
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.45;
+}
+.stone-note:empty { display: none; }
+
+/* the training wheel in World 4 */
+.spoke-wheel {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .4rem 1.2rem;
+  margin: .9rem 0 0;
+  padding: .6rem .8rem .8rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg);
+}
+.wheel-svg {
+  flex: 1 1 15rem;
+  width: 100%;
+  max-width: 18rem;
+  height: auto;
+  margin: 0 auto;
+  overflow: visible;
+}
+.wheel-caption {
+  flex: 1 1 13rem;
+  color: var(--text);
+  font-size: .95rem;
+  line-height: 1.5;
+}
+.wheel-caption strong { color: var(--gold-soft); }
+.wheel-rim { fill: none; stroke: var(--dark-yellow); stroke-width: 4; }
+.wheel-hub { fill: var(--gold-soft); }
+.wheel-spoke {
+  stroke: var(--text-faint);
+  stroke-width: 2;
+  stroke-dasharray: 1 6;
+  stroke-linecap: round;
+}
+.wheel-spoke.is-lit {
+  stroke: var(--gold);
+  stroke-width: 5;
+  stroke-dasharray: none;
+}
+.wheel-end { fill: var(--bg); stroke: var(--text-faint); stroke-width: 2; }
+.wheel-end.is-lit { fill: var(--orange); stroke: var(--gold); }
+.wheel-label { fill: var(--text-dim); font-family: inherit; font-size: 15px; }
+.wheel-label.is-lit { fill: var(--text); font-weight: bold; }
+
+/* One Quiet Minute, under the map */
+.trail-daily { margin-top: 1.8rem; }
+
+/* settings, at the foot of the map */
+.trail-settings {
+  margin-top: 2rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--border);
+}
+.settings-title {
+  margin-bottom: .6rem;
+  color: var(--gold-soft);
+  font-size: 1.15rem;
+}
+.setting-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+}
+.setting-btn {
+  font-size: 1rem;
+  font-weight: normal;
+}
+.setting-btn[aria-pressed="true"] {
+  border-color: var(--gold);
+  background: var(--card-hover);
+}
+.setting-btn strong { margin-left: -.2rem; }
+.settings-help {
+  margin-top: .7rem;
+  color: var(--text);
+  font-size: .95rem;
+  line-height: 1.55;
+}
+
+/* ---------- the lesson player and the checks ---------- */
+.lesson {
+  max-width: 36rem;
+  margin: 0 auto;
+}
+.lesson-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+}
+/* "Set aside for now", on every card of a heads-up lesson that is not done yet */
+.lesson-aside {
+  justify-content: flex-start;
+  margin-top: .5rem;
+}
+.lesson-bar .btn {
+  padding-left: .15rem;
+  padding-right: .15rem;
+  font-size: 1rem;
+}
+.top-setting { margin-left: auto; }
+.leave-btn::before {
+  content: "";
+  width: .5em;
+  height: .5em;
+  margin-right: .1em;
+  border-left: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+}
+.lesson-note {
+  margin: .2rem 0 .5rem;
+  color: var(--text);
+  font-size: .95rem;
+}
+.lesson-head {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  margin: .2rem 0 .5rem;
+}
+.lesson-kicker {
+  color: var(--text-dim);
+  font-size: .95rem;
+  line-height: 1.4;
+}
+.lesson-title {
+  color: var(--gold);
+  font-size: 1.45rem;
+  line-height: 1.25;
+}
+.card-count {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .3rem .8rem;
+  margin-bottom: .6rem;
+  color: var(--text);
+  font-size: 1rem;
+}
+.card-dots {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.card-dot {
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--dark-yellow);
+  border-radius: 50%;
+}
+.card-dot.is-past { background: var(--dark-yellow); }
+.card-dot.is-now {
+  width: 22px;
+  border-color: var(--gold);
+  border-radius: 6px;
+  background: var(--gold);
+}
+
+.lesson-card { padding: 1.25rem 1.4rem 1.1rem; }
+.lesson-card + .lesson-card { margin-top: 1rem; }
+.lesson-card > p,
+.card-text { max-width: 31em; }
+.lesson-card > p + p { margin-top: .7em; }
+.card-kicker {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  color: var(--orange);
+  font-size: .95rem;
+  font-weight: bold;
+  line-height: 1.4;
+}
+.card-h {
+  margin: .1rem 0 .7rem;
+  color: var(--gold);
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+.card-text p + p { margin-top: .9em; }
+.idea-text {
+  font-size: 1.25em;
+  line-height: 1.6;
+}
+.lesson-card .card-small,
+.card-small {
+  color: var(--text);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.speak-btn {
+  margin: .7rem 0 -.3rem -.4rem;
+  font-size: 1rem;
+}
+.speak-btn::before {
+  content: "";
+  width: .55em;
+  height: .55em;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+}
+.speak-btn.is-reading::before { background: currentColor; }
+
+.lesson-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.nav-back { min-width: 6.5rem; }
+.nav-next { min-width: 9rem; }
+.nav-deeper { margin-left: auto; }
+
+/* two equal buttons, side by side */
+.choice-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .8rem;
+  margin-top: 1.2rem;
+}
+.choice-btn {
+  flex-direction: column;
+  gap: .1rem;
+  width: 100%;
+  height: 100%;
+  padding: .7rem .9rem;
+}
+.choice-small {
+  color: var(--text-dim);
+  font-size: .9rem;
+  font-weight: normal;
+}
+
+/* the new word */
+.card-h.word-term {
+  margin-bottom: .2rem;
+  font-size: 2rem;
+}
+.word-say { font-size: 1.1em; }
+.word-means-label { margin-top: .9rem; }
+.word-means { margin-top: .2rem !important; }
+
+/* try it now: the ring */
+.ring-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .6rem 1.1rem;
+  margin-top: 1.1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+.ring {
+  flex: 0 0 auto;
+  width: 92px;
+  height: 92px;
+}
+.ring-track { fill: none; stroke: var(--dark-yellow); stroke-width: 2; }
+/* 276.46 is the ring's length: 2 x pi x 44 */
+.ring-fill {
+  fill: none;
+  stroke: var(--gold-soft);
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-dasharray: 276.46;
+  stroke-dashoffset: 276.46;
+}
+.ring-fill.is-running { animation: trail-ring-fill 45s linear both; }
+@keyframes trail-ring-fill {
+  from { stroke-dashoffset: 276.46; }
+  to { stroke-dashoffset: 0; }
+}
+.ring-side { flex: 1 1 12rem; min-width: 0; }
+.ring-note, .ring-live { font-size: 1.125rem; line-height: 1.6; }
+.ring-live:empty { display: none; }
+.ring-btn {
+  margin-top: .6rem;
+  font-size: 1rem;
+}
+
+/* a taught word in running text */
+.word-btn {
+  position: relative;
+  display: inline;
+  margin: 0;
+  padding: 0 .08em;
+  border: 0;
+  border-bottom: 2px dotted var(--gold-soft);
+  border-radius: 3px 3px 0 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  cursor: pointer;
+}
+/* the tap target reaches past the line of text, to 48px */
+.word-btn::after {
+  content: "";
+  position: absolute;
+  left: -6px;
+  right: -6px;
+  top: 50%;
+  height: 48px;
+  transform: translateY(-50%);
+}
+.word-btn:hover,
+.word-btn[aria-expanded="true"] {
+  border-bottom-style: solid;
+  border-bottom-color: var(--gold);
+  background: var(--card-hover);
+}
+.word-panel {
+  max-width: 31em;
+  margin: .6rem 0 .9rem;
+  padding: .75rem 1rem .4rem;
+  border: 1px solid var(--dark-yellow);
+  border-left: 5px solid var(--gold-soft);
+  border-radius: 10px;
+  background: var(--bg-soft);
+  color: var(--text);
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 1.6;
+}
+.word-panel:focus-visible { outline: 3px solid var(--orange); outline-offset: 2px; }
+.word-panel-term { color: var(--gold); font-size: 1.1em; }
+.word-panel-say { color: var(--text-dim); font-size: .9em; }
+.word-close {
+  margin-left: -.4rem;
+  font-size: 1rem;
+}
+
+/* questions */
+.quiz-field {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.quiz-h { font-size: 1.15rem; margin-bottom: .45rem; }
+.quiz-from { margin-bottom: .5rem; color: var(--text-dim); font-weight: normal; }
+.quiz-q {
+  max-width: 28em;
+  padding: 0;
+  color: var(--text);
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 1.6;
+}
+.quiz-hint {
+  margin: .4rem 0 .6rem;
+  color: var(--text-dim);
+  font-size: 1.125rem;
+}
+.quiz-options {
+  display: grid;
+  gap: .7rem;
+  margin-top: .7rem;
+}
+.quiz-hint + .quiz-options { margin-top: 0; }
+.quiz-opt {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .75rem;
+  width: 100%;
+  min-height: 56px;
+  padding: .65rem .9rem;
+  border: 2px solid var(--gold-soft);
+  border-radius: 12px;
+  background: var(--bg-soft);
+  color: var(--text);
+  font: inherit;
+  line-height: 1.6;
+  text-align: left;
+  cursor: pointer;
+}
+.quiz-opt:hover { border-color: var(--gold); background: var(--card-hover); }
+.opt-mark {
+  display: flex;
+  flex: 0 0 26px;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border: 2px solid var(--gold-soft);
+  border-radius: 50%;
+}
+.opt-text { flex: 1 1 8.5rem; min-width: 0; }
+.opt-tag {
+  flex: 0 0 auto;
+  margin-left: auto;
+  padding: .05rem .6rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  font-size: .9rem;
+  font-weight: bold;
+}
+.quiz-opt.is-right {
+  padding: calc(.65rem - 1px) calc(.9rem - 1px);
+  border: 3px solid var(--gold);
+  background: var(--card-hover);
+  cursor: default;
+}
+.quiz-opt.is-right .opt-mark { border-color: var(--gold); background: var(--bg); }
+.quiz-opt.is-tried {
+  border-style: dashed;
+  border-color: var(--text-faint);
+  background: transparent;
+  color: var(--text-dim);
+  cursor: default;
+}
+.quiz-opt.is-tried .opt-mark { border: 2px dashed var(--text-faint); }
+.quiz-opt.is-closed { cursor: default; }
+.quiz-opt.is-closed:not(.is-tried) { border-color: var(--border); }
+.quiz-opt.is-closed:hover { background: var(--bg-soft); }
+.quiz-opt.is-tried:hover { background: transparent; border-color: var(--text-faint); }
+
+.quiz-feedback { margin-top: .9rem; }
+.quiz-feedback:empty { display: none; }
+.quiz-feedback.is-right,
+.quiz-feedback.is-again {
+  padding: .8rem 1rem;
+  border-left: 5px solid var(--gold);
+  border-radius: 10px;
+  background: var(--bg-soft);
+}
+.quiz-feedback.is-again { border-left: 5px dotted var(--gold-soft); }
+.fb-icon { margin: -.2rem .45rem 0 0; }
+/* "Not quite" has its own mark: an open, dashed circle. Never a cross, never red. */
+.fb-mark {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: -.2rem .45rem 0 0;
+  border: 2px dashed var(--gold-soft);
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.fb-word { color: var(--gold); font-weight: bold; }
+.fb-again { margin-top: .2rem; }
+.fb-small { margin-top: .4rem; color: var(--text-dim); font-size: 1.125rem; }
+.fb-link .btn { padding-left: 0; font-size: 1rem; text-align: left; justify-content: flex-start; }
+
+/* the reward card */
+.can-now { font-size: 1.6rem; }
+.reward-points {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  color: var(--text);
+  font-size: 1rem;
+}
+.lesson-card > .reward-note {
+  margin-top: .3rem;
+  color: var(--text);
+  font-size: .95rem;
+}
+.reward-news {
+  display: grid;
+  gap: .5rem;
+  margin-top: .7rem;
+  list-style: none;
+}
+.reward-news-item {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  font-size: 1rem;
+}
+.lesson-card > .reward-plenty {
+  margin-top: 1rem;
+  padding: .7rem .9rem;
+  border: 1px dashed var(--dark-yellow);
+  border-radius: 10px;
+  background: var(--bg-soft);
+  font-size: 1.125rem;
+}
+
+/* go deeper, and other lists of library links */
+.deeper-list {
+  display: grid;
+  gap: .6rem;
+  margin: .8rem 0;
+  list-style: none;
+}
+.deeper-link {
+  display: block;
+  min-height: 48px;
+  padding: .6rem .9rem;
+  border: 1px solid var(--dark-yellow);
+  border-radius: 10px;
+  background: var(--bg-soft);
+  color: var(--text);
+  line-height: 1.45;
+}
+.deeper-link:hover { border-color: var(--gold); background: var(--card-hover); color: var(--text); }
+.deeper-label {
+  display: block;
+  color: var(--gold-soft);
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+.deeper-small {
+  display: block;
+  margin-top: .15rem;
+  color: var(--text-dim);
+  font-size: .9rem;
+}
+.deeper-toggle {
+  margin-top: .8rem;
+  font-size: 1rem;
+}
+.deeper-fold > p { max-width: 31em; }
+.deeper-toggle::after {
+  content: "";
+  width: .5em;
+  height: .5em;
+  margin: -.25em 0 0 .2em;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+}
+.deeper-toggle[aria-expanded="true"]::after {
+  margin-top: .25em;
+  transform: rotate(-135deg);
+}
+
+/* after a check: the next world */
+.preview {
+  display: flex;
+  align-items: center;
+  gap: .9rem;
+  margin: 1rem 0 .8rem;
+  padding: .9rem 1rem;
+  border: 1px solid var(--dark-yellow);
+  border-radius: 12px;
+  background: var(--bg-soft);
+}
+.preview-text { min-width: 0; }
+.preview-title {
+  color: var(--gold);
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 1.3;
+}
+.preview-tagline { font-size: 1rem; line-height: 1.5; }
+
+/* Trail complete */
+.complete-title { font-size: 1.7rem; }
+.complete-sub {
+  margin: 1.1rem 0 .3rem;
+  color: var(--gold-soft);
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+.left-out .complete-sub { margin-top: 0; }
+
+/* ---------- narrow screens ---------- */
+@media (max-width: 30rem) {
+  main.trail { padding-left: 1rem; padding-right: 1rem; }
+  .world { padding: .85rem .7rem .9rem; }
+  .world-emblem { width: 52px; height: 52px; }
+  .legend { padding: .9rem .8rem; }
+  .lesson-card { padding: 1.1rem 1rem 1rem; }
+  .choice-row { grid-template-columns: 1fr; }
+  .stone-item.is-here > .stone { flex-wrap: wrap; }
+  .stone-go { flex: 1 1 100%; margin-left: 0; }
+  .stone-banner, .stone-note { margin-left: 4.4rem; }
+  .card-h { font-size: 1.35rem; }
+  .can-now { font-size: 1.45rem; }
+  .nav-next { min-width: 8rem; }
+  /* the wheel's labels shrink with the picture, so they start bigger here */
+  .wheel-label { font-size: 17px; }
+}
+
+/* ---------- Larger Text ---------- */
+html.large-text .map-lede { font-size: 1.25rem; }
+html.large-text .legend { font-size: 1.2rem; }
+html.large-text .world-kicker,
+html.large-text .world-progress,
+html.large-text .world-toggle,
+html.large-text .stone-state,
+html.large-text .stone-banner,
+html.large-text .stone-note,
+html.large-text .wheel-caption,
+html.large-text .settings-help,
+html.large-text .lesson-kicker,
+html.large-text .lesson-note,
+html.large-text .card-kicker,
+html.large-text .deeper-small,
+html.large-text .choice-small,
+html.large-text .lesson-card > .reward-note { font-size: 1.15rem; }
+html.large-text .world-tagline,
+html.large-text .card-count,
+html.large-text .reward-points,
+html.large-text .reward-news-item,
+html.large-text .preview-tagline { font-size: 1.2rem; }
+/* full sentences on a card grow with the card text (1.35rem in css/game.css) */
+html.large-text .card-small,
+html.large-text .quiz-hint,
+html.large-text .fb-small,
+html.large-text .ring-note,
+html.large-text .ring-live,
+html.large-text .lesson-card > .reward-plenty { font-size: 1.35rem; }
+html.large-text .world-title { font-size: 1.6rem; }
+html.large-text .stone-title { font-size: 1.35rem; }
+html.large-text .stone-num { min-width: 1.9rem; height: 1.9rem; font-size: 1.1rem; }
+html.large-text .stone-item { padding-bottom: .9rem; }
+html.large-text .stone-go { font-size: 1.25rem; min-height: 52px; }
+html.large-text .lesson-title { font-size: 1.7rem; }
+html.large-text .card-h { font-size: 1.75rem; }
+html.large-text .quiz-h { font-size: 1.35rem; }
+html.large-text .can-now { font-size: 1.85rem; }
+html.large-text .card-h.word-term { font-size: 2.3rem; }
+html.large-text .quiz-opt { min-height: 64px; padding-top: .8rem; padding-bottom: .8rem; }
+html.large-text .opt-tag { font-size: 1.05rem; }
+html.large-text .lesson-bar .btn,
+html.large-text .speak-btn,
+html.large-text .ring-btn,
+html.large-text .setting-btn,
+html.large-text .deeper-toggle,
+html.large-text .legend-jump,
+html.large-text .word-close,
+html.large-text .fb-link .btn { font-size: 1.15rem; }
+html.large-text .wheel-label { font-size: 17px; }
+@media (max-width: 30rem) {
+  html.large-text .wheel-label { font-size: 19px; }
+}
+html.large-text .lesson-bar .btn { padding-left: .15rem; padding-right: .15rem; }
+html.large-text .speak-btn,
+html.large-text .word-close { padding-left: .4rem; padding-right: .4rem; }
+html.large-text .legend-jump,
+html.large-text .fb-link .btn { padding-left: 0; }
+html.large-text .stones,
+html.large-text .legend,
+html.large-text .world-text,
+html.large-text .trail-settings {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .ring-fill.is-running { animation: none; }
+}
+
+/* ---------- print ---------- */
+@media print {
+  .lesson-nav,
+  .stone-go,
+  .ring-box,
+  .word-panel .word-close { display: none !important; }
+  .stone-item.is-here > .stone { box-shadow: none; }
+}

@@ -5,113 +5,717 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Buddhism Study</title>
 <link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/game.css">
+<link rel="stylesheet" href="css/home.css">
+<script>
+/* Runs before the first paint. It reads the saved progress as plain text and sets classes on
+   <html>: "has-progress" (css/home.css then hides the first-visit panel and holds room for the
+   Continue panel), "quiet" and "large-text". It is only a first guess. js/site.js and the script
+   at the foot of the page ask the engine and put right anything this got wrong. */
+(function () {
+  try {
+    var root = document.documentElement, progress = false, save, old, k;
+    var read = function (key) {
+      try { return JSON.parse(localStorage.getItem(key) || "null"); } catch (e) { return null; }
+    };
+    save = read("buddhismstudy-game-v1");
+    if (save && save.v === 1 && typeof save.xp === "number" && save.done && typeof save.done === "object") {
+      for (k in save.done) {
+        if (Object.prototype.hasOwnProperty.call(save.done, k)) { progress = true; break; }
+      }
+      if (save.settings && save.settings.quiet === true) { root.className += " quiet"; }
+      if (save.settings && save.settings.large === true) { root.className += " large-text"; }
+    } else {
+      /* No save the engine can read: it will count the old Guided Study ticks instead. */
+      old = read("buddhismstudy-progress");
+      if (old && typeof old === "object") {
+        for (k in old) {
+          if (Object.prototype.hasOwnProperty.call(old, k) && old[k] === true) { progress = true; break; }
+        }
+      }
+    }
+    if (progress) { root.className += " has-progress"; }
+  } catch (e) { /* storage is blocked: the page loads as a first visit */ }
+})();
+</script>
+<noscript><style>.needs-js { display: none !important; }</style></noscript>
 </head>
 <body>
 
 <header class="site-header">
-  <span class="wheel">☸</span>
+  <span class="wheel" aria-hidden="true">☸</span>
   <h1>Buddhism Study</h1>
-  <p class="subtitle">A growing personal study of the Dhamma — one basket at a time</p>
+  <p class="subtitle">Learn about Buddhism from zero, one short step at a time</p>
   <nav class="site-nav">
     <a href="index.html" class="active">Home</a>
+    <a href="trail.html">The Trail</a>
+    <a href="profile.html">My Journey</a>
+    <a href="glossary.html">Glossary</a>
     <a href="curriculum.html">Curriculum</a>
     <a href="study.html">Guided Study</a>
     <a href="canon.html">The Canon</a>
     <a href="suttas.html">Sutta Library</a>
-    <a href="vinaya.html">Vinaya</a>
+    <a href="vinaya.html">Monks’ Rules</a>
     <a href="themes.html">Modern Life</a>
     <a href="journey.html">Journey West</a>
-    <a href="everything.html">Export PDF</a>
+    <a href="everything.html">Save as PDF</a>
   </nav>
 </header>
 
-<main>
-  <p class="intro">
-    This site expands as my study of Buddhism deepens. Each section below is a chapter
-    of that study — some complete, some still to come.
-  </p>
+<main class="home">
 
-  <div class="topic-grid">
+  <noscript>
+    <section class="panel panel-gold home-panel home-noscript">
+      <h2>Welcome</h2>
+      <p>This site teaches Buddhism in plain words.</p>
+      <p>The short lessons need JavaScript, and it is turned off in this browser.
+      Every reading page still works without it.</p>
+      <p class="home-noscript-links">
+        <a class="btn btn-primary" href="study.html">Start with Guided Study</a>
+        <a class="btn btn-plain" href="suttas.html">Open the Sutta Library</a>
+      </p>
+    </section>
+  </noscript>
 
-    <a class="topic-card" href="study.html">
-      <h2>Guided Study</h2>
-      <span class="pali">Nine units · logical sequence · progress tracking</span>
-      <p>The whole site as a course: from the shape of the problem through mechanics, ethics,
-      mind-training, and relational practice — each unit with ordered readings, a rationale,
-      and a practice assignment. Checkboxes remember your progress.</p>
-    </a>
-
-    <a class="topic-card" href="curriculum.html">
-      <h2>The Curriculum</h2>
-      <span class="pali">Four stages · dukkha → mechanics → path → relational living</span>
-      <p>A structured study path from the universal predicament through psychological
-      mechanics and daily implementation to the four Brahmavihāras — each stage anchored
-      to specific canonical texts, with notes on what English translations lose.</p>
-    </a>
-
-    <a class="topic-card" href="canon.html">
-      <h2>The Canon, Cover to Cover</h2>
-      <span class="pali">All three baskets · every book</span>
-      <p>Every division of the Tipiṭaka — the full Vinaya, all five Nikāyas including
-      each book of the Khuddaka, and all seven Abhidhamma books — explained in
-      contemporary English and mapped to the curriculum stages.</p>
-    </a>
-
-    <a class="topic-card" href="suttas.html">
-      <h2>The Sutta Library</h2>
-      <span class="pali">67 key texts · study notes</span>
-      <p>"Spark notes" for the canon's essential suttas — the gist of each text, what it
-      teaches about truth and human nature, and how to apply it in daily life. Searchable
-      by theme: anger, money, grief, speech, breath.</p>
-    </a>
-
-    <a class="topic-card" href="vinaya.html">
-      <h2>The Pātimokkha</h2>
-      <span class="pali">Vinaya Piṭaka · Suttavibhaṅga</span>
-      <p>All 227 rules of the bhikkhu Pātimokkha, organized by category, each with the
-      origin story that prompted the Buddha to lay it down.</p>
-    </a>
-
-    <a class="topic-card" href="themes.html">
-      <h2>Modern Life</h2>
-      <span class="pali">Fourteen lenses · career · love · family · money · digital life · health</span>
-      <p>A full handbook aiming the canon at contemporary life: promotion treadmills and
-      layoffs, relationship repair and breakups, parenting, friendship audits, debt,
-      doomscrolling, chronic pain, grief, imposter syndrome, decisions, gray-zone ethics,
-      fame — each with a concrete playbook and every claim linked to its source.</p>
-    </a>
-
-    <a class="topic-card" href="journey.html">
-      <h2>Journey to the West</h2>
-      <span class="pali">Xiyouji · the mind-monkey's pilgrimage</span>
-      <p>The great Chinese allegory read episode by episode: the golden headband as
-      discipline, Pigsy as appetite, the counterfeit self, the bottomless boat, the blank
-      scriptures — each mapped to the principles taught on this site.</p>
-    </a>
-
-    <a class="topic-card" href="everything.html">
-      <h2>Export as PDF</h2>
-      <span class="pali">The whole site, one document</span>
-      <p>Compiles every section — curriculum, guided study, canon guide, all 67 sutta
-      cards with historical context, modern life lenses, Journey West, and the 227
-      rules — into a single printable book. Save it as a PDF from your browser.</p>
-    </a>
-
-    <div class="topic-card placeholder">
-      <h2>Reading Notes</h2>
-      <span class="pali">Journal</span>
-      <p>Running notes and reflections from whatever I'm currently reading.</p>
-      <span class="badge-soon">Coming as I learn</span>
+  <!-- First visit. This panel is the default, so nothing flashes on a first visit.
+       For a returning learner the script in <head> hides it before the first paint (the class
+       "has-progress" on <html>) and an empty Continue panel holds the room. The script at the
+       foot of the page then fills the Continue panel, and has the last word on which one shows. -->
+  <section class="panel panel-gold home-panel home-welcome needs-js" id="home-welcome" aria-labelledby="home-welcome-h">
+    <div class="home-lead">
+      <img class="home-hero" src="img/brand/hero.svg" width="800" height="320"
+           alt="A dotted gold trail runs from a gateway, past eight markers, to a lamp on a hill."
+           onerror="this.style.display='none'">
+      <div class="home-lead-text">
+        <h2 id="home-welcome-h">New to Buddhism? Start at zero.</h2>
+        <p class="home-sub">Short stories. One idea at a time. Hard words explained one at a time.
+        Nothing to lose if you miss one.</p>
+        <p class="home-cta">
+          <a class="btn btn-primary home-big" href="trail.html#w0-l1">Take the first step (about 3 minutes)</a>
+        </p>
+      </div>
     </div>
+
+    <ul class="home-three">
+      <li>
+        <img class="icon-img" src="img/brand/book.svg" width="48" height="48" alt="" onerror="this.style.display='none'">
+        <span>Read a short story</span>
+      </li>
+      <li>
+        <img class="icon-img" src="img/icons/seated-figure.svg" width="48" height="48" alt="" onerror="this.style.display='none'">
+        <span>Try it for one minute</span>
+      </li>
+      <li>
+        <img class="icon-img" src="img/icons/speech-bubble.svg" width="48" height="48" alt="" onerror="this.style.display='none'">
+        <span>Answer three short questions</span>
+      </li>
+    </ul>
+
+    <div class="home-how">
+      <h3>How this works</h3>
+      <ul>
+        <li>Each step is one short lesson.</li>
+        <li class="game-only">You collect points for the steps you finish.</li>
+        <li class="game-only">Points only count what you have done, and you cannot lose them.</li>
+      </ul>
+    </div>
+
+    <p class="home-free">Free. No sign-up. Your progress stays in this browser.</p>
+    <p class="home-skip">
+      <a class="btn btn-link" href="#library">I already know the basics. Take me to the library.</a>
+    </p>
+  </section>
+
+  <!-- Later visits. Filled in by the script at the foot of the page. -->
+  <section class="panel panel-gold home-panel home-continue" id="home-continue" aria-labelledby="home-continue-h" hidden></section>
+
+  <!-- The optional One Quiet Minute card (js/daily.js). -->
+  <div class="home-panel home-daily" id="home-daily" hidden></div>
+
+  <!-- Shown once the whole Trail is done. -->
+  <section class="panel home-panel home-left-out" id="home-left-out" aria-labelledby="home-left-out-h" hidden>
+    <h2 id="home-left-out-h">What this Trail left out</h2>
+    <p>The Trail is a first walk. It is not the whole map. These 4 things were left out on purpose.
+    The library has them.</p>
+    <ul class="home-links">
+      <li><a href="suttas.html#mn135">Rebirth (life after life) and other worlds</a></li>
+      <li><a href="vinaya.html">The full life of the monks and nuns</a></li>
+      <li><a href="suttas.html#mn141">The eight steps, by name</a></li>
+      <li><a href="canon.html">The different schools of Buddhism</a></li>
+    </ul>
+    <p class="home-small">These pages are harder reading. They are for later. You lose nothing by skipping them.</p>
+  </section>
+
+  <div class="home-library" id="library" tabindex="-1">
+
+    <p class="home-open">Every page on this site is open to everyone, at any time.</p>
+
+    <section class="home-group" aria-labelledby="home-g1">
+      <h2 id="home-g1">Start here</h2>
+      <p class="home-group-note">Made for beginners. No reading needed first.</p>
+      <div class="topic-grid">
+
+        <a class="topic-card" href="trail.html">
+          <h3>The Trail</h3>
+          <p>Short lessons that start at zero. Each one has a story, one idea and three short questions.</p>
+          <span class="home-meta">
+            <span class="home-tag">Begin here</span>
+            <span class="home-tag">8 worlds, 46 lessons</span>
+            <span class="points home-points"><img class="icon-img" src="img/brand/lotus.svg" width="20" height="20" alt="" onerror="this.style.display='none'"> 30 points per lesson</span>
+          </span>
+        </a>
+
+        <a class="topic-card" href="glossary.html">
+          <h3>Plain-English Glossary</h3>
+          <p>Hard words in plain words, with how to say each one. Flip a card to see what a word means.</p>
+          <span class="home-meta">
+            <span class="home-tag">Good at any time</span>
+            <span class="points home-points"><img class="icon-img" src="img/brand/lotus.svg" width="20" height="20" alt="" onerror="this.style.display='none'"> 2 points per word card</span>
+          </span>
+        </a>
+
+      </div>
+    </section>
+
+    <section class="home-group" aria-labelledby="home-g2">
+      <h2 id="home-g2">When you are ready</h2>
+      <p class="home-group-note">Harder reading, in small pieces. The Trail links to these pages as you go.</p>
+      <div class="topic-grid">
+
+        <a class="topic-card" href="suttas.html">
+          <h3>Sutta Library</h3>
+          <p>Notes on 67 old talks and poems. Each card opens with one plain sentence about what it says.</p>
+          <span class="home-meta">
+            <span class="home-tag">Best after World 1</span>
+            <span class="points home-points"><img class="icon-img" src="img/brand/lotus.svg" width="20" height="20" alt="" onerror="this.style.display='none'"> 10 points per card</span>
+          </span>
+        </a>
+
+        <a class="topic-card" href="themes.html">
+          <h3>Modern Life topics</h3>
+          <p>Old ideas put to work in life today. There are 14 topics, such as work, money, phones and family.</p>
+          <span class="home-meta">
+            <span class="home-tag">Best after World 2</span>
+            <span class="points home-points"><img class="icon-img" src="img/brand/lotus.svg" width="20" height="20" alt="" onerror="this.style.display='none'"> 10 points per topic</span>
+          </span>
+        </a>
+
+        <a class="topic-card" href="journey.html">
+          <h3>Journey to the West</h3>
+          <p>A famous old story from China about a monkey and a long walk. It is read here in 14 episodes.</p>
+          <span class="home-meta">
+            <span class="home-tag">Best after World 3</span>
+            <span class="points home-points"><img class="icon-img" src="img/brand/lotus.svg" width="20" height="20" alt="" onerror="this.style.display='none'"> 10 points per episode</span>
+          </span>
+        </a>
+
+      </div>
+    </section>
+
+    <section class="home-group" aria-labelledby="home-g3">
+      <h2 id="home-g3">Deep study</h2>
+      <p class="home-group-note">The full library, for a long, slow read.</p>
+      <div class="topic-grid">
+
+        <a class="topic-card" href="curriculum.html">
+          <h3>Curriculum</h3>
+          <p>A study plan in four stages. Each stage names the old texts that go with it.</p>
+          <span class="home-meta">
+            <span class="home-tag">Best after the Trail</span>
+          </span>
+        </a>
+
+        <a class="topic-card" href="study.html">
+          <h3>Guided Study</h3>
+          <p>The library in reading order. There are nine units, with a box to tick for each reading.</p>
+          <span class="home-meta">
+            <span class="home-tag">Best after the Trail</span>
+            <span class="points home-points"><img class="icon-img" src="img/brand/lotus.svg" width="20" height="20" alt="" onerror="this.style.display='none'"> 10 points per library card, counted once</span>
+          </span>
+        </a>
+
+        <a class="topic-card" href="canon.html">
+          <h3>The Canon: the full bookshelf of old texts</h3>
+          <p>Every book on the old bookshelf, with a few lines on what is inside each one.</p>
+          <span class="home-meta">
+            <span class="home-tag">For deep study</span>
+          </span>
+        </a>
+
+        <a class="topic-card" href="vinaya.html">
+          <h3>The 227 monks’ rules</h3>
+          <p>Monks are men who leave home to train full time. Here is each of their rules, with the story of how it began.</p>
+          <span class="home-meta">
+            <span class="home-tag">Best after World 4</span>
+            <span class="points home-points"><img class="icon-img" src="img/brand/lotus.svg" width="20" height="20" alt="" onerror="this.style.display='none'"> 2 points per story, for your first 50 stories</span>
+          </span>
+        </a>
+
+        <a class="topic-card" href="everything.html">
+          <h3>Save as PDF</h3>
+          <p>The whole library as one book. Print it, or keep it as a file to read away from the screen.</p>
+          <span class="home-meta">
+            <span class="home-tag">Good at any time</span>
+          </span>
+        </a>
+
+        <a class="topic-card" href="profile.html">
+          <h3>My Journey</h3>
+          <p>See what you have done so far. The settings and the backup of your progress are here too.</p>
+          <span class="home-meta">
+            <span class="home-tag">Good at any time</span>
+          </span>
+        </a>
+
+      </div>
+    </section>
 
   </div>
 </main>
 
-<footer class="site-footer">
-  Rule and origin summaries are drawn from the Suttavibhaṅga of the Pali Vinaya Piṭaka ·
-  Full translations at <a href="https://suttacentral.net">SuttaCentral</a> and
-  <a href="https://www.dhammatalks.org/vinaya/bmc/Section0001.html">dhammatalks.org</a>
+<footer class="site-footer home-footer">
+  <p>Your progress is saved only in this browser.</p>
+  <p>Quiet Mode, Larger text, Open all lessons, saving to a file and Start over are on My Journey.</p>
+  <p><a class="btn btn-link" href="profile.html#settings-h">Settings, backup and start over</a></p>
+  <p>All pictures are original SVGs made for this site and released as CC0 (public domain).</p>
+  <p><a class="btn btn-link" href="license.html">Read the picture license</a></p>
 </footer>
+
+<script src="js/data/trail-w0.js"></script>
+<script src="js/data/trail-w1.js"></script>
+<script src="js/data/trail-w2.js"></script>
+<script src="js/data/trail-w3.js"></script>
+<script src="js/data/trail-w4.js"></script>
+<script src="js/data/trail-w5.js"></script>
+<script src="js/data/trail-w6.js"></script>
+<script src="js/data/trail-w7.js"></script>
+<script src="js/data/game-config.js"></script>
+<script src="js/game.js"></script>
+<script src="js/site.js"></script>
+<script src="js/daily.js"></script>
+<script>
+/* The home page. First visit: the welcome panel in the HTML above stays as it is.
+   Later visits: the Continue panel, or "Choose your own next step" once the Trail is done.
+   Everything is worked out from window.Game; nothing here logs an activity. */
+(function () {
+  "use strict";
+
+  var TEXT = {
+    continueHead: "Continue the Trail",
+    chooseHead: "Choose your own next step",
+    nextUp: "Next up: ",
+    about: ", about ",
+    aboutOpen: " (about ",
+    aboutClose: ")",
+    minute: " minute",
+    minutes: " minutes",
+    yourTitle: "Your title",
+    toNext: " to the next title",
+    enough: "Enough.",
+    days: "Days you showed up: ",
+    plenty: "That is plenty for one day. Rest helps it sink in.",
+    lampKeeper: "There is one more title, Lamp Keeper, for people who read on in the library. No hurry.",
+    cardLabel: "Read one library card",
+    cardAll: "You have read all the cards. Read any one again.",
+    cardSome: "Open the library and pick any card.",
+    studyLabel: "Guided Study",
+    studyUnit: "Guided Study, Unit\u00a0",
+    studyNote: "Readings in order, with a box to tick for each one.",
+    studyAll: "Every box is ticked. Read any unit again.",
+    topicLabel: "A Modern Life topic: ",
+    topicAny: "Modern Life topics",
+    topicNote: "Old ideas put to work in life today.",
+    topicAll: "Pick any topic.",
+    cardsRead: " cards read",
+    topicsRead: " topics read",
+    episodesRead: " episodes read",
+    of: " of "
+  };
+
+  var TRAIL_NEXT = "trail.html#next";
+  var DEFAULT_MINUTES = 4;
+  var EPISODES = 14;
+
+  /* The Modern Life topics, by section id on themes.html, with a plain name for each. */
+  var TOPICS = [
+    { id: "career", name: "Work" },
+    { id: "friendship", name: "Friendship" },
+    { id: "money", name: "Money" },
+    { id: "digital", name: "Phones and attention" },
+    { id: "conflict", name: "Anger and hard talks" },
+    { id: "decisions", name: "Choices" },
+    { id: "love", name: "Love" },
+    { id: "family", name: "Family" },
+    { id: "identity", name: "Who you are" },
+    { id: "ethics", name: "Doing right when it is not clear" },
+    { id: "status", name: "Praise and blame" },
+    { id: "universal", name: "Truths for everyone" },
+    { id: "health", name: "Health and the body", gentle: true },
+    { id: "loss", name: "Loss and grief", gentle: true }
+  ];
+
+  /* Cards about death and grief are never picked for the learner. They stay one tap away. */
+  var GENTLE_CARDS = ["an5.57", "thig10.1", "mn87", "sn15.3", "dn16"];
+
+  var G = window.Game;
+  var welcome = document.getElementById("home-welcome");
+  var panel = document.getElementById("home-continue");
+  var leftOut = document.getElementById("home-left-out");
+  var dailyBox = document.getElementById("home-daily");
+  var hasOwn = Object.prototype.hasOwnProperty;
+  var lastSig = null;
+  var dailyOn = false;
+  var dailyShown = false;
+
+  /* The script in <head> guesses the class "has-progress" from the saved text, so the right
+     panel shows from the first paint. Here the engine has the last word. */
+  function markProgress(on) {
+    var root = document.documentElement;
+    var cls = (" " + root.className + " ").replace(/\s+/g, " ").replace(/ has-progress /g, " ");
+    root.className = (cls + (on ? "has-progress" : "")).replace(/^ +| +$/g, "");
+  }
+
+  /* Without the engine the welcome panel stays, and every link on the page still works. */
+  if (!G || typeof G.nextStep !== "function" || !welcome || !panel) { markProgress(false); return; }
+
+  /* ---------- small helpers ---------- */
+
+  function config() {
+    var c = window.GAME_CONFIG;
+    return c && typeof c === "object" ? c : {};
+  }
+
+  function list(v) { return Object.prototype.toString.call(v) === "[object Array]" ? v : []; }
+
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) { n.className = cls; }
+    if (text !== undefined && text !== null) { n.appendChild(document.createTextNode(String(text))); }
+    return n;
+  }
+
+  function clear(n) {
+    while (n.firstChild) { n.removeChild(n.firstChild); }
+  }
+
+  /* A picture with a fixed size. One that has not arrived is hidden and moves nothing. */
+  function picture(src, size, cls) {
+    var img = document.createElement("img");
+    img.className = "icon-img" + (cls ? " " + cls : "");
+    img.setAttribute("width", size);
+    img.setAttribute("height", size);
+    img.setAttribute("alt", "");
+    img.onerror = function () { img.style.display = "none"; };
+    img.src = src;
+    return img;
+  }
+
+  function pointsWord(n) {
+    if (window.Site && typeof window.Site.pointsWord === "function") { return window.Site.pointsWord(n); }
+    return n + (n === 1 ? " point" : " points");
+  }
+
+  /* ---------- reading the Trail ---------- */
+
+  /* The lesson's title, icon and minutes: from the Trail data when it has loaded,
+     else from the config (which has no minutes). */
+  function lessonInfo(id) {
+    var out = { title: "", icon: "", minutes: DEFAULT_MINUTES };
+    var worlds = list(window.TRAIL), i, j, ls;
+    for (i = 0; i < worlds.length; i++) {
+      ls = list(worlds[i] && worlds[i].lessons);
+      for (j = 0; j < ls.length; j++) {
+        if (ls[j] && ls[j].id === id) {
+          out.title = ls[j].title || "";
+          out.icon = ls[j].icon || "";
+          if (typeof ls[j].minutes === "number" && ls[j].minutes > 0) { out.minutes = Math.round(ls[j].minutes); }
+          return out;
+        }
+      }
+    }
+    worlds = list(config().worlds);
+    for (i = 0; i < worlds.length; i++) {
+      ls = list(worlds[i] && worlds[i].lessons);
+      for (j = 0; j < ls.length; j++) {
+        if (ls[j] && ls[j].id === id) {
+          out.title = ls[j].title || "";
+          out.icon = ls[j].icon ? "img/icons/" + ls[j].icon + ".svg" : "";
+          return out;
+        }
+      }
+    }
+    return out;
+  }
+
+  function checkInfo(worldId) {
+    var worlds = list(config().worlds), i;
+    for (i = 0; i < worlds.length; i++) {
+      if (worlds[i] && worlds[i].id === worldId) {
+        return { title: worlds[i].bossTitle || "", icon: "img/worlds/" + worldId + ".svg" };
+      }
+    }
+    return { title: "", icon: "" };
+  }
+
+  /* The words and picture for the one gold button. */
+  function nextInfo(step) {
+    var info, words, mins;
+    if (step.type === "boss") {
+      info = checkInfo(step.world);
+      return { icon: info.icon, round: true, words: info.title ? TEXT.nextUp + info.title : TEXT.continueHead };
+    }
+    info = lessonInfo(step.id);
+    words = info.title ? TEXT.nextUp + info.title : TEXT.continueHead;
+    mins = info.minutes + (info.minutes === 1 ? TEXT.minute : TEXT.minutes);
+    /* A title that ends in its own mark ("Who's the Boss?") takes brackets, so "?," is never printed. */
+    if (info.title && /[?!.]$/.test(info.title)) {
+      words += TEXT.aboutOpen + mins + TEXT.aboutClose;
+    } else {
+      words += TEXT.about + mins;
+    }
+    return { icon: info.icon, round: false, words: words };
+  }
+
+  /* ---------- three suggestions for after the Trail ---------- */
+
+  function isGentle(cardId) { return GENTLE_CARDS.indexOf(cardId) !== -1; }
+
+  /* A library card not yet read: Guided Study order first, then the rest of the shelf. */
+  function nextCard() {
+    var cards = config().cards || {}, study = config().study || {}, seen = {}, k, i, ids;
+    function ok(id) {
+      if (seen[id] || !hasOwn.call(cards, id)) { return false; }
+      seen[id] = true;
+      return !isGentle(id) && !G.has("sutta:" + id);
+    }
+    for (k in study) {
+      if (!hasOwn.call(study, k)) { continue; }
+      ids = list(study[k]);
+      for (i = 0; i < ids.length; i++) {
+        if (ok(ids[i])) { return { id: ids[i], card: cards[ids[i]] }; }
+      }
+    }
+    for (k in cards) {
+      if (hasOwn.call(cards, k) && ok(k)) { return { id: k, card: cards[k] }; }
+    }
+    return null;
+  }
+
+  /* True only when every card on the shelf is read, the gentle ones too. Counted over the
+     config's own card ids, so an old id that is no longer on the shelf is never counted. */
+  function allCardsRead() {
+    var cards = config().cards || {}, total = 0, read = 0, k;
+    for (k in cards) {
+      if (!hasOwn.call(cards, k)) { continue; }
+      total += 1;
+      if (G.has("sutta:" + k)) { read += 1; }
+    }
+    return total > 0 && read >= total;
+  }
+
+  /* The first Guided Study unit that still has an open box. 0 when every box is ticked. */
+  function nextUnit() {
+    var study = config().study || {}, k, m;
+    for (k in study) {
+      if (!hasOwn.call(study, k) || G.studyChecked(k)) { continue; }
+      m = /^u(\d+)-/.exec(k);
+      if (m) { return parseInt(m[1], 10); }
+    }
+    return 0;
+  }
+
+  function nextTopic() {
+    var i;
+    for (i = 0; i < TOPICS.length; i++) {
+      if (!TOPICS[i].gentle && !G.has("theme:" + TOPICS[i].id)) { return TOPICS[i]; }
+    }
+    return null;
+  }
+
+  function suggestions() {
+    var out = [], card = nextCard(), unit = nextUnit(), topic = nextTopic(), small;
+    if (card) {
+      small = (card.card && card.card.title ? card.card.title : "") +
+        (card.card && card.card.ref ? " (" + String(card.card.ref).replace(/ /g, "\u00a0") + ")" : "");
+      out.push({ href: "suttas.html#" + card.id, icon: "img/brand/book.svg", label: TEXT.cardLabel, small: small });
+    } else {
+      /* Nothing to pick: every card is read, or only the gentle cards are left. A gentle card
+         is never named or linked here, so the words must not say that all the cards are read. */
+      out.push({
+        href: "suttas.html", icon: "img/brand/book.svg", label: TEXT.cardLabel,
+        small: allCardsRead() ? TEXT.cardAll : TEXT.cardSome
+      });
+    }
+    out.push({
+      href: "study.html", icon: "img/icons/stepping-stones.svg",
+      label: unit ? TEXT.studyUnit + unit : TEXT.studyLabel,
+      small: unit ? TEXT.studyNote : TEXT.studyAll
+    });
+    if (topic) {
+      out.push({ href: "themes.html#" + topic.id, icon: "img/icons/two-friends.svg", label: TEXT.topicLabel + topic.name, small: TEXT.topicNote });
+    } else {
+      out.push({ href: "themes.html", icon: "img/icons/two-friends.svg", label: TEXT.topicAny, small: TEXT.topicAll });
+    }
+    return out;
+  }
+
+  /* ---------- building the panel ---------- */
+
+  function nextButton(step) {
+    var info = nextInfo(step), a = el("a", "btn btn-primary home-big home-next"), holder;
+    a.setAttribute("href", TRAIL_NEXT);
+    if (info.icon) {
+      holder = el("span", info.round ? "home-next-icon is-round" : "home-next-icon");
+      holder.setAttribute("aria-hidden", "true");
+      holder.appendChild(picture(info.icon, 36));
+      a.appendChild(holder);
+    }
+    a.appendChild(el("span", "home-next-words", info.words));
+    return a;
+  }
+
+  function choiceList() {
+    var items = suggestions(), ul = el("ul", "home-choices"), i, li, a, holder, words;
+    for (i = 0; i < items.length; i++) {
+      li = el("li");
+      a = el("a", "btn btn-plain home-choice");
+      a.setAttribute("href", items[i].href);
+      holder = el("span", "home-choice-icon");
+      holder.setAttribute("aria-hidden", "true");
+      holder.appendChild(picture(items[i].icon, 36));
+      a.appendChild(holder);
+      words = el("span", "home-choice-words");
+      words.appendChild(el("span", "home-choice-label", items[i].label));
+      if (items[i].small) {
+        words.appendChild(el("span", "sr-only", ". "));
+        words.appendChild(el("span", "home-choice-small", items[i].small));
+      }
+      a.appendChild(words);
+      li.appendChild(a);
+      ul.appendChild(li);
+    }
+    return ul;
+  }
+
+  function counts() {
+    var cards = config().cards || {}, total = 0, k, ul = el("ul", "home-counts");
+    for (k in cards) {
+      if (hasOwn.call(cards, k)) { total += 1; }
+    }
+    if (total > 0) { ul.appendChild(el("li", "", G.count("sutta:") + TEXT.of + total + TEXT.cardsRead)); }
+    ul.appendChild(el("li", "", G.count("theme:") + TEXT.of + TOPICS.length + TEXT.topicsRead));
+    ul.appendChild(el("li", "", G.count("jw:") + TEXT.of + EPISODES + TEXT.episodesRead));
+    return ul;
+  }
+
+  /* The title emblem and name, then: a slim bar and the points to go; or, once the Trail is
+     done, one plain sentence; or, at the last title, the word "Enough." and counts. */
+  function titleBlock(rank, trailDone) {
+    var block = el("div", "home-title game-only"), text = el("div", "home-title-text");
+    var last = !rank.next, name = el("p", "home-title-name"), bar, fill, pct;
+    if (rank.icon) { block.appendChild(picture(rank.icon, 64, "home-emblem")); }
+    name.appendChild(el("span", "home-kicker", TEXT.yourTitle));
+    name.appendChild(el("span", "sr-only", ": "));
+    name.appendChild(el("strong", "home-title-rank", rank.name));
+    text.appendChild(name);
+    if (last) {
+      text.appendChild(el("p", "home-enough", TEXT.enough));
+      if (trailDone) { text.appendChild(counts()); }
+    } else if (trailDone) {
+      text.appendChild(el("p", "home-lamp", TEXT.lampKeeper));
+    } else {
+      pct = rank.pct > 0 ? (rank.pct > 100 ? 100 : rank.pct) : 0;
+      bar = el("div", "home-bar");
+      bar.setAttribute("aria-hidden", "true");
+      fill = el("span", "home-bar-fill");
+      fill.style.width = pct + "%";
+      bar.appendChild(fill);
+      text.appendChild(bar);
+      text.appendChild(el("p", "home-bar-words", pointsWord(rank.toNext) + TEXT.toNext));
+    }
+    block.appendChild(text);
+    return block;
+  }
+
+  function build(step, trailDone) {
+    var rank = G.rank() || {}, streak = G.streak() || {}, head, facts, days, run;
+    clear(panel);
+
+    head = el("h2", "", step ? TEXT.continueHead : TEXT.chooseHead);
+    head.id = "home-continue-h";
+    panel.appendChild(head);
+
+    if (step) {
+      panel.appendChild(el("p", "home-cta")).appendChild(nextButton(step));
+    } else {
+      panel.appendChild(choiceList());
+    }
+
+    if (step && G.lessonsToday() >= 3) {
+      panel.appendChild(el("p", "home-plenty home-quiet-hide", TEXT.plenty));
+    }
+
+    facts = el("div", "home-facts game-only");
+    if (rank.name) { facts.appendChild(titleBlock(rank, trailDone)); }
+    days = el("div", "home-days-box");
+    if (streak.total > 0) {
+      days.appendChild(el("p", "home-days", TEXT.days)).appendChild(el("strong", "", streak.total));
+    }
+    run = el("div", "home-run");
+    days.appendChild(run);
+    facts.appendChild(days);
+    panel.appendChild(facts);
+
+    if (window.Site && typeof window.Site.renderRun === "function") { window.Site.renderRun(run); }
+  }
+
+  function mountDaily() {
+    if (dailyOn || !dailyBox) { return; }
+    dailyOn = true;
+    if (window.Daily && typeof window.Daily.mount === "function") {
+      dailyBox.hidden = false;
+      try { window.Daily.mount(dailyBox); } catch (e) { dailyBox.hidden = true; }
+      dailyShown = !dailyBox.hidden;
+    }
+  }
+
+  function render() {
+    /* A first visit has nothing logged at all: no lesson, no reading, no old Guided Study tick. */
+    var first = G.count("") === 0, step, trailDone, rank, streak, sig;
+    if (first) {
+      markProgress(false);
+      welcome.hidden = false;
+      panel.hidden = true;
+      if (leftOut) { leftOut.hidden = true; }
+      /* After Start over this page can come back from the browser's page store: a first visit has no daily card. */
+      if (dailyBox) { dailyBox.hidden = true; }
+      lastSig = null;
+      return;
+    }
+    markProgress(true);
+    step = G.nextStep();
+    /* Once every check is done there is no bar and no "points to go", whatever comes next. */
+    trailDone = !step || (typeof G.trailDone === "function" && G.trailDone() === true);
+    rank = G.rank() || {};
+    streak = G.streak() || {};
+    sig = JSON.stringify([step, trailDone, rank.id, rank.toNext, rank.pct, streak.total, G.lessonsToday() >= 3,
+      step ? null : suggestions(),
+      trailDone && !rank.next ? [G.count("sutta:"), G.count("theme:"), G.count("jw:")] : null]);
+    welcome.hidden = true;
+    panel.hidden = false;
+    if (leftOut) { leftOut.hidden = !trailDone; }
+    if (sig !== lastSig) {
+      lastSig = sig;
+      build(step, trailDone);
+    }
+    mountDaily();
+    if (dailyBox && dailyShown) { dailyBox.hidden = false; }
+  }
+
+  render();
+  if (typeof G.on === "function") { G.on("change", render); }
+})();
+</script>
 
 </body>
 </html>

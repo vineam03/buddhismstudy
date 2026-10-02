@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plain-English Glossary — Buddhism Study</title>
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/game.css">
+<link rel="stylesheet" href="css/glossary.css">
+</head>
+<body>
+
+<header class="site-header">
+  <span class="wheel" aria-hidden="true">☸</span>
+  <h1>Plain-English Glossary</h1>
+  <p class="subtitle">Hard words, explained one at a time</p>
+  <nav class="site-nav">
+    <a href="index.html">Home</a>
+    <a href="trail.html">The Trail</a>
+    <a href="profile.html">My Journey</a>
+    <a href="glossary.html" class="active" aria-current="page">Glossary</a>
+    <a href="curriculum.html">Curriculum</a>
+    <a href="study.html">Guided Study</a>
+    <a href="canon.html">The Canon</a>
+    <a href="suttas.html">Sutta Library</a>
+    <a href="vinaya.html">Monks’ Rules</a>
+    <a href="themes.html">Modern Life</a>
+    <a href="journey.html">Journey West</a>
+    <a href="everything.html">Save as PDF</a>
+  </nav>
+</header>
+
+<main class="gloss" id="gloss">
+
+  <noscript>
+    <div class="panel gloss-noscript">
+      <p>The word list needs JavaScript, and it is switched off in this browser.</p>
+      <p>Every other page still works. A good place to read on is the
+      <a href="curriculum.html">Curriculum</a>. It explains the main words as they come up.</p>
+    </div>
+  </noscript>
+
+  <div id="gloss-app" hidden>
+
+    <!-- ============ the word list ============ -->
+    <div id="gloss-list-view">
+      <p class="gloss-intro">The hard words on this site, each with a short meaning in plain
+      English. The Trail’s own words come first. There is no need to learn them all. Look one
+      up when you meet it.</p>
+
+      <div class="gloss-tools" id="gloss-tools">
+        <label for="gloss-search" class="gloss-search-label">Find a word</label>
+        <input id="gloss-search" type="search" autocomplete="off" autocapitalize="off"
+               spellcheck="false" aria-describedby="gloss-search-hint">
+        <p id="gloss-search-hint" class="gloss-hint">Type any part of a word or its meaning. The
+        list changes as you type.</p>
+        <button type="button" class="btn btn-plain no-print" id="gloss-practice">Practice with cards</button>
+      </div>
+
+      <p id="gloss-count" class="gloss-count" role="status" aria-live="polite"></p>
+
+      <div id="gloss-none" class="gloss-none" hidden>
+        <p>Try a shorter word, or a different spelling. You can also look through the whole list.</p>
+        <button type="button" class="btn btn-plain" id="gloss-clear">Show all words</button>
+      </div>
+
+      <div id="gloss-root"></div>
+
+      <p class="gloss-foot no-print" id="gloss-foot">
+        <button type="button" class="btn btn-link" id="gloss-to-top">Back to the search box</button>
+      </p>
+    </div>
+
+    <!-- ============ flashcards ============ -->
+    <section id="gloss-cards-view" class="cards-view" aria-labelledby="cards-title" hidden>
+      <p class="cards-back-row">
+        <button type="button" class="btn btn-link" id="cards-back">Back to the word list</button>
+      </p>
+      <h2 id="cards-title" class="cards-title" tabindex="-1">Practice with cards</h2>
+
+      <div class="cards-progress">
+        <p id="cards-progress-text" class="cards-progress-text"></p>
+        <div class="cards-bar" aria-hidden="true"><span class="cards-bar-fill" id="cards-bar-fill"></span></div>
+      </div>
+
+      <div class="panel panel-gold flash-card" id="flash-card">
+        <p class="flash-kind" id="flash-kind"></p>
+        <h3 class="flash-term" id="flash-term" tabindex="-1"></h3>
+        <p class="flash-say" id="flash-say"></p>
+        <div class="flash-body">
+          <div class="flash-front" id="flash-front">
+            <p class="flash-hint">What does it mean? Take your time.</p>
+            <p class="points flash-first" id="flash-first" hidden></p>
+          </div>
+          <div class="flash-back" id="flash-back" aria-live="polite"></div>
+        </div>
+        <div class="flash-actions">
+          <button type="button" class="btn btn-primary flash-main" id="flash-show">Show the meaning</button>
+          <button type="button" class="btn btn-primary flash-main" id="flash-next" hidden>Next word</button>
+          <div class="flash-links">
+            <a class="btn btn-link" id="flash-more" href="#" hidden>More about this word</a>
+            <button type="button" class="btn btn-link" id="flash-prev" hidden>Back one word</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-gold flash-end" id="flash-end" hidden>
+        <h3 class="flash-end-title" id="flash-end-title" tabindex="-1">That is every word.</h3>
+        <p id="flash-end-text"></p>
+        <p>Flipping a card again is free practice. Stopping here is fine too.</p>
+        <div class="flash-actions">
+          <button type="button" class="btn btn-plain" id="flash-again">Start again from the first word</button>
+          <button type="button" class="btn btn-plain" id="flash-done">Back to the word list</button>
+        </div>
+      </div>
+
+      <p class="cards-how">One word at a time. Say the meaning in your head, then check.
+      Nobody is grading, and there is no clock.</p>
+      <p id="cards-note" class="cards-note" hidden></p>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  Meanings are short study notes in plain English, not full definitions ·
+  Say-it guides are close, not exact ·
+  Your progress is saved only in this browser.
+</footer>
+
+<script src="js/data/glossary.js"></script>
+<script src="js/data/game-config.js"></script>
+<script src="js/game.js"></script>
+<script src="js/site.js"></script>
+<script src="js/glossary.js"></script>
+
+</body>
+</html>

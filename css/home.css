@@ -1,0 +1,402 @@
+/* The home page: the welcome panel for a first visit, the Continue panel for later visits,
+   and the section cards under three plain headings.
+   Linked after css/styles.css and css/game.css. Colours come only from the variables in
+   css/styles.css. Reading text uses --text. */
+
+.home [hidden] { display: none !important; }
+
+/* A returning learner: the script in the <head> of index.html sets "has-progress" on <html>
+   before the first paint. The first-visit panel never shows, and the empty Continue panel
+   holds its room until the script at the foot of the page fills it. */
+html.has-progress #home-welcome { display: none; }
+html.has-progress #home-continue[hidden] { display: block !important; min-height: 9rem; }
+
+.home-panel { margin-bottom: 1.6rem; }
+
+.home .panel h2 {
+  color: var(--gold);
+  font-size: 1.7rem;
+  line-height: 1.25;
+  margin-bottom: .5rem;
+}
+
+.home .panel h3 {
+  color: var(--gold-soft);
+  font-size: 1.15rem;
+  margin-bottom: .3rem;
+}
+
+.home .panel p { max-width: 38em; }
+
+/* ---------- the big gold button ---------- */
+.home-cta { margin-top: 1rem; }
+
+.home-big {
+  min-height: 60px;
+  padding: .75rem 1.5rem;
+  font-size: 1.3rem;
+  border-radius: 12px;
+}
+
+/* ---------- first visit: the welcome panel ---------- */
+.home-lead {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.home-hero {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.home-sub { font-size: 1.2rem; }
+
+/* three small pictures with a few words each */
+.home-three {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 1.6rem 0 1.3rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.home-three li {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .45rem;
+  text-align: center;
+  line-height: 1.35;
+}
+
+.home-how ul {
+  list-style: none;
+  margin: 0;
+}
+
+.home-how li {
+  position: relative;
+  padding-left: 1.3rem;
+  margin-bottom: .2rem;
+}
+
+.home-how li::before {
+  content: "";
+  position: absolute;
+  left: .15rem;
+  top: .68em;
+  width: .5rem;
+  height: .5rem;
+  border-radius: 50%;
+  background: var(--gold-soft);
+}
+
+.home-free {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.home-skip { margin-top: .4rem; }
+.home-skip .btn-link {
+  margin-left: -.4rem;
+  font-size: 1.05rem;
+  text-align: left;
+  justify-content: flex-start;
+}
+
+/* ---------- later visits: the Continue panel ---------- */
+.home-next { text-align: left; }
+
+/* The lesson pictures are drawn in gold line. On a gold button they sit in a dark disc. */
+.home-next-icon,
+.home-choice-icon {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--card);
+}
+.home-next-icon.is-round { background: transparent; }
+.home-next-icon.is-round .icon-img { width: 52px; height: 52px; }
+.home-choice-icon { background: var(--bg); border: 1px solid var(--border); }
+
+.home-plenty {
+  margin-top: 1rem;
+  padding: .6rem .9rem;
+  border-left: 3px solid var(--gold-soft);
+  background: var(--bg-soft);
+  border-radius: 0 8px 8px 0;
+}
+
+.home-facts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1.2rem 2.5rem;
+  margin-top: 1.4rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--border);
+}
+
+.home-title {
+  display: flex;
+  align-items: flex-start;
+  gap: .9rem;
+  flex: 1 1 18rem;
+  min-width: 0;
+}
+
+.home-title-text { flex: 1 1 auto; min-width: 0; }
+
+.home-title-name { line-height: 1.3; }
+.home-kicker {
+  display: block;
+  color: var(--text-dim);
+  font-size: .95rem;
+}
+.home-title-rank {
+  display: block;
+  color: var(--gold);
+  font-size: 1.3rem;
+}
+
+.home-bar {
+  height: 10px;
+  max-width: 22rem;
+  margin-top: .5rem;
+  background: var(--bg);
+  border: 1px solid var(--dark-yellow);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.home-bar-fill {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--dark-yellow), var(--gold));
+  border-radius: 999px;
+}
+.home-bar-words { margin-top: .3rem; font-size: 1rem; }
+
+.home-enough {
+  color: var(--gold);
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.home-lamp { margin-top: .3rem; font-size: 1.05rem; }
+
+.home-counts {
+  list-style: none;
+  margin: .3rem 0 0;
+  font-size: 1.05rem;
+}
+
+.home-days-box { flex: 1 1 15rem; min-width: 0; }
+.home-days strong { color: var(--gold); font-size: 1.3rem; }
+.home-run { margin-top: .5rem; font-size: 1rem; }
+
+/* ---------- the Trail is done: three equal suggestions ---------- */
+.home-choices {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .8rem;
+  margin: 1rem 0 0;
+}
+
+.home-choices li { display: flex; }
+
+.home-choice {
+  flex: 1 1 auto;
+  justify-content: flex-start;
+  gap: .8rem;
+  padding: .7rem .9rem;
+  text-align: left;
+}
+
+.home-choice-words { display: block; min-width: 0; }
+.home-choice-label { display: block; font-size: 1.05rem; }
+.home-choice-small {
+  display: block;
+  margin-top: .15rem;
+  color: var(--text);
+  font-size: .95rem;
+  font-weight: normal;
+}
+
+/* ---------- "What this Trail left out" ---------- */
+.home-links {
+  list-style: none;
+  margin: .5rem 0;
+}
+
+.home-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
+.home-links li + li { margin-top: .5rem; }
+
+.home-small { font-size: 1rem; }
+
+/* ---------- the section cards ---------- */
+.home-library:focus { outline: none; }
+
+.home-open {
+  margin: 2.2rem 0 0;
+  color: var(--text);
+  font-size: 1.05rem;
+  text-align: center;
+}
+
+.home-group { margin-top: 2rem; }
+
+.home-group > h2 {
+  color: var(--gold);
+  font-size: 1.5rem;
+  line-height: 1.3;
+  border-bottom: 1px solid var(--dark-yellow);
+  padding-bottom: .25rem;
+}
+
+.home-group-note {
+  margin: .4rem 0 1rem;
+  color: var(--text);
+}
+
+.home .topic-card {
+  display: flex;
+  flex-direction: column;
+  color: var(--text);
+}
+
+.home .topic-card h3 {
+  color: var(--gold);
+  font-size: 1.25rem;
+  line-height: 1.3;
+  margin-bottom: .35rem;
+}
+
+.home .topic-card p {
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.55;
+  margin-top: 0;
+}
+
+.home-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .4rem .5rem;
+  margin-top: auto;
+  padding-top: .8rem;
+}
+
+.home-tag {
+  display: inline-block;
+  padding: .1rem .6rem;
+  border: 1px solid var(--dark-yellow);
+  border-radius: 999px;
+  color: var(--text);
+  font-size: .875rem;
+  line-height: 1.5;
+}
+
+.home-points {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+/* ---------- without JavaScript ---------- */
+.home-noscript-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .8rem;
+  margin-top: 1rem;
+}
+
+/* ---------- footer ---------- */
+footer.home-footer {
+  color: var(--text-dim);
+  font-size: .95rem;
+  line-height: 1.6;
+}
+.home-footer p + p { margin-top: .15rem; }
+.home-footer .btn-link { font-size: 1rem; }
+
+/* ---------- Quiet Mode: only the next step and the daily card ---------- */
+html.quiet .home-quiet-hide { display: none !important; }
+
+/* ---------- Larger Text ---------- */
+html.large-text .home .panel h2 { font-size: 2rem; }
+html.large-text .home-big { min-height: 68px; font-size: 1.5rem; }
+html.large-text .home-sub { font-size: 1.4rem; }
+html.large-text .home-bar-words,
+html.large-text .home-lamp,
+html.large-text .home-counts,
+html.large-text .home-small,
+html.large-text .home-run,
+html.large-text .home-choice-small { font-size: 1.15rem; }
+
+/* ---------- wide screens: words beside the picture ---------- */
+@media (min-width: 820px) {
+  .home-lead {
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 1.6rem;
+  }
+  .home-hero { flex: 0 0 44%; width: 44%; margin: 0; }
+  .home-lead-text { flex: 1 1 auto; min-width: 0; }
+}
+
+/* ---------- narrow screens ---------- */
+@media (max-width: 760px) {
+  .home-choices { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 560px) {
+  main.home { padding: 1.25rem 1rem 3rem; }
+  .home .panel { padding: 1.1rem 1rem; }
+  .home .panel h2 { font-size: 1.45rem; }
+  .home-sub { font-size: 1.125rem; }
+  .home-big { display: flex; width: 100%; font-size: 1.2rem; padding: .7rem 1rem; }
+
+  /* the three pictures become three rows: picture, then words */
+  .home-three { flex-direction: column; gap: .7rem; }
+  .home-three li { flex-direction: row; text-align: left; gap: .8rem; }
+
+  .home-facts { gap: 1rem; }
+  .home-emblem { width: 52px; height: 52px; }
+  .home-noscript-links .btn { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home .topic-card { transition: none; }
+  .home a.topic-card:hover { transform: none; }
+}
+
+/* ---------- print: the cards and their words only ---------- */
+@media print {
+  .home-welcome,
+  .home-continue,
+  .home-daily,
+  .home-left-out,
+  .home-footer .btn-link { display: none !important; }
+}

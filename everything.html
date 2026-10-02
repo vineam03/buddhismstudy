@@ -3,38 +3,201 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Export as PDF — Buddhism Study</title>
+<title>Save as PDF — Buddhism Study</title>
 <link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/game.css">
+<style>
+/* Save as PDF: the cover, the part headings, and the two beginner parts (the Trail and the
+   glossary). Colours come only from the variables in css/styles.css, which turn dark-on-white
+   for print. Reading text uses --text. */
+
+.print-btn { min-height: 48px; }
+#build-status { display: inline-block; margin: .6rem 0 0 1rem; color: var(--text); }
+
+.book-cover { padding: 3rem 0 1rem; text-align: center; }
+.cover-wheel { color: var(--orange); font-size: 3rem; line-height: 1.2; }
+.cover-title { margin: .5rem 0; color: var(--gold); font-size: 2.2rem; font-weight: bold; }
+.book-contents {
+  max-width: 34rem;
+  margin: 1.6rem auto 0;
+  padding: 1rem 1.3rem;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  text-align: left;
+}
+.contents-head { color: var(--gold-soft); font-weight: bold; }
+.book-contents ol { margin: .3rem 0 0; list-style: none; }
+.book-contents li a {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--dark-yellow);
+  text-underline-offset: .2em;
+}
+.book-contents li a:hover { color: var(--gold); }
+
+.part-head {
+  margin: 3rem 0 1rem;
+  padding-bottom: .4rem;
+  border-bottom: 3px solid var(--dark-yellow);
+  color: var(--gold);
+  font-size: 1.8rem;
+  line-height: 1.3;
+  break-before: page;
+}
+.part-sub { margin: 1.5rem 0 .6rem; color: var(--orange); font-size: 1.5rem; }
+.part-missing { max-width: 42rem; color: var(--text); }
+
+/* "In plain words" at the top of a sutta card */
+.plain-words {
+  margin: .9rem 0 .3rem;
+  padding: .6rem 1rem .7rem;
+  background: var(--bg-soft);
+  border-left: 4px solid var(--gold);
+  border-radius: 0 8px 8px 0;
+}
+.rule-body .plain-words h4 { margin-top: 0; }
+.rule-body .plain-words p { font-size: 1.05rem; line-height: 1.6; }
+
+/* ---------- the Trail, laid out to read on paper ---------- */
+.trail-book-intro { max-width: 42rem; margin-bottom: 1rem; color: var(--text); font-size: 1.05rem; }
+
+.trail-world { margin-top: 2.2rem; }
+.trail-world-head {
+  display: flex;
+  align-items: center;
+  gap: .9rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid var(--border);
+}
+.trail-world-head h3 { color: var(--orange); font-size: 1.5rem; line-height: 1.3; }
+.trail-tagline { color: var(--text); }
+.trail-world-intro { max-width: 42rem; margin: .8rem 0 1rem; }
+.trail-world-intro p { color: var(--text); font-size: 1.05rem; }
+
+.trail-lesson {
+  margin: 1rem 0;
+  padding: 1rem 1.3rem 1.1rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--dark-yellow);
+  border-radius: 10px;
+}
+.trail-lesson-head {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  color: var(--gold);
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+.trail-step { max-width: 42rem; }
+.trail-step h5 { margin: 1rem 0 .25rem; font-size: 1rem; }
+.step-label {
+  display: block;
+  color: var(--gold-soft);
+  font-size: .8rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.step-title { display: block; margin-top: .1rem; color: var(--text); font-size: 1.08rem; }
+.trail-step p { margin-bottom: .5rem; color: var(--text); font-size: 1.05rem; line-height: 1.6; }
+.trail-step .say { color: var(--text); }
+.trail-idea p { font-weight: bold; }
+/* the gentle note that opens a lesson on a hard subject */
+.trail-note {
+  margin-top: .8rem;
+  padding: .5rem .9rem;
+  border-left: 3px solid var(--dark-yellow);
+}
+.trail-note p { margin-bottom: 0; }
+.trail-cannow {
+  max-width: 42rem;
+  margin-top: 1rem;
+  padding-top: .7rem;
+  border-top: 1px dashed var(--border);
+  color: var(--text);
+  font-size: 1.05rem;
+  font-weight: bold;
+}
+
+/* ---------- the glossary ---------- */
+.gloss-list { margin: 1rem 0 0; }
+.gloss-item { padding: .7rem 0 .8rem; border-bottom: 1px solid var(--border); }
+.gloss-item dt { color: var(--gold); font-size: 1.15rem; }
+.gloss-item dt .say { color: var(--text); font-size: 1rem; font-weight: normal; }
+.gloss-kind {
+  display: inline-block;
+  margin-left: .3rem;
+  padding: .02rem .55rem;
+  border: 1px solid var(--dark-yellow);
+  border-radius: 999px;
+  color: var(--text-dim);
+  font-size: .78rem;
+  font-weight: normal;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.gloss-item dd p { max-width: 42rem; margin-top: .2rem; color: var(--text); font-size: 1.05rem; }
+.gloss-item dd .gloss-more { color: var(--text-dim); font-size: .97rem; }
+
+@media (max-width: 600px) {
+  #build-status { display: block; margin-left: 0; }
+  .cover-title { font-size: 1.8rem; }
+  .part-head { font-size: 1.5rem; }
+  .trail-lesson { padding: .9rem 1rem 1rem; }
+}
+
+@media print {
+  .book-cover { padding-top: 1rem; }
+  .book-contents li a { min-height: 0; text-decoration: none; }
+  .trail-lesson, .trail-step, .gloss-item, .book-contents { break-inside: avoid; }
+  .trail-world-head, .trail-lesson-head, .trail-step h5, .part-sub { break-after: avoid; }
+}
+</style>
 </head>
 <body>
 
 <header class="site-header">
-  <span class="wheel">☸</span>
+  <span class="wheel" aria-hidden="true">☸</span>
   <h1>Buddhism Study — The Complete Book</h1>
   <p class="subtitle">The whole site compiled as one document, ready to save as PDF</p>
   <nav class="site-nav">
     <a href="index.html">Home</a>
+    <a href="trail.html">The Trail</a>
+    <a href="profile.html">My Journey</a>
+    <a href="glossary.html">Glossary</a>
     <a href="curriculum.html">Curriculum</a>
     <a href="study.html">Guided Study</a>
     <a href="canon.html">The Canon</a>
     <a href="suttas.html">Sutta Library</a>
-    <a href="vinaya.html">Vinaya</a>
+    <a href="vinaya.html">Monks’ Rules</a>
     <a href="themes.html">Modern Life</a>
     <a href="journey.html">Journey West</a>
-    <a href="everything.html" class="active">Export PDF</a>
+    <a href="everything.html" class="active" aria-current="page">Save as PDF</a>
   </nav>
 </header>
 
 <main>
   <div class="note-box no-print">
-    <strong>How to export:</strong> wait for the sections below to finish assembling (a few
-    seconds), then press the button — your browser's print dialog opens; choose
-    <strong>“Save as PDF”</strong> as the destination. Every sutta card and Vinaya rule is
-    expanded automatically, and the page switches to a clean light print layout.
+    <strong>How to save a PDF:</strong> wait a few seconds for the parts below to load. Then
+    press the button. Your browser's print window opens. Choose
+    <strong>“Save as PDF”</strong> as the destination. The Trail lessons and the glossary come
+    first. Every sutta card and every rule is opened for you, and the page prints as dark text
+    on white paper. Points, buttons and other game parts are left out, and saving a PDF does
+    not mark anything as read.
     <br><br>
-    <button class="print-btn" onclick="window.print()">⤓ Save the whole site as PDF</button>
-    <span class="dim" id="build-status" style="margin-left:1rem;">assembling…</span>
+    <button type="button" class="print-btn" onclick="window.print()">⤓ Save the whole site as PDF</button>
+    <span id="build-status" aria-live="polite">Putting the parts together…</span>
   </div>
+
+  <noscript>
+    <p class="note-box">This page needs JavaScript to put the book together. Every other page still
+    works. A good place to read on is <a href="study.html">Guided Study</a>.</p>
+  </noscript>
 
   <div id="book-root"></div>
 </main>
@@ -44,6 +207,15 @@
   translations at suttacentral.net
 </footer>
 
+<script src="js/data/trail-w0.js"></script>
+<script src="js/data/trail-w1.js"></script>
+<script src="js/data/trail-w2.js"></script>
+<script src="js/data/trail-w3.js"></script>
+<script src="js/data/trail-w4.js"></script>
+<script src="js/data/trail-w5.js"></script>
+<script src="js/data/trail-w6.js"></script>
+<script src="js/data/trail-w7.js"></script>
+<script src="js/data/glossary.js"></script>
 <script src="js/data/parajika.js"></script>
 <script src="js/data/sanghadisesa.js"></script>
 <script src="js/data/aniyata.js"></script>
@@ -59,8 +231,17 @@
 <script src="js/data/suttas-an.js"></script>
 <script src="js/data/suttas-kn.js"></script>
 <script src="js/data/suttas-history.js"></script>
+<script src="js/data/suttas-easy-dn.js"></script>
+<script src="js/data/suttas-easy-mn1.js"></script>
+<script src="js/data/suttas-easy-mn2.js"></script>
+<script src="js/data/suttas-easy-sn.js"></script>
+<script src="js/data/suttas-easy-an.js"></script>
+<script src="js/data/suttas-easy-kn.js"></script>
 <script src="js/data/sekhiya.js"></script>
 <script src="js/data/adhikarana.js"></script>
+<script src="js/data/game-config.js"></script>
+<script src="js/game.js"></script>
+<script src="js/site.js"></script>
 <script src="js/export.js"></script>
 
 </body>

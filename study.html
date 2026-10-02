@@ -5,31 +5,70 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Guided Study — Buddhism Study</title>
 <link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/game.css">
+<style>
+/* Guided Study: the reading boxes as 48px targets, and one plain line about what a tick does.
+   Colours come only from the variables in css/styles.css. Reading text uses --text. */
+.tick-note { margin: -.7rem 0 1.2rem; color: var(--text); font-size: 1.05rem; line-height: 1.5; }
+
+@media screen {
+  .unit ul.readings li { align-items: flex-start; gap: .15rem; margin-bottom: 0; }
+  .unit ul.readings li > span { padding: 10px 0; color: var(--text); }
+  /* The box is drawn 24px wide inside a clear 12px edge, so the whole target is 48px. */
+  .unit input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 48px;
+    height: 48px;
+    margin: 0 0 0 -12px;
+    border: 12px solid transparent;
+    border-radius: 17px;
+    background-color: var(--bg-soft);
+    background-clip: padding-box;
+    box-shadow: inset 0 0 0 2px var(--gold-soft);
+    transform: none;
+    cursor: pointer;
+  }
+  .unit input[type="checkbox"]:hover { box-shadow: inset 0 0 0 2px var(--gold); }
+  /* Ticked: a filled box with a dark check, so shape as well as colour shows it. */
+  .unit input[type="checkbox"]:checked {
+    background-color: var(--gold-soft);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5' fill='none' stroke='%231a1208' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px 20px;
+  }
+  .unit input[type="checkbox"]:focus-visible { outline-offset: -8px; }
+}
+</style>
 </head>
 <body>
 
 <header class="site-header">
-  <span class="wheel">☸</span>
+  <span class="wheel" aria-hidden="true">☸</span>
   <h1>Guided Study</h1>
   <p class="subtitle">The whole site in logical sequence — nine units from first contact to integration</p>
   <nav class="site-nav">
     <a href="index.html">Home</a>
+    <a href="trail.html">The Trail</a>
+    <a href="profile.html">My Journey</a>
+    <a href="glossary.html">Glossary</a>
     <a href="curriculum.html">Curriculum</a>
-    <a href="study.html" class="active">Guided Study</a>
+    <a href="study.html" class="active" aria-current="page">Guided Study</a>
     <a href="canon.html">The Canon</a>
     <a href="suttas.html">Sutta Library</a>
-    <a href="vinaya.html">Vinaya</a>
+    <a href="vinaya.html">Monks’ Rules</a>
     <a href="themes.html">Modern Life</a>
     <a href="journey.html">Journey West</a>
-    <a href="everything.html">Export PDF</a>
+    <a href="everything.html">Save as PDF</a>
   </nav>
 </header>
 
 <main>
 
 <div class="progress-wrap no-print">
-  <div class="progress-bar"><div class="progress-fill" id="pfill"></div></div>
-  <div class="progress-label" id="plabel">0 of 0 readings complete</div>
+  <div class="progress-bar" aria-hidden="true"><div class="progress-fill" id="pfill"></div></div>
+  <div class="progress-label" id="plabel">0 of 67 readings complete</div>
 </div>
 
 <div class="note-box">
@@ -40,6 +79,11 @@
   text's card in the <a href="suttas.html">library</a> and doing the unit's practice before
   moving on. Don't rush units 1–2; everything later stands on them.
 </div>
+
+<p class="tick-note no-print">
+  A tick marks that reading’s library card as read. Marking the card as read in the library ticks it here too.
+  <span class="game-only">10 points for each card, counted once.</span>
+</p>
 
 <section class="unit" data-unit="1">
   <h3>Unit 1 — First Contact: the shape of the problem</h3>
@@ -131,7 +175,7 @@
     <li><input type="checkbox" data-r="u6-7"><span><a href="suttas.html#an5.177">AN 5.177 — The five trades</a>: livelihood boundaries</span></li>
     <li><input type="checkbox" data-r="u6-8"><span><a href="suttas.html#mn135">MN 135 — Action's results</a>: character as compounding cause</span></li>
     <li><input type="checkbox" data-r="u6-9"><span><a href="suttas.html#an3.99">AN 3.99 — The lump of salt</a>: the past is dilutable</span></li>
-    <li><input type="checkbox" data-r="u6-10"><span>Browse the <a href="vinaya.html">227 Vinaya rules</a>: ethics as institution — read one category's origin stories</span></li>
+    <li><input type="checkbox" data-r="u6-10"><span>Browse the <a href="vinaya.html">227 monks’ rules</a>: ethics as institution — read one category's origin stories</span></li>
   </ul>
   <h4>Practice this unit</h4>
   <p>Pick one: a week of the three speech gates before every hard message, or the DN 31 six-direction audit with one concrete repair per direction.</p>
@@ -200,43 +244,69 @@
 
 <div class="note-box">
   <strong>After Unit 9:</strong> loop back. The units re-read differently after the first pass —
-  Unit 2 in particular. And the <a href="everything.html">full-site PDF export</a> makes the whole
+  Unit 2 in particular. And the <a href="everything.html">Save as PDF page</a> makes the whole
   course printable for offline study.
 </div>
 
 </main>
 
 <footer class="site-footer">
-  Progress is stored only in this browser (localStorage) · Sequence follows the canon's own gradual-training model (MN 107)
+  Your progress is saved only in this browser · Sequence follows the canon's own gradual-training model (MN 107)
 </footer>
 
+<script src="js/data/game-config.js"></script>
+<script src="js/game.js"></script>
+<script src="js/site.js"></script>
 <script>
+/* Guided Study boxes. The engine (js/game.js) keeps the ticks: each box shows
+   Game.studyChecked(key), and a change calls Game.studyTick(key, checked). Ticking a box marks
+   its library cards as read, and reading those cards in the library ticks the box.
+   Un-ticking clears only the tick. Ticks from before the game are carried over by the engine. */
 (function () {
   "use strict";
-  var KEY = "buddhismstudy-progress";
-  var state = {};
-  try { state = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) { state = {}; }
+  var G = window.Game && typeof window.Game.studyTick === "function" &&
+    typeof window.Game.studyChecked === "function" ? window.Game : null;
   var boxes = document.querySelectorAll('input[type="checkbox"][data-r]');
   var fill = document.getElementById("pfill");
   var label = document.getElementById("plabel");
 
+  function each(fn) {
+    var i;
+    for (i = 0; i < boxes.length; i++) { fn(boxes[i]); }
+  }
+
   function update() {
-    var done = 0;
-    boxes.forEach(function (b) { if (b.checked) done++; });
-    var pct = boxes.length ? Math.round(done * 100 / boxes.length) : 0;
+    var done = 0, pct;
+    each(function (b) { if (b.checked) { done++; } });
+    pct = boxes.length ? Math.round(done * 100 / boxes.length) : 0;
     fill.style.width = pct + "%";
     label.textContent = done + " of " + boxes.length + " readings complete (" + pct + "%)";
   }
 
-  boxes.forEach(function (b) {
-    b.checked = !!state[b.dataset.r];
+  /* Shows what the engine holds. Runs at the start and whenever the engine changes. */
+  function paint() {
+    if (G) {
+      each(function (b) { b.checked = G.studyChecked(b.getAttribute("data-r")) === true; });
+    }
+    update();
+  }
+
+  each(function (b) {
+    var key = b.getAttribute("data-r");
+    var text = b.nextElementSibling;
+    /* The words beside a box are its name, so a screen reader says which reading it is. */
+    if (text && text.tagName === "SPAN") {
+      if (!text.id) { text.id = "reading-" + key; }
+      b.setAttribute("aria-labelledby", text.id);
+    }
     b.addEventListener("change", function () {
-      state[b.dataset.r] = b.checked;
-      try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
-      update();
+      if (G) { G.studyTick(key, b.checked); }
+      paint();
     });
   });
-  update();
+
+  paint();
+  if (G && typeof G.on === "function") { G.on("change", paint); }
 })();
 </script>
 

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Journey — Buddhism Study</title>
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/game.css">
+<link rel="stylesheet" href="css/profile.css">
+<noscript><style>.needs-js { display: none !important; }</style></noscript>
+</head>
+<body>
+
+<header class="site-header">
+  <span class="wheel" aria-hidden="true">☸</span>
+  <h1>My Journey</h1>
+  <p class="subtitle">What you have done on this site, in plain words</p>
+  <nav class="site-nav">
+    <a href="index.html">Home</a>
+    <a href="trail.html">The Trail</a>
+    <a href="profile.html" class="active" aria-current="page">My Journey</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="curriculum.html">Curriculum</a>
+    <a href="study.html">Guided Study</a>
+    <a href="canon.html">The Canon</a>
+    <a href="suttas.html">Sutta Library</a>
+    <a href="vinaya.html">Monks’ Rules</a>
+    <a href="themes.html">Modern Life</a>
+    <a href="journey.html">Journey West</a>
+    <a href="everything.html">Save as PDF</a>
+  </nav>
+</header>
+
+<main class="journey" id="journey">
+
+  <noscript>
+    <p class="panel">This page needs JavaScript to show what you have done. Every other page still
+    works. A good place to read on is <a href="study.html">Guided Study</a>.</p>
+  </noscript>
+
+  <p class="panel j-quiet-note quiet-only">Quiet Mode is on. Points, titles, badges and recent
+  days are hidden on every page. You can switch it off under Settings, lower down.</p>
+
+  <p class="panel j-save-note" id="save-note" hidden></p>
+
+  <!-- The name, when one is saved. It is not a point, title or badge, so it stays in Quiet Mode. -->
+  <p class="j-hello" id="j-hello" hidden></p>
+
+  <!-- 1. Days you showed up, the title now, the points in words, the run display (smallest) -->
+  <section class="panel panel-gold j-top game-only needs-js" aria-labelledby="days-h">
+    <div class="j-days">
+      <h2 class="j-days-label" id="days-h">Days you showed up</h2>
+      <p class="j-days-n" id="days-n" hidden></p>
+      <p class="j-days-note" id="days-note"></p>
+    </div>
+    <div class="j-now" id="now-title"></div>
+    <div class="j-run" id="j-run"></div>
+  </section>
+
+  <!-- 2. All ten titles, from the first visit -->
+  <section class="j-section game-only needs-js" aria-labelledby="titles-h">
+    <h2 class="j-h2" id="titles-h">All ten titles</h2>
+    <p class="j-lede">Titles count study done on this site. They do not measure wisdom or
+    goodness. The names are made up for this site. The last one, Lamp Keeper, needs reading
+    in the library too.</p>
+    <ol class="j-titles" id="title-list"></ol>
+  </section>
+
+  <!-- 3. The Trail, world by world (this part stays in Quiet Mode) -->
+  <section class="j-section needs-js" aria-labelledby="trail-h">
+    <h2 class="j-h2" id="trail-h">The Trail, world by world</h2>
+    <p class="j-lede" id="trail-sum"></p>
+    <ol class="j-worlds" id="world-list"></ol>
+    <p class="j-actions"><a class="btn btn-plain" href="trail.html">Open the Trail</a></p>
+  </section>
+
+  <!-- 4. Badges: every one is listed, with how to earn it -->
+  <section class="j-section game-only needs-js" aria-labelledby="badges-h">
+    <h2 class="j-h2" id="badges-h">Badges</h2>
+    <p class="j-lede" id="badge-sum"></p>
+    <ul class="j-badges" id="badge-list"></ul>
+  </section>
+
+  <!-- 5. Counts across the site -->
+  <section class="j-section game-only needs-js" aria-labelledby="counts-h">
+    <h2 class="j-h2" id="counts-h">Across the site</h2>
+    <p class="j-lede">These counts are what you marked yourself. This site trusts you.</p>
+    <ul class="j-counts" id="count-list"></ul>
+    <p class="j-lede" id="migrated-note" hidden>We counted the readings you had already ticked.</p>
+  </section>
+
+  <!-- 6. One Quiet Minute (js/daily.js) -->
+  <div id="daily" class="needs-js"></div>
+
+  <!-- 7. Settings, saved progress, start over -->
+  <section class="j-section needs-js" aria-labelledby="settings-h">
+    <h2 class="j-h2" id="settings-h">Settings</h2>
+
+    <div class="j-switches">
+      <button type="button" class="j-switch" id="set-quiet" data-setting="quiet" aria-pressed="false">
+        <span class="j-switch-track" aria-hidden="true"><span class="j-switch-knob"></span></span>
+        <span class="j-switch-text">
+          <span class="j-switch-name">Quiet Mode</span>
+          <span class="j-switch-help">Hide points, titles, badges and recent days</span>
+        </span>
+        <span class="j-switch-state" aria-hidden="true">Off</span>
+      </button>
+      <button type="button" class="j-switch" id="set-large" data-setting="large" aria-pressed="false">
+        <span class="j-switch-track" aria-hidden="true"><span class="j-switch-knob"></span></span>
+        <span class="j-switch-text">
+          <span class="j-switch-name">Larger text</span>
+          <span class="j-switch-help">Bigger words and more space on the Trail and on this page</span>
+        </span>
+        <span class="j-switch-state" aria-hidden="true">Off</span>
+      </button>
+      <button type="button" class="j-switch" id="set-openall" data-setting="openAll" aria-pressed="false">
+        <span class="j-switch-track" aria-hidden="true"><span class="j-switch-knob"></span></span>
+        <span class="j-switch-text">
+          <span class="j-switch-name">Open all lessons</span>
+          <span class="j-switch-help">For people who already know the basics</span>
+        </span>
+        <span class="j-switch-state" aria-hidden="true">Off</span>
+      </button>
+    </div>
+    <p class="j-msg" id="settings-msg" role="status"></p>
+
+    <form class="j-name" id="name-form" autocomplete="off">
+      <label class="j-label" for="name-input">Your name (you can leave this empty)</label>
+      <p class="j-help" id="name-help">It shows only on this page.</p>
+      <div class="j-name-row">
+        <input class="j-input" type="text" id="name-input" maxlength="40" aria-describedby="name-help">
+        <button type="submit" class="btn btn-plain">Save name</button>
+      </div>
+      <p class="j-msg" id="name-msg" role="status"></p>
+    </form>
+
+    <h3 class="j-h3" id="backup-h">Your saved progress</h3>
+    <p class="j-lede">You can keep a copy in a file, load a copy back, or erase everything.</p>
+    <div class="j-actions j-backup">
+      <button type="button" class="btn btn-plain" id="save-btn">Save my progress to a file</button>
+      <button type="button" class="btn btn-plain" id="load-btn">Load progress from a file</button>
+      <button type="button" class="btn btn-plain" id="reset-btn">Start over</button>
+      <input type="file" id="load-input" accept=".json,application/json" hidden tabindex="-1" aria-hidden="true">
+    </div>
+
+    <div class="panel j-confirm" id="load-confirm" hidden>
+      <p class="j-confirm-text" id="load-confirm-text" tabindex="-1">Load this file? It takes the
+      place of the progress now in this browser.</p>
+      <div class="j-actions">
+        <button type="button" class="btn btn-plain" id="load-yes">Yes, load the file</button>
+        <button type="button" class="btn btn-plain" id="load-no">No, keep what I have</button>
+      </div>
+    </div>
+
+    <div class="panel j-confirm" id="reset-confirm" hidden>
+      <p class="j-confirm-text" id="reset-confirm-text" tabindex="-1">Start over? This erases all
+      your progress in this browser. Every lesson, badge, day and setting goes back to the start.
+      It cannot be undone.</p>
+      <div class="j-actions">
+        <button type="button" class="btn btn-plain" id="reset-yes">Yes, erase everything</button>
+        <button type="button" class="btn btn-plain" id="reset-no">No, keep my progress</button>
+      </div>
+    </div>
+
+    <p class="j-msg" id="backup-msg" role="status" tabindex="-1"></p>
+  </section>
+
+</main>
+
+<footer class="site-footer j-footer">
+  <p id="privacy-line">Your progress is saved only in this browser.</p>
+  <p>All pictures are original SVGs made for this site and released as <span class="j-plain">CC0</span> (public domain).
+  <a href="license.html">Read the picture license</a></p>
+</footer>
+
+<script src="js/data/trail-w0.js"></script>
+<script src="js/data/trail-w1.js"></script>
+<script src="js/data/trail-w2.js"></script>
+<script src="js/data/trail-w3.js"></script>
+<script src="js/data/trail-w4.js"></script>
+<script src="js/data/trail-w5.js"></script>
+<script src="js/data/trail-w6.js"></script>
+<script src="js/data/trail-w7.js"></script>
+<script src="js/data/game-config.js"></script>
+<script src="js/game.js"></script>
+<script src="js/site.js"></script>
+<script src="js/daily.js"></script>
+<script src="js/profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,391 @@
+/* The glossary page: the search box, the word list and the flashcards.
+   Linked after css/styles.css and css/game.css. Colours come only from the variables in
+   css/styles.css. Reading text uses --text. Nothing here moves, slides or flips. */
+
+main.gloss { max-width: 960px; }
+
+/* A hidden thing stays hidden, even when a class gives it a display of its own. */
+.gloss [hidden] { display: none !important; }
+
+.gloss-noscript p + p { margin-top: .7rem; }
+.gloss-noscript a { text-decoration: underline; text-underline-offset: .2em; }
+
+/* ---------- top of the list: intro, search, practice button ---------- */
+.gloss-intro {
+  max-width: 42rem;
+  margin-bottom: 1.4rem;
+  color: var(--text);
+  font-size: 1.125rem;
+  line-height: 1.65;
+}
+
+.gloss-tools {
+  scroll-margin-top: .75rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: .35rem 1rem;
+  align-items: center;
+}
+
+.gloss-search-label {
+  grid-column: 1 / -1;
+  color: var(--gold);
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+#gloss-search {
+  grid-column: 1;
+  grid-row: 2;
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  padding: .55rem .9rem;
+  border: 2px solid var(--dark-yellow);
+  border-radius: 10px;
+  background: var(--bg-soft);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 1.125rem;
+}
+#gloss-search:hover { border-color: var(--gold-soft); }
+
+#gloss-practice {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.gloss-hint {
+  grid-column: 1 / -1;
+  grid-row: 3;
+  color: var(--text-dim);
+  font-size: .95rem;
+}
+
+.gloss-count {
+  min-height: 1.65em;
+  margin: .9rem 0 .2rem;
+  color: var(--text);
+  font-size: 1.0625rem;
+}
+
+.gloss-none {
+  margin: .4rem 0 1.5rem;
+  color: var(--text);
+  font-size: 1.0625rem;
+}
+.gloss-none .btn { margin-top: .8rem; }
+
+/* ---------- groups ---------- */
+.gloss-group { margin-top: 1.9rem; }
+
+.gloss-group-title {
+  padding-bottom: .3rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--orange);
+  font-size: 1.45rem;
+  line-height: 1.3;
+}
+
+.gloss-group-note {
+  margin: .4rem 0 0;
+  color: var(--text-dim);
+  font-size: 1rem;
+}
+
+.gloss-entries { margin-top: .9rem; }
+
+/* ---------- one word ---------- */
+.gloss-entry {
+  margin-bottom: .7rem;
+  padding: .9rem 1.2rem .35rem;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--dark-yellow);
+  border-radius: 10px;
+  background: var(--card);
+  scroll-margin-top: 1rem;
+}
+.gloss-entry.is-open { border-color: var(--dark-yellow); border-left-color: var(--gold); }
+/* The word a link pointed to: a gold frame as well as being open. */
+.gloss-entry.is-target { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold); }
+
+.gloss-term {
+  color: var(--gold);
+  font-size: 1.35rem;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+.gloss-term:focus,
+.cards-title:focus,
+.flash-term:focus,
+.flash-end-title:focus { outline: none; }
+.gloss-term:focus-visible,
+.cards-title:focus-visible,
+.flash-term:focus-visible,
+.flash-end-title:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.gloss-say {
+  margin-top: .15rem;
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.gloss-say-label { color: var(--text-dim); }
+.gloss-say-text {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: bold;
+  letter-spacing: .02em;
+  white-space: nowrap;
+}
+
+.gloss-plain {
+  max-width: 38rem;
+  margin-top: .45rem;
+  color: var(--text);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+/* "More" and "Less": a real button with a small arrow that turns over when open. */
+.gloss-more-btn {
+  justify-content: flex-start;
+  padding-left: 0;
+  padding-right: .6rem;
+  font-size: 1.0625rem;
+}
+.gloss-more-btn::after {
+  content: "";
+  flex: 0 0 auto;
+  width: .5em;
+  height: .5em;
+  margin-left: .1rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-.15em) rotate(45deg);
+}
+.gloss-more-btn[aria-expanded="true"]::after { transform: translateY(.15em) rotate(-135deg); }
+
+.gloss-more {
+  max-width: 38rem;
+  margin-top: .1rem;
+  padding: .8rem 0 .4rem;
+  border-top: 1px solid var(--border);
+}
+
+.gloss-more-text {
+  color: var(--text);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+.gloss-links {
+  margin-top: .5rem;
+  list-style: none;
+}
+/* at least 8px between one tap target and the next */
+.gloss-links li + li { margin-top: .5rem; }
+
+.gloss-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  min-height: 48px;
+  padding: .3rem .3rem .3rem 0;
+  border-radius: 8px;
+  color: var(--gold-soft);
+  font-size: 1.0625rem;
+  line-height: 1.4;
+}
+.gloss-link:hover { color: var(--gold); }
+.gloss-link-lead { color: var(--text); }
+.gloss-link-title { text-decoration: underline; text-underline-offset: .2em; }
+.gloss-shelf {
+  color: var(--text-dim);
+  font-size: .9rem;
+  white-space: nowrap;
+}
+
+.gloss-foot { margin-top: 1.5rem; }
+.gloss-foot .btn { justify-content: flex-start; padding-left: 0; }
+
+/* Wide screens: the word on the left, its meaning on the right, like a dictionary. */
+@media (min-width: 720px) {
+  .gloss-entry {
+    display: grid;
+    grid-template-columns: 14.5rem minmax(0, 1fr);
+    column-gap: 1.6rem;
+    padding-top: 1rem;
+  }
+  .gloss-plain { margin-top: .1rem; }
+}
+
+/* ---------- flashcards ---------- */
+.cards-view {
+  scroll-margin-top: .5rem;
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+.cards-back-row .btn { justify-content: flex-start; padding-left: 0; }
+
+.cards-title {
+  margin-top: .3rem;
+  color: var(--gold);
+  font-size: 1.7rem;
+  line-height: 1.3;
+}
+.cards-how {
+  margin-top: 1.3rem;
+  color: var(--text);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.cards-note {
+  margin-top: .4rem;
+  color: var(--text-dim);
+  font-size: .95rem;
+}
+
+.cards-progress { margin: 1.1rem 0 1rem; }
+.cards-progress-text {
+  margin-bottom: .4rem;
+  color: var(--text);
+  font-size: 1.0625rem;
+}
+.cards-bar {
+  height: 10px;
+  border: 1px solid var(--dark-yellow);
+  border-radius: 999px;
+  background: var(--bg);
+  overflow: hidden;
+}
+.cards-bar-fill {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--dark-yellow), var(--gold));
+}
+
+/* The space for the meaning is kept from front to back, so the big button stays put. */
+.flash-body {
+  min-height: 10rem;
+  margin-top: 1rem;
+}
+
+.flash-kind {
+  color: var(--text-dim);
+  font-size: .95rem;
+}
+
+.flash-term {
+  margin-top: .2rem;
+  color: var(--gold);
+  font-size: 2.2rem;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+/* the line is kept even when a word has no say-it guide, so the big button stays put */
+.flash-say {
+  min-height: 1.65em;
+  margin-top: .35rem;
+  color: var(--text);
+  font-size: 1.125rem;
+}
+
+.flash-hint {
+  color: var(--text-dim);
+  font-size: 1.0625rem;
+}
+.flash-first { margin-top: .3rem; }
+
+.flash-plain {
+  padding-top: .9rem;
+  border-top: 1px solid var(--dark-yellow);
+  color: var(--text);
+  font-size: 1.3rem;
+  line-height: 1.55;
+}
+
+.flash-points { margin-top: .5rem; }
+
+.flash-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .6rem 1rem;
+  margin-top: 1rem;
+}
+.flash-main {
+  flex: 1 1 100%;
+  min-height: 60px;
+  font-size: 1.25rem;
+}
+.flash-actions .btn-link { padding-left: 0; }
+/* the row under the big button is always there, so the button does not move */
+.flash-links {
+  display: flex;
+  flex: 1 1 100%;
+  flex-wrap: wrap;
+  gap: .5rem 1.5rem;
+  min-height: 48px;
+}
+
+.flash-end-title {
+  color: var(--gold);
+  font-size: 1.6rem;
+  line-height: 1.3;
+}
+.flash-end p { margin-top: .5rem; }
+.flash-end .btn-plain { flex: 1 1 14rem; }
+
+/* the footer is read too, so it uses the dim text colour, not the faint one */
+main.gloss ~ footer.site-footer { color: var(--text-dim); }
+
+/* ---------- narrow screens, down to 320px ---------- */
+@media (max-width: 560px) {
+  .gloss-tools { grid-template-columns: minmax(0, 1fr); }
+  #gloss-practice {
+    grid-column: 1;
+    grid-row: 4;
+    width: 100%;
+    margin-top: .5rem;
+  }
+  .gloss-entry { padding: .85rem 1rem .3rem; }
+  .gloss-group-title { font-size: 1.3rem; }
+  .flash-term { font-size: 1.9rem; }
+  .flash-body { min-height: 12.5rem; }
+  .flash-actions .btn-plain { flex: 1 1 100%; }
+}
+
+/* ---------- Larger Text ---------- */
+html.large-text .gloss-plain,
+html.large-text .gloss-more-text,
+html.large-text .gloss-link { font-size: 1.3rem; line-height: 1.75; }
+html.large-text .gloss-say { font-size: 1.15rem; }
+html.large-text .gloss-term { font-size: 1.55rem; }
+html.large-text .flash-plain { font-size: 1.5rem; }
+html.large-text .gloss-more-btn,
+html.large-text .gloss-foot .btn,
+html.large-text .cards-back-row .btn,
+html.large-text .flash-actions .btn-link { padding-left: 0; }
+html.large-text .cards-how,
+html.large-text .cards-progress-text { font-size: 1.3rem; }
+
+/* ---------- print: the list only, every word open ---------- */
+@media print {
+  #gloss-cards-view,
+  .gloss-tools,
+  .gloss-count,
+  .gloss-none { display: none !important; }
+  #gloss-list-view { display: block !important; }
+  .gloss .gloss-more[hidden] { display: block !important; }
+  .gloss-entry { break-inside: avoid; box-shadow: none; }
+  .gloss-group-title { break-after: avoid; }
+}

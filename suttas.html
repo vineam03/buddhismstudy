@@ -5,23 +5,173 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sutta Library — Buddhism Study</title>
 <link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/game.css">
+<style>
+/* Sutta Library: the game layer's pieces on this page.
+   Colours come only from the variables in css/styles.css. Reading text uses --text. */
+
+#search:focus-visible { outline: 3px solid var(--orange); outline-offset: 2px; }
+
+/* the one calm line under the intro */
+.trail-hint { margin: -.7rem 0 .9rem; }
+.trail-hint a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.45;
+  text-decoration: underline;
+  text-decoration-color: var(--gold-soft);
+  text-underline-offset: .22em;
+}
+.trail-hint a:hover { color: var(--gold); }
+.read-count { margin: -.6rem 0 1rem; color: var(--text); font-size: 1rem; }
+.read-count:empty { display: none; }
+
+/* a deep link lands below the search bar, not under it */
+details.rule { scroll-margin-top: 11rem; }
+
+/* "Read" in the summary line: a check and a word, never colour alone */
+.read-mark {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: .3rem;
+  margin-left: auto;
+  padding: .05rem .6rem;
+  border: 1px solid var(--dark-yellow);
+  border-radius: 999px;
+  color: var(--text);
+  font-size: .85rem;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.read-mark[hidden] { display: none; }
+.card-tick { color: var(--gold); font-weight: bold; }
+
+/* "In plain words": the soft landing at the top of an open card */
+.plain-words {
+  margin: .9rem 0 .3rem;
+  padding: .7rem 1rem .8rem;
+  background: var(--bg-soft);
+  border-left: 4px solid var(--gold);
+  border-radius: 0 8px 8px 0;
+}
+.rule-body .plain-words h3 { margin-top: 0; }
+.rule-body .plain-words p {
+  max-width: 40rem;
+  color: var(--text);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+/* the foot of an open card: "I have read this", then one question */
+.card-game {
+  margin-top: 1.1rem;
+  border-top: 1px dashed var(--border);
+}
+.rule-body .card-done {
+  margin-top: .9rem;
+  color: var(--text);
+  font-size: 1.05rem;
+  font-weight: bold;
+}
+.card-done:focus-visible,
+.card-q:focus-visible,
+.card-q-done:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+.rule-body .card-game h3 .points {
+  letter-spacing: 0;
+  text-transform: none;
+  white-space: nowrap;
+}
+
+.card-q {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.card-q legend,
+.rule-body .card-q-text {
+  max-width: 40rem;
+  margin: 0 0 .7rem;
+  padding: 0;
+  color: var(--text);
+  font-size: 1.125rem;
+  font-weight: bold;
+  line-height: 1.5;
+}
+.card-q-opts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 40rem;
+}
+.card-q-opt.btn {
+  width: 100%;
+  padding: .6rem .95rem;
+  justify-content: flex-start;
+  font-weight: normal;
+  text-align: left;
+}
+/* an option already tried: dashed and marked in words, still open to pick */
+.card-q-opt.btn.is-tried {
+  border-style: dashed;
+  border-color: var(--dark-yellow);
+  color: var(--text-dim);
+}
+.card-q-say { max-width: 40rem; }
+.card-q-note,
+.card-q-right {
+  margin-top: .8rem;
+  padding: .7rem 1rem;
+  background: var(--bg-soft);
+  border-left: 4px solid var(--dark-yellow);
+  border-radius: 0 8px 8px 0;
+}
+.card-q-right { max-width: 40rem; border-left-color: var(--gold); }
+.rule-body .card-q-note p,
+.rule-body .card-q-right p {
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+.rule-body .card-q-note p + p,
+.rule-body .card-q-right p + p { margin-top: .3rem; }
+
+html.large-text .rule-body .plain-words p,
+html.large-text .card-q legend,
+html.large-text .rule-body .card-q-text { font-size: 1.3rem; }
+
+@media (max-width: 600px) {
+  details.rule { scroll-margin-top: 16rem; }
+}
+</style>
 </head>
 <body>
 
 <header class="site-header">
-  <span class="wheel">☸</span>
+  <span class="wheel" aria-hidden="true">☸</span>
   <h1>The Sutta Library</h1>
   <p class="subtitle">Study notes on the key texts — the gist, what they teach about truth and human nature, and how to use them</p>
   <nav class="site-nav">
     <a href="index.html">Home</a>
+    <a href="trail.html">The Trail</a>
+    <a href="profile.html">My Journey</a>
+    <a href="glossary.html">Glossary</a>
     <a href="curriculum.html">Curriculum</a>
     <a href="study.html">Guided Study</a>
     <a href="canon.html">The Canon</a>
-    <a href="suttas.html" class="active">Sutta Library</a>
-    <a href="vinaya.html">Vinaya</a>
+    <a href="suttas.html" class="active" aria-current="page">Sutta Library</a>
+    <a href="vinaya.html">Monks’ Rules</a>
     <a href="themes.html">Modern Life</a>
     <a href="journey.html">Journey West</a>
-    <a href="everything.html">Export PDF</a>
+    <a href="everything.html">Save as PDF</a>
   </nav>
 </header>
 
@@ -36,11 +186,19 @@
     Click a card to expand it. Links from other pages land on the right card automatically.
   </div>
 
+  <p class="trail-hint no-print"><a href="trail.html">New here? The Trail teaches these ideas one small step at a time.</a></p>
+  <p class="read-count no-print" id="read-count"></p>
+
   <div class="controls">
-    <input id="search" type="search" placeholder="Search the library… (e.g. anger, money, grief, breath)">
+    <input id="search" type="search" aria-label="Search the library" placeholder="Search the library… (e.g. anger, money, grief, breath)">
     <div class="cat-filters" id="cat-filters"></div>
-    <div class="result-count" id="result-count"></div>
+    <div class="result-count" id="result-count" aria-live="polite"></div>
   </div>
+
+  <noscript>
+    <p class="note-box">This page needs JavaScript to show the cards. Every other page still works.
+    A good place to read on is <a href="study.html">Guided Study</a>.</p>
+  </noscript>
 
   <div id="suttas-root"></div>
 </main>
@@ -57,6 +215,15 @@
 <script src="js/data/suttas-an.js"></script>
 <script src="js/data/suttas-kn.js"></script>
 <script src="js/data/suttas-history.js"></script>
+<script src="js/data/suttas-easy-dn.js"></script>
+<script src="js/data/suttas-easy-mn1.js"></script>
+<script src="js/data/suttas-easy-mn2.js"></script>
+<script src="js/data/suttas-easy-sn.js"></script>
+<script src="js/data/suttas-easy-an.js"></script>
+<script src="js/data/suttas-easy-kn.js"></script>
+<script src="js/data/game-config.js"></script>
+<script src="js/game.js"></script>
+<script src="js/site.js"></script>
 <script src="js/suttas.js"></script>
 
 </body>

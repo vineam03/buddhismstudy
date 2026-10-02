@@ -1,0 +1,462 @@
+/* My Journey (profile.html). Linked after css/styles.css and css/game.css.
+   Colours come only from the variables in css/styles.css. Reading text uses --text.
+   Sizes inside the page are in em, so the "Larger text" switch scales all of it at once.
+   Nothing here moves, fades or slides. */
+
+.journey {
+  max-width: 920px;
+  color: var(--text);
+  font-size: 1.125rem;
+  line-height: 1.65;
+}
+
+/* Space sits under each block, so hidden blocks at the top leave no gap. */
+.journey > * { margin-bottom: 2rem; }
+.journey > *:last-child { margin-bottom: 0; }
+
+/* Shown only while Quiet Mode is on. */
+.quiet-only { display: none; }
+html.quiet .quiet-only { display: block; }
+
+.j-quiet-note { border-left: 5px solid var(--gold-soft); }
+.j-save-note { border-left: 5px solid var(--orange); }
+
+.j-h2 {
+  margin-bottom: .35rem;
+  color: var(--gold);
+  font-size: 1.5em;
+  line-height: 1.25;
+}
+
+.j-h3 {
+  margin: 1.8rem 0 .25rem;
+  color: var(--gold-soft);
+  font-size: 1.2em;
+  line-height: 1.3;
+}
+
+.j-lede {
+  max-width: 40rem;
+  color: var(--text);
+}
+
+.j-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .7rem 1rem;
+  margin-top: 1rem;
+}
+
+/* Text that takes focus after an action (a confirm question, a result). */
+.journey [tabindex="-1"]:focus { outline: none; }
+.journey [tabindex="-1"]:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 5px;
+  border-radius: 4px;
+}
+
+/* The small check mark and word that say "reached" or "earned". */
+.j-mark-line {
+  display: flex;
+  align-items: flex-start;
+  gap: .4rem;
+  color: var(--text);
+  font-size: .9em;
+  font-weight: bold;
+  line-height: 1.4;
+}
+/* The mark sits beside the first line of its words. */
+.j-check { flex: 0 0 auto; margin-top: .2em; }
+
+/* ---------- 1. days you showed up, the title now, the run ---------- */
+.j-top {
+  display: grid;
+  grid-template-columns: minmax(12rem, 16rem) 1fr;
+  gap: 1.3rem 2.2rem;
+  align-items: start;
+}
+
+/* The saved name stands above the panel, so that it also shows in Quiet Mode. */
+.j-hello {
+  margin-bottom: .8rem;
+  color: var(--text);
+}
+
+.j-days-label {
+  color: var(--gold-soft);
+  font-size: 1.15em;
+  line-height: 1.3;
+}
+
+.j-days-n {
+  margin: .1rem 0 .2rem;
+  color: var(--gold);
+  font-size: 3.6em;
+  font-weight: bold;
+  font-variant-numeric: lining-nums;
+  line-height: 1.05;
+}
+
+.j-days-note {
+  color: var(--text);
+  font-size: .9em;
+  line-height: 1.5;
+}
+
+.j-now {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1rem;
+  min-width: 0;
+}
+.j-now-emblem { margin-top: .2rem; }
+.j-now-text { min-width: 0; }
+
+.j-kicker {
+  color: var(--text-dim);
+  font-size: .85em;
+  line-height: 1.4;
+}
+
+.j-now-name {
+  color: var(--gold);
+  font-size: 1.35em;
+  font-weight: bold;
+  line-height: 1.25;
+}
+
+.j-now-blurb { margin-top: .25rem; color: var(--text); }
+.j-now-points { margin-top: .5rem; color: var(--text); }
+.j-now-points + .j-now-points { margin-top: 0; }
+
+.j-enough {
+  margin-top: .5rem;
+  color: var(--gold);
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+/* The run display is the smallest thing in the panel. */
+.j-run {
+  grid-column: 1 / -1;
+  padding-top: .8rem;
+  border-top: 1px solid var(--border);
+}
+.j-run:empty { display: none; }
+
+/* ---------- 2. all ten titles ---------- */
+.j-titles,
+.j-worlds,
+.j-badges,
+.j-counts {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: .8rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.j-title,
+.j-world,
+.j-badge {
+  display: flex;
+  align-items: flex-start;
+  gap: .9rem;
+  min-width: 0;
+  padding: .9rem 1rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.j-title-body,
+.j-world-body,
+.j-badge-body { min-width: 0; }
+
+/* Not reached yet: a dashed edge. Reached: a solid one, a check mark and the word. */
+.j-title { border-style: dashed; }
+.j-title.is-reached { border-style: solid; border-color: var(--dark-yellow); }
+.j-title.is-now { border-width: 2px; border-color: var(--gold-soft); }
+
+.j-title-head { line-height: 1.35; }
+.j-title-name { color: var(--gold); font-size: 1.1em; }
+.j-title-points { display: inline-block; color: var(--text); font-size: .9em; }
+.j-title-blurb { margin-top: .2rem; color: var(--text); font-size: .95em; line-height: 1.55; }
+
+/* ---------- 3. the Trail, world by world ---------- */
+.j-world-name {
+  color: var(--gold);
+  font-size: 1.1em;
+  line-height: 1.3;
+}
+
+.j-world-words {
+  display: flex;
+  align-items: flex-start;
+  gap: .4rem;
+  margin-top: .15rem;
+  color: var(--text);
+  font-size: .95em;
+}
+
+.j-marks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: .45rem;
+}
+
+/* One mark per lesson. Open and dotted: not done. Filled with a tick: done. */
+.j-dot {
+  display: block;
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  border: 2px dotted var(--text-faint);
+  border-radius: 50%;
+}
+.j-dot.is-done {
+  border: 2px solid var(--gold);
+  background: var(--gold);
+}
+.j-dot.is-done::after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 9px;
+  margin: 1px auto 0;
+  border: solid #1a1208;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+/* The world's check is a square mark, set a little apart. */
+.j-dot-check { margin-left: 8px; border-radius: 4px; }
+
+/* ---------- 4. badges ---------- */
+.j-badge-name {
+  color: var(--gold);
+  font-size: 1.05em;
+  line-height: 1.3;
+}
+.j-badge-how { margin-top: .15rem; color: var(--text); font-size: .92em; line-height: 1.5; }
+
+/* Not earned yet: dimmed picture and a dashed edge. The words stay at full strength. */
+.j-badge.is-open { border-style: dashed; background: transparent; }
+.j-badge.is-open .j-badge-pic { opacity: .45; }
+.j-badge.is-open .j-badge-name { color: var(--text); }
+.j-badge-open { color: var(--text-dim); font-weight: normal; }
+.j-badge.is-earned { border-color: var(--dark-yellow); }
+
+/* ---------- 5. counts across the site ---------- */
+.j-count-row {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0 .6rem;
+  min-height: 48px;
+  padding: .55rem 1rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+  line-height: 1.45;
+}
+.j-count-n {
+  color: var(--gold);
+  font-size: 1.15em;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.j-count-words { color: var(--text); }
+a.j-count-row .j-count-words { text-decoration: underline; text-underline-offset: .2em; }
+a.j-count-row:hover { background: var(--card-hover); border-color: var(--gold-soft); color: var(--text); }
+
+/* ---------- 7. settings ---------- */
+.j-switches {
+  display: grid;
+  gap: .7rem;
+  margin-top: .8rem;
+  max-width: 40rem;
+}
+
+/* A real button with aria-pressed. On or off is shown three ways: the knob's side,
+   the filled track and the word. */
+.j-switch {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  min-height: 56px;
+  padding: .6rem 1rem;
+  background: var(--card);
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 1em;
+  line-height: 1.4;
+  text-align: left;
+  cursor: pointer;
+}
+.j-switch:hover { background: var(--card-hover); }
+.j-switch[aria-pressed="true"] { border-color: var(--gold-soft); }
+
+.j-switch-track {
+  position: relative;
+  display: block;
+  flex: 0 0 auto;
+  width: 54px;
+  height: 30px;
+  border: 2px solid var(--text-dim);
+  border-radius: 999px;
+}
+.j-switch-knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--text-dim);
+}
+.j-switch[aria-pressed="true"] .j-switch-track { background: var(--gold); border-color: var(--gold); }
+.j-switch[aria-pressed="true"] .j-switch-knob { left: 27px; background: #1a1208; }
+
+.j-switch-text { flex: 1 1 auto; min-width: 0; }
+.j-switch-name { display: block; font-weight: bold; }
+.j-switch-help { display: block; color: var(--text); font-size: .9em; }
+.j-switch-state {
+  flex: 0 0 auto;
+  min-width: 2.2em;
+  color: var(--text);
+  font-weight: bold;
+  text-align: right;
+}
+.j-switch[aria-pressed="true"] .j-switch-state { color: var(--gold); }
+
+.j-msg {
+  min-height: 1.65em;
+  margin-top: .4rem;
+  color: var(--text);
+  font-weight: bold;
+}
+
+.j-name { margin-top: 1rem; max-width: 40rem; }
+.j-label { display: block; color: var(--text); font-weight: bold; }
+.j-help { color: var(--text); font-size: .9em; }
+.j-name-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .7rem 1rem;
+  margin-top: .5rem;
+}
+.j-input {
+  flex: 1 1 12rem;
+  min-width: 0;
+  max-width: 24rem;
+  min-height: 48px;
+  padding: .5rem .8rem;
+  background: var(--bg-soft);
+  border: 2px solid var(--dark-yellow);
+  border-radius: 10px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 1em;
+}
+
+.j-confirm {
+  max-width: 40rem;
+  margin-top: 1rem;
+  border: 2px solid var(--gold-soft);
+}
+.j-confirm-text { color: var(--text); }
+
+/* ---------- the foot of the page ---------- */
+footer.site-footer.j-footer {
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+/* Georgia draws a zero like a small o. A plain face keeps "CC0" clear. */
+.j-plain { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+.j-footer p + p { margin-top: .3rem; }
+.j-footer a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 .2rem;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
+/* ---------- wider screens: two or three columns ---------- */
+@media (min-width: 760px) {
+  .j-titles,
+  .j-worlds,
+  .j-badges,
+  .j-counts { grid-template-columns: 1fr 1fr; }
+}
+
+/* ---------- narrow screens: one column, down to 320px ---------- */
+@media (max-width: 640px) {
+  .j-top { grid-template-columns: 1fr; gap: 1.1rem; }
+  .j-now-emblem { width: 72px; height: 72px; }
+  .j-days-n { font-size: 3.2em; }
+  .j-actions .btn { flex: 1 1 100%; }
+  .j-name-row .btn { flex: 1 1 100%; }
+  .j-input { max-width: none; flex-basis: 100%; }
+  .j-switch { gap: .7rem; padding: .6rem .75rem; }
+}
+
+@media (max-width: 380px) {
+  .j-title,
+  .j-world,
+  .j-badge { gap: .7rem; padding: .8rem .75rem; }
+  .j-title-emblem,
+  .j-world-emblem,
+  .j-badge-pic { width: 48px; height: 48px; }
+  .j-now { gap: .8rem; }
+  .j-now-emblem { width: 56px; height: 56px; }
+}
+
+/* ---------- Larger text: bigger, roomier, a clean system sans-serif ---------- */
+html.large-text .journey {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.35rem;
+  line-height: 1.8;
+  letter-spacing: .01em;
+}
+html.large-text .j-switch { min-height: 64px; padding: .8rem 1.1rem; }
+html.large-text .j-input { min-height: 56px; }
+html.large-text .j-count-row { min-height: 56px; }
+html.large-text .j-title,
+html.large-text .j-world,
+html.large-text .j-badge { padding: 1.1rem 1.2rem; }
+html.large-text footer.site-footer.j-footer { font-size: 1.2rem; }
+html.large-text .j-run .run { font-size: 1.05rem; }
+/* css/game.css spaces out every paragraph in a panel. Here the short lines belong together. */
+html.large-text .journey .j-top p + p { margin-top: 0; }
+html.large-text .journey .j-top .j-days-note { margin-top: .2em; }
+html.large-text .journey .j-top .j-now-blurb { margin-top: .2em; }
+html.large-text .journey .j-top .j-now-blurb + p { margin-top: .5em; }
+html.large-text .journey .j-top .j-enough + p { margin-top: .3em; }
+/* With bigger words, one column reads better than two. */
+html.large-text .j-titles,
+html.large-text .j-worlds,
+html.large-text .j-badges,
+html.large-text .j-counts { grid-template-columns: 1fr; }
+html.large-text .j-top { grid-template-columns: 1fr; }
+
+/* ---------- print: the page's own controls are left out ---------- */
+@media print {
+  .j-switches,
+  .j-name,
+  .j-backup,
+  .j-confirm,
+  .j-msg,
+  .j-quiet-note { display: none !important; }
+  .j-title, .j-world, .j-badge { break-inside: avoid; }
+}

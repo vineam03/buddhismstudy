@@ -3,25 +3,78 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The 227 Rules — Buddhism Study</title>
+<title>Monks’ Rules — Buddhism Study</title>
 <link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/game.css">
+<style>
+/* Monks' Rules: the game layer's pieces on this page.
+   Colours come only from the variables in css/styles.css. Reading text uses --text. */
+
+#search:focus-visible { outline: 3px solid var(--orange); outline-offset: 2px; }
+
+/* the plain line under the intro */
+.read-note {
+  margin: -.6rem 0 1rem;
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+/* "Read" in the summary line: a check and a word, never colour alone */
+.read-mark {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: .3rem;
+  margin-left: auto;
+  padding: .05rem .6rem;
+  border: 1px solid var(--dark-yellow);
+  border-radius: 999px;
+  color: var(--text);
+  font-size: .85rem;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.read-mark[hidden] { display: none; }
+.card-tick { color: var(--gold); font-weight: bold; }
+
+/* the foot of an open rule: "I have read this story" */
+.card-game {
+  margin-top: 1.1rem;
+  border-top: 1px dashed var(--border);
+}
+.rule-body .card-done {
+  margin-top: .9rem;
+  color: var(--text);
+  font-size: 1.05rem;
+  font-weight: bold;
+}
+.card-done:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+</style>
 </head>
 <body>
 
 <header class="site-header">
-  <span class="wheel">☸</span>
-  <h1>The Bhikkhu Pātimokkha</h1>
-  <p class="subtitle">All 227 rules of monastic discipline, with the stories behind them</p>
+  <span class="wheel" aria-hidden="true">☸</span>
+  <h1>The Monks’ Rules</h1>
+  <p class="subtitle">All 227 rules for monks, each with the story of how it began. The library calls this list the <span lang="pi">Pātimokkha</span>.</p>
   <nav class="site-nav">
     <a href="index.html">Home</a>
+    <a href="trail.html">The Trail</a>
+    <a href="profile.html">My Journey</a>
+    <a href="glossary.html">Glossary</a>
     <a href="curriculum.html">Curriculum</a>
     <a href="study.html">Guided Study</a>
     <a href="canon.html">The Canon</a>
     <a href="suttas.html">Sutta Library</a>
-    <a href="vinaya.html" class="active">Vinaya</a>
+    <a href="vinaya.html" class="active" aria-current="page">Monks’ Rules</a>
     <a href="themes.html">Modern Life</a>
     <a href="journey.html">Journey West</a>
-    <a href="everything.html">Export PDF</a>
+    <a href="everything.html">Save as PDF</a>
   </nav>
 </header>
 
@@ -36,11 +89,22 @@
     lust-prone <strong>Udāyin</strong>.
   </div>
 
+  <p class="read-note no-print" id="read-note">
+    Open a rule and read its story. Then tap “I have read this story”.
+    <span class="game-only">2 points each for your first 50 stories.</span>
+    <span id="read-count"></span>
+  </p>
+
   <div class="controls">
-    <input id="search" type="search" placeholder="Search rules and origin stories… (e.g. Devadatta, robe, alcohol)">
+    <input id="search" type="search" aria-label="Search rules and origin stories" placeholder="Search rules and origin stories… (e.g. Devadatta, robe, alcohol)">
     <div class="cat-filters" id="cat-filters"></div>
-    <div class="result-count" id="result-count"></div>
+    <div class="result-count" id="result-count" aria-live="polite"></div>
   </div>
+
+  <noscript>
+    <p class="note-box">This page needs JavaScript to show the rules. Every other page still works.
+    A good place to read on is <a href="study.html">Guided Study</a>.</p>
+  </noscript>
 
   <div id="rules-root"></div>
 </main>
@@ -61,6 +125,9 @@
 <script src="js/data/patidesaniya.js"></script>
 <script src="js/data/sekhiya.js"></script>
 <script src="js/data/adhikarana.js"></script>
+<script src="js/data/game-config.js"></script>
+<script src="js/game.js"></script>
+<script src="js/site.js"></script>
 <script src="js/vinaya.js"></script>
 
 </body>

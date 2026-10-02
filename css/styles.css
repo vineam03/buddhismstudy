@@ -147,6 +147,7 @@ a.topic-card:hover {
 
 #search {
   width: 100%;
+  min-height: 48px;
   padding: .65rem .9rem;
   font-size: 1rem;
   font-family: inherit;
@@ -157,14 +158,15 @@ a.topic-card:hover {
   outline: none;
 }
 #search:focus { border-color: var(--gold); box-shadow: 0 0 0 2px rgba(255, 215, 0, .15); }
-#search::placeholder { color: var(--text-faint); }
+#search::placeholder { color: var(--text-dim); }
 
-.cat-filters { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .7rem; }
+.cat-filters { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .7rem; }
 
 .cat-filters button {
   font-family: inherit;
-  font-size: .82rem;
-  padding: .3rem .75rem;
+  font-size: .9rem;
+  min-height: 44px;
+  padding: .3rem .9rem;
   background: transparent;
   color: var(--text-dim);
   border: 1px solid var(--border);
@@ -231,6 +233,7 @@ details.rule[open] .rule-num { background: var(--gold); }
 .rule-title .pali { color: var(--orange); font-weight: normal; font-style: italic; font-size: .92em; }
 
 .rule-body { padding: 0 1.1rem 1rem; border-top: 1px solid var(--border); }
+.rule-body h3,
 .rule-body h4 {
   color: var(--gold-soft);
   font-size: .8rem;
@@ -433,4 +436,15 @@ footer.site-footer {
 @media (max-width: 600px) {
   .site-header h1 { font-size: 1.7rem; }
   details.rule summary { flex-wrap: wrap; }
+  /* Full-size filter buttons in one row that slides sideways, so the bar that stays at the
+     top of the screen does not eat half a phone. The page itself never scrolls sideways. */
+  .cat-filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 4px 4px 8px;
+    margin-left: -4px;
+    margin-right: -4px;
+    scrollbar-width: thin;
+  }
+  .cat-filters button { flex: 0 0 auto; white-space: nowrap; }
 }
